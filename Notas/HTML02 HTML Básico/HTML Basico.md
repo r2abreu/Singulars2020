@@ -20,7 +20,12 @@ Al usar la sintaxis `<!DOCTYPE html>` le estamos especificando al explorador, qu
 
 Los encabezados se definen con etiquetas que van desde el `<h1>` hasta el `<h6>`, sin embargo por razones de SEO, se recomienda usar estas etiquetas con la jerarquía que merecen, siendo esta la recomendada: 
 
-[Untitled](HTML02%20HTML%20Ba%CC%81sico%20ea5f53e1c410406f92886d158aef06d3/Untitled%20Database%20fb3faedfa7b6444b96d871a9dde52068.csv)
+| Encabezado | Cantidad | 
+| ---------- | -------- | 
+| `<h1>`     | 1        | 
+| `<h2>`     | 2        | 
+| `<h3>`     | 4        | 
+| `<h4>`     | No importa demasiado     | 
 
 ## Párrafos
 
