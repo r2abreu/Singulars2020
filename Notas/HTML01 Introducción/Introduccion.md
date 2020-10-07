@@ -24,4 +24,4 @@ Esta interpretación ocurre en aquellas paginas las cuales son interpretadas dir
 
 ## Lenguajes de cliente y lenguajes de servidor
 
-![HTML01%20Introduccio%CC%81n%20fc2855e61415466ead08be410619aa98/Untitled.png](HTML01%20Introduccio%CC%81n%20fc2855e61415466ead08be410619aa98/Untitled.png)
+![Imagen](Untitled.png)
