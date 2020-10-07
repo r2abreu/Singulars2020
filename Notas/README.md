@@ -1,9 +1,5 @@
 # Singulars 2020
 
-Profesor: [Albert Bassons](https://www.linkedin.com/in/albertbassons/)
-
-Email: [albertbformacio@gmail.com](mailto:albertbformacio@gmail.com)
-
 [HTML01: Introducción](Singulars%202020%203a03e0af97df4f8dbd03032c17a114e0/HTML01%20Introduccio%CC%81n%20fc2855e61415466ead08be410619aa98.md)
 
 [HTML02: HTML Básico ](Singulars%202020%203a03e0af97df4f8dbd03032c17a114e0/HTML02%20HTML%20Ba%CC%81sico%20ea5f53e1c410406f92886d158aef06d3.md)
