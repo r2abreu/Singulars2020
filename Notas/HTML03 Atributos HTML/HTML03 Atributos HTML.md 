@@ -9,7 +9,7 @@ Los elementos HTML pueden tener atributos que aportan información adicional res
 Los atributos globales pueden ser usados por cualquier elemento HTML, algunos ejemplos de ellos son los siguientes: 
 
 - `class` : Especifica un nombre de clase para el elemento. Posteriormente podremos usar ese nombre de clase para referirnos al elemento.
-- `id` : Especifica un id ú**nico** para el elemento.
+- `id` : Especifica un id **único** para el elemento.
 - `style` : Especifica un estilo CSS para el elemento.
 - `title` : Especifica información extra sobre un elemento, que se muestra como una pista.
 
