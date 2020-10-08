@@ -14,6 +14,8 @@
 
 ## Ejercicios
 
-[HTML02: Ejercicio 01](https://github.com/r2abreu/Singulars2020/tree/master/HTML02%20-%20Ejercicio%2001)
-[HTML04: Etiquetas](https://github.com/r2abreu/Singulars2020/tree/master/HTML04%20-%20Etiquetas)
-[HTML05: Tablas y Listas](https://github.com/r2abreu/Singulars2020/tree/master/HTML05%20-%20Tablas%20y%20Listas)
+[HTML02: Ejercicio 01](https://github.com/r2abreu/Singulars2020/tree/master/Ejercicios/HTML02%20-%20Ejercicio%2001)
+
+[HTML04: Etiquetas](https://github.com/r2abreu/Singulars2020/tree/master/Ejercicios/HTML04%20-%20Etiquetas)
+
+[HTML05: Tablas y Listas](https://github.com/r2abreu/Singulars2020/tree/master/Ejercicios/HTML05%20-%20Tablas%20y%20Listas)
