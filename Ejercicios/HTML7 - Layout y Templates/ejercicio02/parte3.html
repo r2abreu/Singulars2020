@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <title>Ejercicio 02 | Parte 2</title>
+        <meta charset="UTF-8" />
+        <title>Ejercicio 02 | Parte 3</title>
         <style>
             * {
                 box-sizing:border-box;
@@ -23,30 +23,38 @@
                 text-align: center;
             }
             nav {
-                display: inline-block;
-                width: 30%;
-                margin: 0;
-                padding-top: 200px;
-                padding-bottom: 200px;
+                width: 90%;
+                margin: auto;
                 text-align: center;
-               
-                
-               
+                margin-top: 20px;
+                padding: 20px;
             }
             main {
                 display: inline-block;
                 width: 65%;
                 text-align: center;
-                margin: 0 0 0 5%;
+                margin: 0 5% 0 0;
                 padding: 200px;
         
             }
+
+            aside {
+                display: inline-block;
+                width: 30%;
+                padding-bottom: 200px;
+                padding-top: 200px;
+                text-align: center;
+            }
+
             footer {
                 padding: 20px;
                 width: 90%;
                 margin: auto;
                 text-align: center;
             }
+
+
+
             .main-container {
                 width: 90%;
                 margin: auto;
@@ -57,13 +65,14 @@
     </head>
     <body>
         <header class="container">Cabecera</header>
+        <nav class="container">Barra de Navegacion</nav>
         <div class="main-container">
             <!-- 
                 Este identado, aunque parezca raro, es para evitar el espacio que se genera de forma predeterminada entre inline-block elements:
             Info:     
             https://css-tricks.com/fighting-the-space-between-inline-block-elements/ 
             -->
-            <nav class="container">Barra de Navegacion</nav><main class="container">Contenido de Portada</main>
+            <main class="container">Contenido de Portada</main><aside class="container">Sidebar</aside>
         </div>
         <footer class="container">Pie de Navegacion</footer>
     </body>
