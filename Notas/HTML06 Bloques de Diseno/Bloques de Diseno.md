@@ -45,3 +45,25 @@ Hay que tener en cuenta que los elementos en bloque se ubican en lineas distinta
 Se conoce como elementos semanticos aquellos que describen su significado al navegador, proporcionan informacion adicional mas alla de que tipo de elemento estructural forman parte en la pagina. 
 
 Los ejemplos de estos elementos semanticos son `<article>`, `<header>`, `<footer>`, en contraste a elementos no semanticos como `<div>` y `<span>`.
+
+| Etiqueta | Descripcion |
+| `<header>` | Especifica una cabecera para el documento o seccion. Puede haber mas de uno  por pagina. |
+| `nav` | Define la zona de navegacion de una pagina. Es un conjunto de enlaces de navegacion. |
+| `<main>` | Especifica el contenido principal del documento. Define el area del contenido principal, se encuentra dentro del body. Contiene el contenido principal, aquel directamente relacionado sobre el tema central del documento. |
+| `<footer>` | Especifica el pie de pagina para el documento o seccion. Se puede tener mas de un pie de documento. |
+| `<article>` | Define un articulo. Especifica un contenido independiente, que tiene sentido por si solo y es posible distribuir por cualquier parte del sitio web. Por ejemplo, un post de un foto o un blog, una noticia o comentario. |
+| `<section>` | Define una seccion en el documento |
+| `<aside>` | Define un contenido lateral respecto al contenido principal. Puede haber mas de uno. |
+| `<figure>` | Especifica un diagrama, foto, ilustracion, etc.  |
+| `<figcaption>` | Define una leyenda para el elemento `<figure>` |
+| `<picture>` | Inserta una imagen que permite diversas fuentes (*sources*) para distintos tipos de dispositivo. De este modo es posible cargar imagenes diferentes en ordenadores, tables o telefonos por ejemplo. Se usan media queries en el elemento `<source>`, sobre todo para disenos responsives. |
+| `<details>` | Define detalles adicionales que el usuario puede mostrar u ocultar. |
+| `<summary>` | Define una cabecera visible para el elemento `<details>`. Esta etiqueta va dentro de `<details>` |
+| `<mark>` | Define un texto el cual esta resaltado |
+| `<time>` | Define una fecha/hora |
+
+## Compatibilidad
+
+Tener en cuenta la compatibilidad es algo bastante importante al programar nuestras paginas webs, sobre todo tener en cuenta los navegadores antiguos ya que estos no soportan la mayoria de las nuevas funcionalidades y caracteristicas de HTML5. 
+
+
