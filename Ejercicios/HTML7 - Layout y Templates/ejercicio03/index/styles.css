@@ -5,16 +5,56 @@
 body {
 	padding: 0;
 	margin: 0;
-	background-color: red;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-areas: 'left-container left-container right-container' 'left-container left-container right-container'
+		'left-container left-container right-container';
+	font-family: 'Montserrat', sans-serif;
 }
 
-.home-image {
-	width: 888px;
-	height: 1027px;
-}
-
-.home-image img {
-	width: 100%;
-	border-radius: 0 40px 40px 0;
+.left-container {
+	grid-area: left-container;
+	height: 1024px;
 	box-shadow: 5px 4px 20px #000000;
+	border-radius: 0 40px 40px 0;
+}
+
+.right-container {
+	grid-area: right-container;
+	margin-left: 2%;
+}
+
+.logo {
+	position: absolute;
+	top: 57px;
+	left: 96px;
+	width: 225px;
+	height: 61px;
+}
+
+.logo img {
+	width: 100%;
+}
+
+aside {
+	height: 1027;
+}
+
+article {
+	color: black;
+}
+
+article h1 {
+	font-size: 100px;
+	margin: 0 0 4%;
+	text-align: right;
+	font-weight: 400;
+}
+
+article p {
+	font-size: 35px;
+	margin: 0;
+	width: 735px;
+	text-align: justify;
 }
