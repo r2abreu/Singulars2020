@@ -172,7 +172,7 @@ section h2 {
 }
 
 footer {
-	padding-top: 120px;
+	padding-top: 190px;
 	grid-area: footer;
 	text-align: center;
 	align-items: baseline;
@@ -184,4 +184,17 @@ footer {
 
 span img {
 	width: 30px;
+}
+
+@media (max-width: 1370px) {
+	article h1 {
+		left: 77px;
+		top: 200px;
+	}
+
+	article p {
+		font-size: 30px;
+		width: 600px;
+		top: 350px;
+	}
 }
