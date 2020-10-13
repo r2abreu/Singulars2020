@@ -19,7 +19,7 @@ body {
 	height: 1024px;
 	box-shadow: 5px 4px 20px #000000;
 	border-radius: 0 40px 40px 0;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 1) 100%),
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, rgba(0, 0, 0, 1) 100%),
 		url("../assets/index/homeImage.jpg");
 	background-size: cover;
 }
@@ -65,6 +65,7 @@ article p {
 	position: absolute;
 	top: 505px;
 	left: 77px;
+	text-shadow: 7px 5px 5px black;
 }
 
 nav {
@@ -88,6 +89,18 @@ nav ul li {
 header .hamburguer {
 	width: 70px;
 	margin: 0;
+}
+
+ul li a {
+	text-decoration: none;
+	color: black;
+	transition: transform 1s;
+}
+
+ul li a:hover {
+	text-decoration: underline;
+	text-decoration-color: #75bbca;
+	text-decoration-thickness: 2px;
 }
 
 .hamburguer img {
@@ -179,10 +192,12 @@ section h2 {
 }
 
 footer {
-	padding-top: 150px;
+	display: flex;
+	flex-direction: column;
 	grid-area: footer;
+	height: 220px;
 	text-align: center;
-	align-items: baseline;
+	justify-content: flex-end;
 }
 
 .social span:not(:first-child) {

@@ -172,10 +172,12 @@ section h2 {
 }
 
 footer {
-	padding-top: 190px;
+	display: flex;
+	flex-direction: column;
 	grid-area: footer;
+	height: 300px;
 	text-align: center;
-	align-items: baseline;
+	justify-content: flex-end;
 }
 
 .social span:not(:first-child) {
