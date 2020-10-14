@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 20px;
+	margin: 0;
+}
+
+main > section {
+	border-radius: 20px;
+	border: 2px solid cyan;
+}
+
+section p {
+	border-radius: 20px;
+	border: 2px solid black;
+}
+
+#nav-menu {
+	padding: 0;
+	margin: 0;
+}
+
+ul > li {
+	color: red;
+}
+
+#nav-menu .nav-item {
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.nav-item,
+.nav-item ~ li {
+	border: 5px solid purple;
+}
+
+section figure {
+	width: 200px;
+}
+
+img[alt="foto barcelona"] {
+	width: 100%;
+	height: 100%;
+}
+
+li[class|='nav'] {
+	transition: transform 0.25s;
+	color: purple;
+}
+
+li[class|='nav']:hover {
+	transform: scale(1.2);
+}
