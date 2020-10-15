@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios | Ejercicio 1 y 2</title>
+
+        <style>
+            * {
+                box-sizing: border-box
+            }
+
+            body {
+                padding: 0 100px;
+                margin: 0;
+            }
+
+            form {
+                width: 500px; 
+                padding: 10px;
+            }
+
+            form fieldset {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .personal-particular {
+                width: 200px;
+                margin-bottom: 10px;
+            }
+
+            .personal-particular-label {
+                display: inline-block;
+                min-width: 100px;
+            }
+
+            label[for="female"] {
+                border: 2px solid red;
+            }
+
+            select {
+                margin-top: 10px;
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+            fieldset:last-of-type {
+                margin-bottom: 10px;
+            }
+
+            form:last-of-type label {
+                display: inline-block;
+                min-width: 167px;
+                margin-bottom: 15px;
+                
+            }
+
+            form:last-of-type input {
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h2>User Input Form</h2>
+            <form>
+                <fieldset>
+                    <legend>Personal Particular</legend>
+                    <label class="personal-particular-label" for="nombre">Name:</label>
+                    <input class="personal-particular" type="text" id="nombre-primero" placeholder="Arturo Abreu" /><br />
+                    <label class="personal-particular-label" for="password-primera">Password:</label>
+                    <input class="personal-particular" type="password" id="password" /><br />
+                    <span>Gender:</span>
+                    <input type="radio" id="genero" name="genero" /> Male
+                    <input type="radio" id="genero" name="genero" /> Female <br />
+                    <label for="age">Age:</label>
+                    <select id="age">
+                        <option>> 1 year old</option>
+                        <option>> 5 year old</option>
+                        <option>> 10 year old</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Languages</legend>
+                    <input type="checkbox" name="language" value="java" />
+                    <label>Java</label>
+                    <input type="checkbox" name="language" value="C/C++" />
+                    <label>C/C++</label>
+                    <input type="checkbox" name="language" value="C#" />
+                    <label>C#</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Instruction</legend>
+                    <textarea rows="7" placeholder="Enter your instruction here..."></textarea>
+                </fieldset>
+                <button type="submit">Send</button>
+                <button type="clear">Clear</button>
+            </form>
+            <h2>Formulario estructurado</h2>
+            <form>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="nombre-segundo">Nombre</label>
+                <input type="text" name="nombre" id="nombre-segundo" />
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" />
+                <label for="dni">DNI</label>
+                <input type="text" name="dni" id="dni"/>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de conexion</legend>
+                <label for="nombre-usuario">Nombre de usuario</label>
+                <input type="text" name="nombre" id="nombre-usuario" />
+                <label for="password-segunda">Contrasena</label>
+                <input type="password" name="password" id="apellidos" />
+                <label for="repite-password">Repite la contrasena</label>
+                <input type="password" name="repite-password" id="dni"/>
+            </fieldset>
+            </form>
+        </main>
+    </body>
+</html>
