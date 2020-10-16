@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACJ,gBAAgB,EAAE,GAAG",
+"sources": ["../sass/register.scss"],
+"names": [],
+"file": "registerStyles.css"
+}

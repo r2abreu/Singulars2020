@@ -221,3 +221,79 @@ span img {
 		top: 350px;
 	}
 }
+
+.modal,
+.modal > a {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.modal {
+	left: -100vw;
+	opacity: 0;
+	transition: left 0s 0.5s, opacity 0.5s;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal:target {
+	left: 0px;
+	opacity: 1;
+	transition: left 0s, opacity 0.5s;
+}
+
+.modal > a {
+	position: absolute;
+	left: 0;
+	cursor: default;
+}
+
+.modal > div {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	top: -50vh;
+	width: 40%;
+	padding: 30px 60px;
+	background-color: #fff;
+	border-radius: 20px;
+	transition: top 0.5s;
+}
+
+.modal > div label {
+	align-self: flex-start;
+	color: #75bbca;
+	font-weight: 500;
+}
+
+.modal > div input:not([type="submit"]) {
+	border: none;
+	border-bottom: 2px solid #75bbca;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+.modal > div input[type="submit"] {
+	margin-top: 20px;
+	width: 100%;
+	align-self: center;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: #fff;
+	font-weight: 600;
+	background-color: #75bbca;
+	cursor: pointer;
+}
+
+.modal > div a {
+	align-self: center;
+}
+
+.modal:target > div {
+	top: 0;
+}

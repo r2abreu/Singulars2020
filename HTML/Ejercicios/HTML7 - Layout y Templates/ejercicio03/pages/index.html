@@ -24,13 +24,18 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                     </figure>
                     <ul>
                         <li>
-                            <a href="#">
-                                Contactanos
+                            <a href="#login">
+                                Accede
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#register">
+                                Registrate
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Blog
+                                Contactanos
                             </a>
                         </li>
                     </ul>
@@ -120,5 +125,33 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                 </article>
             </aside>
         </div>     
+        <div id="login" class="modal">
+            <a href="#"></a>
+            <div>
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" name="username" id="username" autofocus="autofocus"/>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" />
+                <a href="#">
+                    <input 
+                    type="submit" value="Accede" />
+                </a>
+            </div>
+        </div>
+        <div id="register" class="modal">
+            <a href="#"></a>
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" />
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" name="username" id="username" autofocus="autofocus"/>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" />
+                <a href="#">
+                    <input 
+                type="submit" value="Registrate" />
+                </a>
+            </div>
+        </div>
     </body>
 </html>
