@@ -5,6 +5,10 @@
 body {
 	padding: 20px;
 	margin: 0;
+	background-color: blue;
+}
+a {
+	color: white;
 }
 
 main > section {
@@ -52,4 +56,12 @@ li[class|='nav'] {
 
 li[class|='nav']:hover {
 	transform: scale(1.2);
+}
+
+#azul:target {
+	background-color: blue;
+}
+
+#purple:target {
+	background-color: purple;
 }
