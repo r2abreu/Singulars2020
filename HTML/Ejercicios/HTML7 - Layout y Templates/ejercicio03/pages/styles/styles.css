@@ -254,7 +254,6 @@ span img {
 
 .modal > div {
 	position: relative;
-	display: flex;
 	flex-direction: column;
 	top: -50vh;
 	width: 40%;
@@ -264,20 +263,25 @@ span img {
 	transition: top 0.5s;
 }
 
-.modal > div label {
+.modal > div form {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal > div form label {
 	align-self: flex-start;
 	color: #75bbca;
 	font-weight: 500;
 }
 
-.modal > div input:not([type="submit"]) {
+.modal > div form input:not([type="submit"]) {
 	border: none;
 	border-bottom: 2px solid #75bbca;
 	margin-bottom: 20px;
 	padding: 5px;
 }
 
-.modal > div input[type="submit"] {
+.modal > div form input[type="submit"] {
 	margin-top: 20px;
 	width: 100%;
 	align-self: center;
@@ -290,10 +294,25 @@ span img {
 	cursor: pointer;
 }
 
-.modal > div a {
+.modal > div form a {
 	align-self: center;
 }
 
 .modal:target > div {
 	top: 0;
+}
+
+#register > div {
+	width: 70%;
+}
+
+#register > div form {
+	display: grid;
+	grid-template-columns: 1, 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: "datos-basicos" "direccion submit";
+}
+
+#register > div form div:nth-child(1) {
+	border: 2px solid red;
 }
