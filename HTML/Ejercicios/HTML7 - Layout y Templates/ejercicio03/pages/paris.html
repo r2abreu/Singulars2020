@@ -144,9 +144,9 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
             <div>
                 <h2>Formulario de Contacto</h2>
                 <h3>Datos Basicos</h3>
-                <form class="second-form">  <!-- Comienzo de grid -->
-                    <div> <!-- datosBasicos grid area (flex container)-->
-                        <div> <!-- Apertura Contenedor Izquierdo -->
+                <form class="second-form">  <!-- begins grid container -->
+                    <div> <!-- begins grid area 'datos basicos' (it's also a flex container) -->
+                        <div> <!-- begins left container -->
                             <label for="name">Nombre</label>
                             <input type="text" name="name" id="name" />
                             <label for="username">Nombre de Usuario</label>
@@ -216,17 +216,17 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                                     <option value="1999">1999</option>
                                 </select>
                             </div>
-                        </div> <!--  Cierre Contenedor Izquierdo -->
-                        <div>    <!-- Contenedor Derecho -->
+                        </div> <!--  ends left container -->
+                        <div>    <!-- begins right container -->
                             <label for="lastname">Apellidos</label>
                             <input type="text" id="lastname" name="lastname" />
                             <label for="password">Contraseña</label>
                             <input type="password" id="password" name="password" />
                             <label for="dni">DNI</label>
                             <input type="text" id="dni" name="dni" /> 
-                        </div>    <!-- Contenedor Derecho Cierre -->
-                    </div> <!-- datosBasicos grid area CIERRE -->
-                    <div> <!-- Direccion grid area apertura-->
+                        </div>    <!-- ends right container -->
+                    </div> <!-- ends grid area 'datosBasicos' -->
+                    <div> <!-- begins of grid area 'direccion' -->
                         <h3>Direccion</h3>
                         <label>Nombre via / calle</label>
                         <input type="text"  name="street" />
@@ -234,8 +234,8 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                         <input type="text" name="town" />
                         <label>Provincia</label>
                         <input type="text" name="city" />
-                    </div> <!-- cierre grid area direccion -->
-                    <div>  <!-- Apertura submit area-->
+                    </div> <!-- ends grid area 'direccion' -->
+                    <div>  <!-- begins of grids submit area -->
                         <a href="#">
                             <span>Registrate</button>
                         </a><br />
@@ -243,9 +243,9 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                         <label>
                             Acepto formar parte de Arturismo y recibir notificaciones asi como ofertas. 
                         </label>
-                    </div> <!-- Cierre submit area-->
-                 </form> <!-- CIERRE GRID -->
+                    </div> <!-- end of grids submit area -->
+                 </form> <!-- end of grid container -->
             </div>
-        </div>  
+        </div>
     </body>
 </html>
