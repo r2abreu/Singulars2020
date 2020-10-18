@@ -1,0 +1,152 @@
+.modal,
+.modal > a {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.modal {
+	left: -100vw;
+	opacity: 0;
+	transition: left 0s 0.5s, opacity 0.5s;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal:target {
+	left: 0px;
+	opacity: 1;
+	transition: left 0s, opacity 0.5s;
+}
+
+.modal > a {
+	position: absolute;
+	left: 0;
+	cursor: default;
+}
+
+.modal > div {
+	position: relative;
+	flex-direction: column;
+	top: -50vh;
+	width: 40%;
+	padding: 30px 60px;
+	background-color: #fff;
+	border-radius: 20px;
+	transition: top 0.5s;
+}
+
+#login > div {
+	width: 20%;
+}
+
+.first-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.first-form label {
+	align-self: flex-start;
+	color: #75bbca;
+	font-weight: 500;
+}
+
+.first-form input:not([type="submit"]),
+.second-form input:not([type="submit"]) {
+	border: none;
+	border-bottom: 2px solid #75bbca;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+.modal > div select,
+label[for="dob"] {
+	margin-bottom: 20px;
+}
+
+.modal h2 {
+	font-size: 30px;
+}
+
+.modal h3 {
+	font-size: 20px;
+}
+
+.modal h2,
+.modal h3 {
+	font-weight: 500;
+	color: #75bbca;
+}
+
+.first-form a,
+.second-form a {
+	margin-top: 20px;
+	width: 20%;
+	align-self: center;
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	text-decoration: none;
+	padding: 10px;
+	color: #fff;
+	font-weight: 400;
+	background-color: #75bbca;
+	cursor: pointer;
+	align-self: center;
+}
+
+.modal:target > div {
+	top: 0;
+}
+
+#register > div {
+	width: 70%;
+}
+
+.second-form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 'datosBasicos datosBasicos' 'direccion submit';
+}
+
+.second-form > div:nth-child(1) {
+	grid-area: datosBasicos;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.second-form > div > div {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+.second-form > div:nth-child(2) {
+	grid-area: direccion;
+	display: flex;
+	flex-direction: column;
+	margin-right: 20%;
+}
+
+.second-form > div:last-of-type {
+	grid-area: submit;
+	text-align: left;
+	margin-left: 20%;
+}
+
+.second-form > div:last-of-type a {
+	display: block;
+	margin: auto;
+}
+
+.second-form > div:last-of-type input {
+	margin: 0;
+}
+
+#register > div > h1 {
+	margin: 0;
+}
