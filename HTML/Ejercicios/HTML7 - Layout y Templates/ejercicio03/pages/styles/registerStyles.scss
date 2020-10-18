@@ -81,6 +81,40 @@ form input[type="email"] {
 form h2 {
 	font-size: calculateRem(20px);
 	font-weight: 500;
+	margin-top: calculateRem(30px);
+	margin-bottom: 0;
+}
+
+form .radio-container {
+	margin: calculateRem(50px) auto;
+
+	input:not(:first-child) {
+		margin-left: calculateRem(50px);
+	}
+}
+
+form label:last-of-type {
+	margin-bottom: calculateRem(30px);
+}
+
+form textarea {
+	border: calculateRem(2px) solid #c4c4c4;
+	border-radius: 10px;
+	margin-top: calculateRem(20px);
+	padding: calculateRem(20px);
+}
+
+form button {
+	width: 20%;
+	padding: calculateRem(15px);
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 500;
+	align-self: flex-end;
+	margin-top: calculateRem(30px);
+	border: 0;
+	background-color: #75bbca;
+	cursor: pointer;
 }
 
 footer {

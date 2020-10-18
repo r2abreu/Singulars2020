@@ -61,7 +61,35 @@ form input[type="email"] {
 
 form h2 {
   font-size: 1.25rem;
-  font-weight: 500; }
+  font-weight: 500;
+  margin-top: 1.875rem;
+  margin-bottom: 0; }
+
+form .radio-container {
+  margin: 3.125rem auto; }
+  form .radio-container input:not(:first-child) {
+    margin-left: 3.125rem; }
+
+form label:last-of-type {
+  margin-bottom: 1.875rem; }
+
+form textarea {
+  border: 0.125rem solid #c4c4c4;
+  border-radius: 10px;
+  margin-top: 1.25rem;
+  padding: 1.25rem; }
+
+form button {
+  width: 20%;
+  padding: 0.9375rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+  align-self: flex-end;
+  margin-top: 1.875rem;
+  border: 0;
+  background-color: #75bbca;
+  cursor: pointer; }
 
 footer {
   grid-area: footer; }
