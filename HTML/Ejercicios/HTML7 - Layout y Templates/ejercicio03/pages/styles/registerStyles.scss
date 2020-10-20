@@ -72,10 +72,25 @@ form {
 }
 
 form input[type="text"],
-form input[type="email"] {
-	border: none;
-	border-bottom: calculateRem(2px) solid #c4c4c4;
+form input[type="email"],
+textarea {
+	border: calculateRem(2px) solid transparent;
+	background-color: #75bbca30;
+	padding: calculateRem(7px);
 	margin-bottom: calculateRem(20px);
+	transition: 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+textarea:focus {
+	border: calculateRem(2px) solid #75bbca;
+	border-radius: calculateRem(5px);
+}
+
+form input[type="text"]:invalid,
+form input[type="email"]:invalid {
+	background-color: #ff000020;
 }
 
 form h2 {
