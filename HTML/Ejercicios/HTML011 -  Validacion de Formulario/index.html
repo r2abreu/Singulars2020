@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Validacion de Formularios | Ejercicio 01</title>
+    </head>
+    <body>
+        <h1>Pruebas de RegExp</h1>
+        <form>
+            <div>
+                <h3>String Exacta</h3>
+                <label>Escribe exactamente "Arturo"</label>
+                <input type="text" required pattern="Arturo" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="Arturo" />
+            </div>
+            <div>
+                <h3>String Exacta u Otra String Exacta</h3>
+                <label>Escribe exactamente "Arturo" o "Abreu"</label>
+                <input type="text" required pattern="Arturo|Abreu" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="Arturo o Abreu" />
+            </div>
+            <div>
+                <h3>Mayusculas y Minusculas</h3>
+                <label>Escribe A, B o C mayusculas o minusculas</label>
+                <input type="text" required pattern="[a-cA-C]" placeholder="a, A, b, B, c, C" title="Por favor, revisa el formato e intentalo nuevamente" />
+            </div>
+            <div>
+                <h3>Cualquier cosa a excepcion de</h3>
+                <label>Escribe lo que sea menos A, B o C</label>
+                <input type="text" required pattern="[^a-cA-C]" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="Cualquier cosa" />
+            </div>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
