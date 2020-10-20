@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Validacion de Formularios | Ejercicio 01</title>
+        <link rel="stylesheet" type="text/css" href="../main.css" />
+    </head>
+    <body>
+        <h1>Pruebas de RegExp</h1>
+        <form>
+            <div>
+                <h3>String Exacta</h3>
+                <label>Escribe exactamente "Arturo"</label>
+                <input type="text" required pattern="Arturo" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="Arturo" />
+            </div>
+            <div>
+                <h3>String Exacta u Otra String Exacta</h3>
+                <label>Escribe exactamente "Arturo" o "Abreu"</label>
+                <input type="text" required pattern="Arturo|Abreu" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="Arturo o Abreu" />
+            </div>
+            <div>
+                <h3>Mayusculas y Minusculas</h3>
+                <label>Escribe A, B o C mayusculas o minusculas</label>
+                <input type="text" required pattern="[a-cA-C]" placeholder="a, A, b, B, c, C" title="Por favor, revisa el formato e intentalo nuevamente" />
+            </div>
+            <div>
+                <h3>Cualquier cosa menos algo</h3>
+                <label>Escribe lo que sea menos A, B o C</label>
+                <input type="text" required pattern="[^a-cA-C]*" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="Cualquier cosa" />
+            </div>
+            <div>
+                <h3>Un caracter cualquiera</h3>
+                <label>Escribe un solo caracter cualquiera</label>
+                <input type="text" required pattern="." title="Por favor, revisa el formato e intentalo nuevamente" placeholder="Cualquier caracter" maxlength="1" />
+            </div>
+            <div>
+                <h3>Una vocal entre dos caracteres cualquiera</h3>
+                <label>Escribe una sola vocal entre dos caracteres cualquiera</label>
+                <input type="text" required pattern=".[aeiouAEIOU]." title="Por favor, revisa el formato e intentalo nuevamente" placeholder="LOL" />
+            </div>
+            <div>
+                <h3>Combinacion de 4 letras, guiones o numeros</h3>
+                <label>Escribe lo que sea menos A, B o C</label>
+                <input type="text" required pattern="\w\w\w\w" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="1234, hola, h_la" />
+            </div>
+            <div>
+                <h3>Horas y minutos (Erroneo)</h3>
+                <label>Escribe dos numeros separados por dos puntos</label>
+                <input type="text" required pattern="\d\d:\d\d" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="97:67" />
+            </div>
+            <div>
+                <h3>Horas y minutos (Correcto)</h3>
+                <label>Escribe una hora cualquiera</label>
+                <input type="text" required pattern="(([01]\d)|(2[0-3])):[0-5]\d" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="12:15" />
+            </div>                                   
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
