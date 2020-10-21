@@ -40,7 +40,7 @@
 }
 
 #login > div {
-	width: 20%;
+	width: 40%;
 }
 
 .first-form {
@@ -54,12 +54,21 @@
 	font-weight: 500;
 }
 
-.first-form input:not([type="submit"]),
-.second-form input:not([type="submit"]) {
-	border: none;
-	border-bottom: 2px solid #75bbca;
-	margin-bottom: 20px;
-	padding: 5px;
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+	border: 0.125rem solid transparent;
+	background-color: #75bbca30;
+	padding: 0.4375rem;
+	margin-bottom: 1.25rem;
+	transition: 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus {
+	border: 0.125rem solid #75bbca;
+	border-radius: 0.3125rem;
 }
 
 .modal > div select,
@@ -81,10 +90,10 @@ label[for="dob"] {
 	color: #75bbca;
 }
 
-.first-form a,
-.second-form a {
+.first-form input[type="submit"],
+.second-form input[type="submit"] {
 	margin-top: 20px;
-	width: 20%;
+	width: 60%;
 	align-self: center;
 	border: none;
 	text-align: center;

@@ -35,7 +35,7 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./contact.html">
                                 Contactanos
                             </a>
                         </li>
@@ -127,14 +127,49 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
         <div id="login" class="modal">
             <a href="#"></a>
             <div>
-                <form class="first-form">
+                <form class="first-form" action="#">
                     <label for="username">Nombre de Usuario</label>
-                    <input type="text" name="username" id="username"/>
+                    <input 
+                    type="text" 
+                    name="username" 
+                    id="username"
+                    title="Es necesario el nombre de usuario"
+                    pattern="\w*"
+                    required />
                     <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password" />
-                    <a href="#">
-                        <span >Accede</button>
-                    </a>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    title="Es necesario la contrasena"
+                    pattern="\w*"
+                    required />
+                    <input type="submit" value="Accede" />
+                </form>
+            </div>
+        </div>
+        <div id="login" class="modal">
+            <a href="#"></a>
+            <div>
+                <form class="first-form" action="#">
+                    <label for="username">Nombre de Usuario</label>
+                    <input 
+                    type="text" 
+                    name="username" 
+                    id="username"
+                    title="Es necesario el nombre de usuario"
+                    pattern="\w*"
+                    autocomplete="off"
+                    required />
+                    <label for="password">Contraseña</label>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    title="Es necesario la contrasena"
+                    pattern="\w*"
+                    required />
+                    <input type="submit" value="Accede" />
                 </form>
             </div>
         </div>
@@ -146,12 +181,34 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                 <form class="second-form">  <!-- begins grid container -->
                     <div> <!-- begins grid area 'datos basicos' (it's also a flex container) -->
                         <div> <!-- begins left container -->
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" />
-                            <label for="username">Nombre de Usuario</label>
-                            <input type="text" name="username" id="username"/>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email"/>
+                            <label for="name">* Nombre</label>
+                            <input 
+                            type="text" 
+                            name="name" 
+                            id="name"
+                            pattern="([a-zA-Z]*)\s([a-zA-Z]*)"
+                            title="Por favor, confirma que no uses ningun caracter que no sea alfabetico"
+                            placeholder="Arturo Gerardo"
+                            required
+                            />
+                            <label for="username">* Nombre de Usuario</label>
+                            <input 
+                            type="text" 
+                            name="username" 
+                            id="username"
+                            pattern="\w*"
+                            title="Por favor, confirma que no hayan espacios y que los caracteres no tengan simbolos especiales"
+                            placeholder="arturo2abreu"
+                            required
+                            />
+                            <label for="email">* Email</label>
+                            <input 
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            placeholder="axa.gomez@gmail.com"
+                            required
+                            />
                             <label for="dob">Fecha de Nacimiento</label>
                             <div>
                                 <select id="dob">
@@ -217,31 +274,66 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                             </div>
                         </div> <!--  ends left container -->
                         <div>    <!-- begins right container -->
-                            <label for="lastname">Apellidos</label>
-                            <input type="text" id="lastname" name="lastname" />
-                            <label for="password">Contraseña</label>
-                            <input type="password" id="password" name="password" />
-                            <label for="dni">DNI</label>
-                            <input type="text" id="dni" name="dni" /> 
+                            <label for="lastname">* Apellidos</label>
+                            <input 
+                            type="text" 
+                            id="lastname" 
+                            name="lastname" 
+                            pattern="([a-zA-Z]*)\s([a-zA-Z]*)"
+                            title="Por favor, confirma que no uses ningun caracter que no sea alfabetico"
+                            placeholder="Abreu Gomez"
+                            required
+                            />
+                            <label for="password">* Contraseña (10 a 15 caracteres)</label>
+                            <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            maxlength="15"
+                            minlength="10"
+                            pattern="\w*"
+                            title="Por favor, asegurate de usar solo caracteres alfa numericos"
+                            placeholder="Pa55w.rd"
+                            required
+                             />
+                            <label for="dni">* DNI</label>
+                            <input 
+                            type="text" 
+                            id="dni" 
+                            name="dni"
+                            pattern="((^[XYZ]\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]$)|(\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]))"
+                            title="Por favor, introduce un DNI o CIF valido"
+                            placeholder="27349542N"
+                            require /> 
                         </div>    <!-- ends right container -->
                     </div> <!-- ends grid area 'datosBasicos' -->
                     <div> <!-- begins of grid area 'direccion' -->
                         <h3>Direccion</h3>
                         <label>Nombre via / calle</label>
-                        <input type="text"  name="street" />
+                        <input 
+                        type="text"  
+                        name="street"
+                        pattern="[\w#]*"
+                        placeholder="Calle Santa Rosalia 42" />
                         <label>Poblacion</label>
-                        <input type="text" name="town" />
+                        <input 
+                        type="text" 
+                        name="town"
+                        pattern="[\w#]*"
+                        placeholder="Barcelona" />
                         <label>Provincia</label>
-                        <input type="text" name="city" />
+                        <input 
+                        type="text" 
+                        name="city"
+                        pattern="[\w#]*"
+                        placeholder="Catalunya" />
                     </div> <!-- ends grid area 'direccion' -->
                     <div>  <!-- begins of grids submit area -->
-                        <a href="#">
-                            <span>Registrate</button>
-                        </a><br />
                         <input type="checkbox" value="true" name="accept-policy" />
                         <label>
                             Acepto formar parte de Arturismo y recibir notificaciones asi como ofertas. 
                         </label>
+                        <input type="submit" value="Accede" />
                     </div> <!-- end of grids submit area -->
                  </form> <!-- end of grid container -->
             </div>

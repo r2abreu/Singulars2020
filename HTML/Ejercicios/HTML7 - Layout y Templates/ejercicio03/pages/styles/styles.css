@@ -134,6 +134,7 @@ ul li a:hover {
 	width: 473px;
 	margin: auto;
 	padding: 0;
+	align-items: center;
 }
 
 .gallery-header {
