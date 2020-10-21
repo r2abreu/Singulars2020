@@ -39,16 +39,43 @@
                  <form>
                      <div class="flex-container">
                          <div class="left-form">
-                            <label>Nombres</label>
-                            <input type="text" name="name" />
-                            <label>Apellidos</label>
-                            <input type="text" name="lastname" /> 
+                            <label for="name">* Nombres</label>
+                            <input 
+                            type="text" 
+                            name="name" 
+                            id="name" 
+                            placeholder="Arturo Gerardo" 
+                            pattern="[a-zA-Z]*(\s[a-zA-Z]*)*" 
+                            title="Por favor, introduce los datos en el formato correcto" 
+                            maxlength="15" />
+                            <label for="lastname">* Apellidos</label>
+                            <input 
+                            type="text" 
+                            name="lastname"
+                            id="lastname"
+                            placeholder="Abreu Gomez"
+                            pattern="[a-zA-Z]*(\s[a-zA-Z]*)*"
+                            title="Por favor, introduce los datos en el formato correcto"
+                            maxlenght="15" /> 
                         </div>
                         <div class="right-form">
-                            <label>Correo Electronico</label>
-                            <input type="email" name="email" />
-                            <label>Telefono</label>
-                            <input type="text" name="phone" />
+                            <label for="email">* Correo Electronico</label>
+                            <input 
+                            type="email" 
+                            name="email"
+                            id="email"
+                            placeholder="axa.gomez@gmail.com"
+                            maxlength="15" />
+                            <label for="tel">* Telefono</label>
+                            <input 
+                            type="text" 
+                            name="phone"
+                            id="tel"
+                            placeholder="+34 622 05 62 60"
+                            pattern="^[+]\d{2}\s\d{3}(\s\d{2}){3}"
+                            title="Por favor, introduce los datos en el formato correcto"
+                            maxlength="15"
+                             />
                          </div>
                         </div>
                         <h2>¿En que te podemos ayudar?</h2>
