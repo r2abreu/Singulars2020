@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS04 | Ejemplo 01 y 02</title>
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+    </head>
+    <body>
+        <h1>Ejemplos Colores CSS</h1>
+        <div>
+            <h2>Ejemplo 01</h2>
+            <label for="color">Selecciona un Color</label>
+            <input type="color" name="color" value="#000000" required onchange="coloredSquare.innerHTML = this.value;" />
+            <div id="coloredSquare">#000000</div>
+        </div>
+        <div>
+            <h2>Ejemplo 02</h2>
+            <label for="second-color">Selecciona un Color</label>
+            <input type="color" name="color" value="#FFF" onchange="mostrar(this.value);" />
+            <div id="res"></div>
+            <div id="hex">#FFF</div>
+            <div id="rgb">rgb(255,255,255)</div>
+        </div>
+        <script>
+            function mostrar(color) {
+                res.style.backgroundColor = color; // Cambia el color del elemento #res
+                hex.innerHTML = color; // Cambia el texto dentro del elemento #hex
+
+                let r = color.substr(1,2);
+                let g = color.substr(3,2);
+                let b = color.substr(5,2);
+
+                rgb.innerHTML = `rgb(${parseInt(r,16)},${parseInt(g,16)},${parseInt(b,16)})`
+            }
+        </script>
+    </body>
+</html>
