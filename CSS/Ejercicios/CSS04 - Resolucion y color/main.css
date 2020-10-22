@@ -153,13 +153,15 @@ table td {
 }
 
 #res {
-	height: 40rem;
-	width: 40rem;
+	height: 10rem;
+	width: 10rem;
 	border: 1rem solid #000;
+	margin: 0 0 2rem 0;
 }
 
 input[type=color] {
 	padding: 0;
+	margin: 0.5rem 0;
 	display: inline-block;
 }
 
