@@ -17,7 +17,7 @@
 }
 
 .modal:target {
-	left: 0px;
+	left: 0;
 	opacity: 1;
 	transition: left 0s, opacity 0.5s;
 }
@@ -33,9 +33,9 @@
 	flex-direction: column;
 	top: -50vh;
 	width: 40%;
-	padding: 30px 60px;
+	padding: 1.875rem 3.750rem;
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 1.250rem;
 	transition: top 0.5s;
 }
 
@@ -73,15 +73,15 @@ form input[type="email"]:focus {
 
 .modal > div select,
 label[for="dob"] {
-	margin-bottom: 20px;
+	margin-bottom: 1.250rem;
 }
 
 .modal h2 {
-	font-size: 30px;
+	font-size: 1.875rem;
 }
 
 .modal h3 {
-	font-size: 20px;
+	font-size: 1.250rem;
 }
 
 .modal h2,
@@ -92,14 +92,14 @@ label[for="dob"] {
 
 .first-form input[type="submit"],
 .second-form input[type="submit"] {
-	margin-top: 20px;
+	margin-top: 1.250rem;
 	width: 60%;
 	align-self: center;
 	border: none;
 	text-align: center;
-	border-radius: 5px;
+	border-radius: 0.313rem;
 	text-decoration: none;
-	padding: 10px;
+	padding: 0.625rem;
 	color: #fff;
 	font-weight: 400;
 	background-color: #75bbca;

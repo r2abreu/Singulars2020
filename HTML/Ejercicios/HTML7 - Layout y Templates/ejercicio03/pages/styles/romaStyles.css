@@ -13,16 +13,16 @@ section h2 {
 }
 
 .gallery .second-figures {
-	height: 160px;
+	height: 10rem;
 }
 
 .gallery figure figcaption {
-	margin-bottom: 10px;
-	margin-left: 0px;
-	font-size: 14px;
+	margin-bottom: 0.625rem;
+	margin-left: 0;
+	font-size: 0.875rem;
 	width: 100%;
 }
 
 footer {
-	height: 300px;
+	height: 18.75rem;
 }
