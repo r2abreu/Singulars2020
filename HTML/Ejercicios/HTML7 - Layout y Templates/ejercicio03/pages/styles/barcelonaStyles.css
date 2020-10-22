@@ -1,16 +1,16 @@
 /* BARCELONA STYLES */
 
 .left-container {
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, rgba(0, 0, 0, 1) 100%),
+	background: linear-gradient(180deg, #ffffff00 10%, #000000 100%),
 		url("../../assets/barcelona/barcelona.jpg") center/cover;
 }
 
 article h1 {
-	color: rgb(255, 81, 0);
+	color: #ff5100;
 }
 
 section h2 {
-	color: rgb(255, 81, 0);
+	color: #ff5100;
 }
 
 .gallery .second-figures {

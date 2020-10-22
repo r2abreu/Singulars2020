@@ -164,5 +164,10 @@ input[type=color] {
 	margin: 0.5rem 0;
 	display: inline-block;
 }
+#res,
+#rgb,
+#hex {
+	background-color: ;
+}
 
 /*# sourceMappingURL=main.css.map */

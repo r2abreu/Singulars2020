@@ -1,8 +1,7 @@
 /* ROMA STYLES */
 
 .left-container {
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 1) 100%),
-		url("../../assets/roma/roma.jpg") center/cover;
+	background: linear-gradient(180deg, #ffffff00 40%, #000000 100%), url("../../assets/roma/roma.jpg") center/cover;
 }
 
 article h1 {
