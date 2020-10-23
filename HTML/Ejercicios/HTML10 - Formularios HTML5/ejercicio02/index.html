@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejercicio Formularios</title>
+		<link rel="stylesheet" type="text/css" href="./styles.css" />
+		<style>
+			html {
+				font-size: 16px;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				padding:0;
+				margin:0;
+			}
+
+			form {
+				width: 40%;
+				margin: 20px auto;
+				padding: 10px;
+				border: 2px solid grey;}
+				label {
+					display: inline-block;
+					margin-bottom: 15px;
+					margin-right: 20px;
+					min-width: 30%;}
+				input {
+					min-width: 60%;
+				}
+				input[type="color"] {
+					min-width: 20%;
+				}
+		</style>
+	</head>
+	<body>
+		<form>
+			<label for="search">Busqueda</label>
+			<input type="search" name="search" id="search" /><br />
+			<label for="url">Direccion URL</label>
+			<input type="url" id="url" name="url" /><br />
+			<label for="tel">Telefono</label>
+			<input type="tel" id="tel" name="tel" placeholder="Ingrese su telefono" required /><br />
+			<label for="web">Direccion WEB</label>
+			<input type="url" id="web" name="web" placeholder="Ingrese su sitio" disabled /><br />
+			<label id="email">Email</label>
+			<input type="email" name="email" id="email" placeholder="Ingrese su email" /><br />
+			<label id="datetime">Fecha y hora</label>
+			<input type="datetime" id="datetime" name="datetime" /><br />
+			<label for="date">Fecha</label>
+			<input type="date" id="date" name="date" /><br />
+			<label for="time">Hora</label>
+			<input type="time" id="time" name="time" /><br />
+			<label for="number">Numero</label>
+			<input type="number" name="number" id="number" /><br />
+			<label for="range">Rango</label>
+			<input type="range" id="range" name="range" /><br />
+			<label for="color">Color</label>
+			<input type="color" id="color" name="color" /><br />
+		</form>
+	</body>
+</html>

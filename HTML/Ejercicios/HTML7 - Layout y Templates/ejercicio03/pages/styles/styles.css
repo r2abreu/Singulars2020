@@ -2,6 +2,10 @@
 
 @import url('./modals.css');
 
+:root {
+	font-size: 16px;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -10,21 +14,22 @@ body {
 	padding: 0;
 	margin: 0;
 	display: grid;
-	grid-template-columns: 1fr 1fr minmax(34.875rem, 34.875rem);
+	grid-template-columns: 1fr 1fr minmax(35rem, 35rem);
 	grid-template-rows: repeat(4, 1fr);
 	grid-template-areas: 'left-container left-container right-container' 'left-container left-container right-container'
 		'left-container left-container right-container' 'left-container left-container footer';
 	font-family: 'Montserrat', sans-serif;
-	max-height: 64rem;
 }
 
 .left-container {
 	grid-area: left-container;
-	height: 64rem;
 	box-shadow: 0.313rem 0.250rem 2.250rem #000000;
 	border-radius: 0 2.5rem 2.5rem 0;
 	background: linear-gradient(180deg, #ffffff00 10%, #000000 100%),
 		url("../../assets/index/homeImage.jpg") center/cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .right-container {
@@ -48,15 +53,16 @@ body {
 
 article {
 	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 article h1 {
 	font-size: 6.25rem;
 	margin: 0 0 4%;
 	font-weight: 400;
-	position: absolute;
-	top: 21.56rem;
-	left: 4.813rem;
 	text-shadow: 0.438rem 0.313rem 0.313rem #000;
 }
 
@@ -65,9 +71,6 @@ article p {
 	margin: 0;
 	width: 45.938rem;
 	text-align: justify;
-	position: absolute;
-	top: 31.563rem;
-	left: 4.813rem;
 	text-shadow: 0.438rem 0.714rem 0.714rem #000;
 }
 
@@ -131,7 +134,7 @@ ul li a:hover {
 	display: flex;
 	justify-content: space-between;
 	list-style: none;
-	width: 473px;
+	width: 29.5rem;
 	margin: auto;
 	padding: 0;
 	align-items: center;
@@ -145,8 +148,8 @@ ul li a:hover {
 }
 
 .gallery-header li {
-	font-size: 2.857rem;
-	margin-bottom: 4.286rem;
+	font-size: 1.2rem;
+	margin-bottom: 0;
 }
 
 .gallery-header li:not(:first-child) {
@@ -191,7 +194,7 @@ section h2 {
 }
 
 .gallery-navigation {
-	margin-top: 11.429rem;
+	margin-top: 8.429rem;
 	margin-left: 2.857rem;
 }
 
@@ -199,7 +202,6 @@ footer {
 	display: flex;
 	flex-direction: column;
 	grid-area: footer;
-	height: 31.429rem;
 	text-align: center;
 	justify-content: flex-end;
 }
@@ -208,8 +210,13 @@ footer {
 	margin-left: 2.143rem;
 }
 
+.social p {
+	margin-bottom: 0;
+	padding-bottom: 2rem;
+}
+
 span img {
-	width: 4.286rem;
+	width: 30px;
 }
 
 @media (max-width: 1370px) {
