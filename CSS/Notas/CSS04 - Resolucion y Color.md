@@ -54,3 +54,16 @@ Se pueden usar diferentes notaciones para poder describir colores:
 * *RGBa*
 * *HEXa*
 * *HSLa*
+
+Con respecto a los detalles tecnicos, cada color se compone de 24 bits, esto nos otorga 2^24 combinaciones (16 millones de colores distintos). Se usan 8 bits para el color rojo, 8 para el verde y 8 para el azul, estas son aproximadamente 256 combinaciones por color (tambien 8 bits mas del canal alfa).
+
+## Colores Seguros 
+
+Por tema de compatibilidad, hay ciertas computadoras que no tienen la capacidad de renderizar esta cantidad total de combinaciones, por los cuales existen unos colores seguros que existen en caso de que queramos usar colores que son completamente compatibles. 
+
+Sin embargo estos colores estan perdiendo relevancia con el tiempo.
+
+## Nombres de Colores 
+
+Tambien cada color puede ser referido por su nombre como valor de alguna propiedad CSS, esto se le conoce como *color names* y son palabras reservadas del lenguaje. Hay un total de 147 colores que pueden ser especificados por su nombre, por ejemplo: *DarkCyan*.
+
