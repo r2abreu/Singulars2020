@@ -218,16 +218,3 @@ footer {
 span img {
 	width: 30px;
 }
-
-@media (max-width: 1370px) {
-	article h1 {
-		left: 4.813rem;
-		top: 28.571rem;
-	}
-
-	article p {
-		font-size: 4.286rem;
-		width: 85.714rem;
-		top: 50rem;
-	}
-}
