@@ -19,6 +19,16 @@ body {
 	grid-template-areas: 'left-container left-container right-container' 'left-container left-container right-container'
 		'left-container left-container right-container' 'left-container left-container footer';
 	font-family: 'Montserrat', sans-serif;
+	max-width: 85rem;
+	margin: auto;
+	position: relative;
+}
+
+@media screen and (max-width: 80rem) {
+	body {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .left-container {
@@ -32,6 +42,12 @@ body {
 	justify-content: center;
 }
 
+@media screen and (max-width: 80rem) {
+	.left-container:not(.logo) {
+		display: none;
+	}
+}
+
 .right-container {
 	grid-area: right-container;
 	margin-left: 5%;
@@ -41,10 +57,16 @@ body {
 .logo {
 	position: absolute;
 	top: 3.563rem;
-	left: 6rem;
+	left: 3rem;
 	width: 14rem;
 	height: 4.813rem;
 	margin: 0;
+}
+
+@media screen and (max-width: 40.625rem) {
+	.logo {
+		display: none;
+	}
 }
 
 .logo img {
@@ -97,6 +119,12 @@ header .hamburguer {
 	margin: 0;
 }
 
+@media screen and (max-width: 80rem) {
+	header .hamburguer {
+		visibility: hidden;
+	}
+}
+
 ul li a {
 	text-decoration: none;
 	color: #000;
@@ -128,6 +156,12 @@ ul li a:hover {
 	margin-top: 10px;
 	color: #000;
 	border: none;
+}
+
+@media screen and (max-width: 80rem) {
+	.search-bar input {
+		width: 100%;
+	}
 }
 
 .gallery {

@@ -30,9 +30,9 @@
 
 .modal > div {
 	position: relative;
-	flex-direction: column;
+	border: 2px solid red;
 	top: -50vh;
-	width: 40%;
+	width: 60%;
 	padding: 1.875rem 3.750rem;
 	background-color: #fff;
 	border-radius: 1.250rem;
@@ -111,10 +111,6 @@ label[for="dob"] {
 	top: 0;
 }
 
-#register > div {
-	width: 70%;
-}
-
 .second-form {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -154,6 +150,13 @@ label[for="dob"] {
 
 .second-form > div:last-of-type input {
 	margin: 0;
+}
+
+@media screen and (max-width: 65.50rem) {
+	.second-form {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 #register > div > h1 {
