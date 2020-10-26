@@ -1,0 +1,254 @@
+/* GLOBAL APP STYLES */
+
+@import url('./modals.css');
+
+:root {
+	font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr minmax(35rem, 35rem);
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-areas: 'left-container left-container right-container' 'left-container left-container right-container'
+		'left-container left-container right-container' 'left-container left-container footer';
+	font-family: 'Montserrat', sans-serif;
+	max-width: 85rem;
+	margin: auto;
+	position: relative;
+}
+
+@media screen and (max-width: 80rem) {
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.left-container {
+	grid-area: left-container;
+	box-shadow: 0.313rem 0.250rem 2.250rem #000000;
+	border-radius: 0 2.5rem 2.5rem 0;
+	background: linear-gradient(180deg, #ffffff00 10%, #000000 100%),
+		url("../../assets/index/homeImage.jpg") center/cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media screen and (max-width: 80rem) {
+	.left-container:not(.logo) {
+		display: none;
+	}
+}
+
+.right-container {
+	grid-area: right-container;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.logo {
+	position: absolute;
+	top: 3.563rem;
+	left: 3rem;
+	width: 14rem;
+	height: 4.813rem;
+	margin: 0;
+}
+
+@media screen and (max-width: 40.625rem) {
+	.logo {
+		display: none;
+	}
+}
+
+.logo img {
+	width: 100%;
+}
+
+article {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+article h1 {
+	font-size: 6.25rem;
+	margin: 0 0 4%;
+	font-weight: 400;
+	text-shadow: 0.438rem 0.313rem 0.313rem #000;
+}
+
+article p {
+	font-size: 2.18rem;
+	margin: 0;
+	width: 45.938rem;
+	text-align: justify;
+	text-shadow: 0.438rem 0.714rem 0.714rem #000;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 2.857rem;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+	padding: 0;
+}
+
+nav ul li {
+	margin-right: 2.5rem;
+}
+
+header .hamburguer {
+	width: 70px;
+	margin: 0;
+}
+
+@media screen and (max-width: 80rem) {
+	header .hamburguer {
+		visibility: hidden;
+	}
+}
+
+ul li a {
+	text-decoration: none;
+	color: #000;
+	transition: transform 1s;
+}
+
+ul li a:hover {
+	text-decoration: underline;
+	text-decoration-color: #75bbca;
+	text-decoration-thickness: 2px;
+}
+
+.hamburguer img {
+	width: 100%;
+}
+
+.search-bar {
+	display: flex;
+	margin-top: 2.5rem;
+	margin-bottom: 6.25rem;
+	flex-direction: column;
+}
+
+.search-bar input {
+	border-radius: 10px;
+	padding: 8px;
+	width: 90%;
+	background-color: #e2e2e2;
+	margin-top: 10px;
+	color: #000;
+	border: none;
+}
+
+@media screen and (max-width: 80rem) {
+	.search-bar input {
+		width: 100%;
+	}
+}
+
+.gallery {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	width: 29.5rem;
+	margin: auto;
+	padding: 0;
+	align-items: center;
+}
+
+.gallery-header {
+	display: flex;
+	list-style: none;
+	justify-content: flex-start;
+	padding: 0;
+}
+
+.gallery-header li {
+	font-size: 1.2rem;
+	margin-bottom: 0;
+}
+
+.gallery-header li:not(:first-child) {
+	margin-left: 2.857rem;
+}
+
+section h2 {
+	color: #75bbca;
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+
+.gallery li {
+	padding: 0;
+	margin: 0;
+	width: 141px;
+}
+
+.gallery figure {
+	width: 141px;
+	height: 228px;
+	margin: 0;
+	transition: transform 1s;
+}
+
+.gallery figure:hover {
+	transform: scale(1.2);
+}
+
+.gallery figure img:not(.figcaption-stars) {
+	border-radius: 2.857rem;
+	box-shadow: 0px 5px 10px 2px #000000;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.gallery figure figcaption {
+	margin-top: 1.429rem;
+	margin-left: 0.714rem;
+}
+
+.gallery-navigation {
+	margin-top: 8.429rem;
+	margin-left: 2.857rem;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	grid-area: footer;
+	text-align: center;
+	justify-content: flex-end;
+}
+
+.social span:not(:first-child) {
+	margin-left: 2.143rem;
+}
+
+.social p {
+	margin-bottom: 0;
+	padding-bottom: 2rem;
+}
+
+span img {
+	width: 30px;
+}
