@@ -35,6 +35,8 @@ Los valores que puede adquirir son los siguientes:
 | `<percentage>` | Alinea la *baseline* del elemento a un porcentaje proporcionado a partir de la *baseline* de su padre, puede usar un valor negativo. |
 | `top` | Alinea el tope de un elemento y sus descendientes con el tope de la linea entera. |
 | `bottom` | Alinea el tope de un elemento y sus descendientes con la parte inferior de la linea entera. |
+| `white-space` | Especifica como se manejan los espacios en blanco en un elemento. |
+| `text-overflow` | Indica que debe pasar cuando el texto ocupa mas del tamano del elemento contenedor. |
 
 ## `text-shadow`
 
@@ -53,3 +55,30 @@ Sintaxis:
 | `none` |  Initial value. |
 | `initial` | Establece el valor de la propiedad a su valor inicial. |
 | `inherit` | Hereda el valor de la propiedad del elemento padre. |
+
+## `white-space`
+
+Esta propiedad indica como el *whitespace* dentro de un elemento debe ser tratado. 
+
+| Valor | Descripcion |
+|-----------|-------------|
+| `normal` | Las secuencias de espacios en blanco son colapsadas. Los saltos de linea son tratados como cualquier otro tipo de *whitespace*. Las lineas son rotas como sea necesario para llenar las lineas de las cajas. |
+| `nowrap` | Las secuencias de espacios en blanco son colapsados como en `normal`. El texto solo cambiara de linea con la etiqueta `<br />` |
+| `pre` | Son preservadas las secuencias de espacios en blanco. Las lineas solo solo rotas al usar `<br />` o en la fuente. | 
+| `pre-wrap` | Son preservadas las secuencias de espacios en blanco. | 
+| `pre-line` | Las secuencias de espacio en blanco son colapsadas. Las lineas se rompen en nuevos caracteres en `<br />` y como sea necesario para llenar las cajas.| 
+| `break-spaces` | Revisar sintaxis y descripcion. | 
+
+## `text-overflow`
+
+| Valor | Descripcion |
+|-----------|-------------|
+| `clip` | Valor por defecto, recorta el texto. |
+| `ellipsis` | Muestra `...` para sustituir el texto sobrante. |
+| `texto` | Escribe la cadena de texto que especifiquemos en el lugar del texto sobrante. |
+| `initial` | Establece el valor de la propiedad a su valor por defecto. |
+| `inherit` | Hereda el valor de la propiedad del elemento padre. |
+
+##  `word-wrap`
+
+## `word-break`
