@@ -153,8 +153,61 @@ table td {
 
 /* LOCAL RULES */
 
+body {
+	padding-top: 2rem;
+}
+
+h1 {
+	text-shadow: 0 0 1rem #111111;
+}
+
+main > div {
+	margin-top: 2rem;
+}
+
 figure {
-	width: 2rem;
+	width: 15rem;
+	background: #c4c4c4;
+	border-radius: 0.5rem;
+	padding: 0.4rem;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+div > div {
+	display: inline-block;
+	width: 40%;
+}
+
+p {
+	display: inline-block;
+	text-align: justify;
+	text-indent: 7%;
+	vertical-align: middle;
+}
+
+p::first-letter {
+	font-size: 2em;
+	font-weight: bold;
+	color: #f00;
+}
+
+div + figure {
+	vertical-align: bottom;
+}
+
+figure img {
+	width: 100%;
+}
+
+header,
+main {
+	text-align: center;
+}
+
+footer {
+	margin-top: 5rem;
+	text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
