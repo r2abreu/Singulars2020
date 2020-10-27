@@ -1,0 +1,136 @@
+body {
+	grid-template-columns: 0.8fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-areas: 'left-container right-container' 'left-container right-container'
+		'left-container right-container';
+}
+
+.left-container {
+	background: url(../../assets/vectors/leftContainer.png);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+aside {
+	align-self: center;
+	margin-top: 20rem;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.25rem;
+	margin-bottom: 6.25rem;
+}
+article span {
+	margin: 1.25rem 0;
+	font-size: 20px;
+}
+
+article h1 {
+	font-size: 1.875rem;
+	margin: 1.25rem auto;
+	position: static;
+	text-shadow: none;
+	color: #ff3838B8;
+}
+
+article i {
+	margin-right: 0.625rem;
+	color: #ff3838B8;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 6.25rem;
+}
+form .flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+form .flex-container .left-form,
+form .flex-container .right-form {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+}
+
+.left-form label,
+.right-form label {
+	margin-bottom: 0.9375rem;
+}
+
+.left-form label:hover + input,
+.right-form label:hover + input {
+	border-color: #75bbca;
+}
+
+form input[type="text"],
+form input[type="email"],
+textarea {
+	border: 0.125rem solid transparent;
+	background-color: #75bbca30;
+	padding: 0.4375rem;
+	margin-bottom: 1.25rem;
+	transition: 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+textarea:focus {
+	border: 0.125rem solid #75bbca;
+	border-radius: 0.3125rem;
+}
+
+form input[type="text"]:invalid,
+form input[type="email"]:invalid {
+	background-color: #ff000020;
+}
+
+form h2 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin-top: 1.875rem;
+	margin-bottom: 0;
+}
+
+form .radio-container {
+	margin: 3.125rem auto;
+}
+form .radio-container input:not(:first-child) {
+	margin-left: 3.125rem;
+}
+
+form label:last-of-type {
+	margin-bottom: 1.875rem;
+}
+
+form textarea {
+	border: 0.125rem solid #c4c4c4;
+	border-radius: 10px;
+	margin-top: 1.25rem;
+	padding: 1.25rem;
+}
+
+form button {
+	width: 20%;
+	padding: 0.9375rem;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 500;
+	align-self: flex-end;
+	margin-top: 1.875rem;
+	border: 0;
+	background-color: #75bbca;
+	cursor: pointer;
+}
+
+footer {
+	align-self: center;
+}
+
+/*# sourceMappingURL=registerStyles.css.map */
