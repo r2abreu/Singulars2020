@@ -1,0 +1,342 @@
+<!-- 
+    
+    NOTA IMPORTANTE: 
+
+Esta website fue realizada con el objetivo de mostrar los conceptos de Layout estudiados en clase, es por esto que esta web NO ES RESPONSIVE. Solo soporta tamanos de pantalla con un ancho superior a 1354 con dos quiebres a partir de este punto. Para ejecutarla en su tamano optimo, seleccionar width: 1440px y height: 1024px al inspeccionar la pagina.
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Arturismo | Barcelona</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,900;1,700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="../pages/styles/styles.css" type="text/css" />
+        <link rel="stylesheet" href="../pages/styles/barcelonaStyles.css" type="text/css" />
+    </head>
+    <body>
+        <div class="right-container">
+            <header>
+                <nav>
+                    <figure class="hamburguer">
+                        <img src="../assets/vectors/hamburguer.svg" title="" alt="hamburguer" />
+                    </figure>
+                    <ul>
+                        <li>
+                            <a href="#login">
+                                Accede
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#register">
+                                Registrate
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">
+                                Contactanos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <label for="query">Busca un destino...</label>
+                    <input type="text" name="query" placeholder="Kerala" />
+                </div>
+            </header>
+            <main>
+                <section>
+                    <h2>Visita</h2>
+                    <ul class="gallery">
+                        <li>
+                            <figure>
+                                <figcaption>
+                                    La Sagrada Familia
+                                    <img class="figcaption-stars" src="../assets/vectors/fullStar.png" title="" alt="star rating" />
+                                </figcaption>
+                                <a href="#" >
+                                    <img src="../assets/barcelona/sagradaFamilia.jpg" alt="sagrada familia" title="Visita La Sagrada Familia" />
+                                </a>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="second-figures">
+                                <figcaption>
+                                    Camp Nou
+                                    <img class="figcaption-stars" src="../assets/vectors/star.png" title="" alt="star rating" />
+                                </figcaption>
+                                <a href="#">
+                                    <img src="../assets/barcelona/campNou.jpg" alt="camp nou" title="Disfruta del Camp Nou" />
+                                </a>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="second-figures">
+                                <figcaption>
+                                    La Barceloneta
+                                    <img class="figcaption-stars" src="../assets/vectors/star.png" title="" alt="star rating" />  
+                                </figcaption>
+                                <a href="#">
+                                    <img src="../assets/barcelona/barceloneta.jpg" alt="barceloneta" title="Disfruta de la Barceloneta" />
+                                </a>
+                            </figure>     
+                        </li>
+                    </ul>
+                    <figure class="gallery-navigation">
+                        <img src="../assets/vectors/arrows.svg" alt="navigation arrows" title="" />
+                    </figure>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <div class="social">
+                <span>
+                    <img src="../assets/vectors/facebook.svg" alt="facebook" title="" />
+                </span>
+                <span>
+                    <img src="../assets/vectors/instagram.svg" alt="instagram" title="" />
+                </span>
+                <span>
+                    <img src="../assets/vectors/twitter.svg" alt="twitter" title="" />
+                </span>
+                <span>
+                    <img src="../assets/vectors/youtube.svg" alt="" title="" />
+                </span>
+                <p>
+                    Derechos Reservados  © Arturismo 2020
+                </p>
+            </div>
+        </footer>
+        <div class="left-container">
+            <aside>
+                <figure class="logo">
+                    <a href="./index.html" >
+                        <img src="../assets/index/logo.png" alt="home image" />
+                    </a>
+                </figure>
+                <article>
+                    <h1>Barcelona</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin leo erat, facilisis nec nisl at, imperdiet gravida magna. Integer blandit tristique sapien, eu congue purus vehicula in. Aenean tristique tincidunt ultrices. Donec orci sem, fermentum quis luctus sed, rutrum ut velit. Nullam enim nunc, pretium a dignissim vitae, porttitor vitae mauris. Mauris erat velit, imperdiet pulvinar sem at, interdum eleifend erat. 
+                    </p>
+                </article>
+            </aside>
+        </div>    
+        <div id="login" class="modal">
+            <a href="#"></a>
+            <div>
+                <form class="first-form" action="#">
+                    <label for="username">Nombre de Usuario</label>
+                    <input 
+                    type="text" 
+                    name="username" 
+                    id="username"
+                    title="Es necesario el nombre de usuario"
+                    pattern="\w*"
+                    required />
+                    <label for="password">Contraseña</label>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    title="Es necesario la contrasena"
+                    pattern="\w*"
+                    required />
+                    <input type="submit" value="Accede" />
+                </form>
+            </div>
+        </div>
+        <div id="login" class="modal">
+            <a href="#"></a>
+            <div>
+                <form class="first-form" action="#">
+                    <label for="username">Nombre de Usuario</label>
+                    <input 
+                    type="text" 
+                    name="username" 
+                    id="username"
+                    title="Es necesario el nombre de usuario"
+                    pattern="\w*"
+                    autocomplete="off"
+                    required />
+                    <label for="password">Contraseña</label>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    title="Es necesario la contrasena"
+                    pattern="\w*"
+                    required />
+                    <input type="submit" value="Accede" />
+                </form>
+            </div>
+        </div>
+        <div id="register" class="modal">
+            <a href="#"></a>
+            <div>
+                <h2>Formulario de Contacto</h2>
+                <h3>Datos Basicos</h3>
+                <form class="second-form">  <!-- begins grid container -->
+                    <div> <!-- begins grid area 'datos basicos' (it's also a flex container) -->
+                        <div> <!-- begins left container -->
+                            <label for="name">* Nombre</label>
+                            <input 
+                            type="text" 
+                            name="name" 
+                            id="name"
+                            pattern="([a-zA-Z]*)\s([a-zA-Z]*)"
+                            title="Por favor, confirma que no uses ningun caracter que no sea alfabetico"
+                            placeholder="Arturo Gerardo"
+                            required
+                            />
+                            <label for="username">* Nombre de Usuario</label>
+                            <input 
+                            type="text" 
+                            name="username" 
+                            id="username"
+                            pattern="\w*"
+                            title="Por favor, confirma que no hayan espacios y que los caracteres no tengan simbolos especiales"
+                            placeholder="arturo2abreu"
+                            required
+                            />
+                            <label for="email">* Email</label>
+                            <input 
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            placeholder="axa.gomez@gmail.com"
+                            required
+                            />
+                            <label for="dob">Fecha de Nacimiento</label>
+                            <div>
+                                <select id="dob">
+                                    <option value="">Dia:</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select>
+                                    <option value="">Mes:</option>
+                                    <option value="Enero">Enero</option>
+                                    <option value="Febrero">Febrero</option>
+                                    <option value="Marzo">Marzo</option>
+                                    <option value="Abril">Abril</option>
+                                    <option value="Mayo">Mayo</option>
+                                    <option value="Junio">Junio</option>
+                                    <option value="Julio">Julio</option>
+                                    <option value="Agosto">Agosto</option>
+                                    <option value="Septiembre">Septiembre</option>
+                                    <option value="Octubre">Octubre</option>
+                                    <option value="Noviembre">Noviembre</option>
+                                    <option value="Diciembre">Diciembre</option>
+                                </select>
+                                <select>
+                                    <option value="">Año:</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1999">1999</option>
+                                </select>
+                            </div>
+                        </div> <!--  ends left container -->
+                        <div>    <!-- begins right container -->
+                            <label for="lastname">* Apellidos</label>
+                            <input 
+                            type="text" 
+                            id="lastname" 
+                            name="lastname" 
+                            pattern="([a-zA-Z]*)\s([a-zA-Z]*)"
+                            title="Por favor, confirma que no uses ningun caracter que no sea alfabetico"
+                            placeholder="Abreu Gomez"
+                            required
+                            />
+                            <label for="password">* Contraseña (10 a 15 caracteres)</label>
+                            <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            maxlength="15"
+                            minlength="10"
+                            pattern="\w*"
+                            title="Por favor, asegurate de usar solo caracteres alfa numericos"
+                            placeholder="Pa55w.rd"
+                            required
+                             />
+                            <label for="dni">* DNI</label>
+                            <input 
+                            type="text" 
+                            id="dni" 
+                            name="dni"
+                            pattern="((^[XYZ]\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]$)|(\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]))"
+                            title="Por favor, introduce un DNI o CIF valido"
+                            placeholder="27349542N"
+                            require /> 
+                        </div>    <!-- ends right container -->
+                    </div> <!-- ends grid area 'datosBasicos' -->
+                    <div> <!-- begins of grid area 'direccion' -->
+                        <h3>Direccion</h3>
+                        <label>Nombre via / calle</label>
+                        <input 
+                        type="text"  
+                        name="street"
+                        pattern="[\w#]*"
+                        placeholder="Calle Santa Rosalia 42" />
+                        <label>Poblacion</label>
+                        <input 
+                        type="text" 
+                        name="town"
+                        pattern="[\w#]*"
+                        placeholder="Barcelona" />
+                        <label>Provincia</label>
+                        <input 
+                        type="text" 
+                        name="city"
+                        pattern="[\w#]*"
+                        placeholder="Catalunya" />
+                    </div> <!-- ends grid area 'direccion' -->
+                    <div>  <!-- begins of grids submit area -->
+                        <input type="checkbox" value="true" name="accept-policy" />
+                        <label>
+                            Acepto formar parte de Arturismo y recibir notificaciones asi como ofertas. 
+                        </label>
+                        <input type="submit" value="Accede" />
+                    </div> <!-- end of grids submit area -->
+                 </form> <!-- end of grid container -->
+            </div>
+        </div> 
+    </body>
+</html>

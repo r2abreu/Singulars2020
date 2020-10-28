@@ -1,0 +1,164 @@
+.modal,
+.modal > a {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.modal {
+	left: -100vw;
+	opacity: 0;
+	transition: left 0s 0.5s, opacity 0.5s;
+	background-color: #00000080;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal:target {
+	left: 0;
+	opacity: 1;
+	transition: left 0s, opacity 0.5s;
+}
+
+.modal > a {
+	position: absolute;
+	left: 0;
+	cursor: default;
+}
+
+.modal > div {
+	position: relative;
+	border: 2px solid red;
+	top: -50vh;
+	width: 60%;
+	padding: 1.875rem 3.750rem;
+	background-color: #fff;
+	border-radius: 1.250rem;
+	transition: top 0.5s;
+}
+
+#login > div {
+	width: 40%;
+}
+
+.first-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.first-form label {
+	align-self: flex-start;
+	color: #75bbca;
+	font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+	border: 0.125rem solid transparent;
+	background-color: #75bbca30;
+	padding: 0.4375rem;
+	margin-bottom: 1.25rem;
+	transition: 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus {
+	border: 0.125rem solid #75bbca;
+	border-radius: 0.3125rem;
+}
+
+.modal > div select,
+label[for="dob"] {
+	margin-bottom: 1.250rem;
+}
+
+.modal h2 {
+	font-size: 1.875rem;
+}
+
+.modal h3 {
+	font-size: 1.250rem;
+}
+
+.modal h2,
+.modal h3 {
+	font-weight: 500;
+	color: #75bbca;
+}
+
+.first-form input[type="submit"],
+.second-form input[type="submit"] {
+	margin-top: 1.250rem;
+	width: 60%;
+	align-self: center;
+	border: none;
+	text-align: center;
+	border-radius: 0.313rem;
+	text-decoration: none;
+	padding: 0.625rem;
+	color: #fff;
+	font-weight: 400;
+	background-color: #75bbca;
+	cursor: pointer;
+	align-self: center;
+}
+
+.modal:target > div {
+	top: 0;
+}
+
+.second-form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 'datosBasicos datosBasicos' 'direccion submit';
+}
+
+.second-form > div:nth-child(1) {
+	grid-area: datosBasicos;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.second-form > div > div {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+.second-form > div:nth-child(2) {
+	grid-area: direccion;
+	display: flex;
+	flex-direction: column;
+	margin-right: 20%;
+}
+
+.second-form > div:last-of-type {
+	grid-area: submit;
+	text-align: left;
+	margin-left: 20%;
+}
+
+.second-form > div:last-of-type a {
+	display: block;
+	margin: auto;
+}
+
+.second-form > div:last-of-type input {
+	margin: 0;
+}
+
+@media screen and (max-width: 65.50rem) {
+	.second-form {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+#register > div > h1 {
+	margin: 0;
+}

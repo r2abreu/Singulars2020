@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../pages/styles/styles.css" type="text/css"/>
+        <link rel="stylesheet" href="../pages/styles/registerStyles.css" >
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,900;1,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <title>Arturismo | Contacto</title>
+    </head>
+    <body>
+        <div class="right-container">
+            <header>
+                <nav>
+                    <figure class="hamburguer">
+                        <img src="../assets/vectors/hamburguer.svg" title="" alt="hamburguer" />
+                    </figure>
+                    <ul>
+                        <li>
+                            <a href="#login">
+                                Accede
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#register">
+                                Registrate
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">
+                                Contactanos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                 <form>
+                     <div class="flex-container">
+                         <div class="left-form">
+                            <label for="name">* Nombres</label>
+                            <input 
+                            type="text" 
+                            name="name" 
+                            id="name" 
+                            placeholder="Arturo Gerardo" 
+                            pattern="[a-zA-Z]*(\s[a-zA-Z]*)*" 
+                            title="Por favor, introduce los datos en el formato correcto" 
+                            maxlength="15" />
+                            <label for="lastname">* Apellidos</label>
+                            <input 
+                            type="text" 
+                            name="lastname"
+                            id="lastname"
+                            placeholder="Abreu Gomez"
+                            pattern="[a-zA-Z]*(\s[a-zA-Z]*)*"
+                            title="Por favor, introduce los datos en el formato correcto"
+                            maxlenght="15" /> 
+                        </div>
+                        <div class="right-form">
+                            <label for="email">* Correo Electronico</label>
+                            <input 
+                            type="email" 
+                            name="email"
+                            id="email"
+                            placeholder="axa.gomez@gmail.com"
+                            maxlength="15" />
+                            <label for="tel">* Telefono</label>
+                            <input 
+                            type="text" 
+                            name="phone"
+                            id="tel"
+                            placeholder="+34 622 05 62 60"
+                            pattern="^[+]\d{2}\s\d{3}(\s\d{2}){3}"
+                            title="Por favor, introduce los datos en el formato correcto"
+                            maxlength="15"
+                             />
+                         </div>
+                        </div>
+                        <h2>¿En que te podemos ayudar?</h2>
+                    <div class="radio-container">
+                         <input type="radio" id="reclamos" name="via" />
+                        <label for="reclamos">Reclamos</label>
+                        <input type="radio" id="sugerencias" name="via" />
+                        <label for="sugerencias">Sugerencias</label>
+                        <input type="radio" id="consultas" name="via" />
+                        <label for="consultas">Consultas</label>
+                        <input type="radio" id="otros" name="via" />
+                        <label for="otros">Otros</label>
+                     </div>
+                     <label>Mensaje</label>
+                     <textarea placeholder="Escribe tu mensaje..." rows="15"></textarea>
+                     <button type="submit">Enviar Mensaje</button>
+                 </form>
+            </main>
+        </div> <!-- right container ends-->
+        <div class="left-container">
+            <aside>
+                <figure class="logo">
+                    <a href="./index.html" >
+                        <img src="../assets/index/logo.png" alt="home image" />
+                    </a>
+                </figure>
+                <article>
+                    <h1>Informacion de Contacto</h1>
+                    <span><i class="fas fa-phone"></i>+34625058795</span>
+                    <span><i class="far fa-envelope"></i>hello@arturismo.com</span>
+                    <span><i class="fas fa-map-marker"></i>Carrer de Almogavers, 123</span>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776.200400083123!2d2.1891678157271945!3d41.397935603303566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2ce5e151b3383c3c!2sNETMIND%2C%20SL!5e1!3m2!1sen!2ses!4v1603901230742!5m2!1sen!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </article>
+            </aside>
+            <footer>
+                <div class="social">
+                    <span>
+                        <img src="../assets/vectors/facebook.svg" alt="facebook" title="" />
+                    </span>
+                    <span>
+                        <img src="../assets/vectors/instagram.svg" alt="instagram" title="" />
+                    </span>
+                    <span>
+                        <img src="../assets/vectors/twitter.svg" alt="twitter" title="" />
+                    </span>
+                    <span>
+                        <img src="../assets/vectors/youtube.svg" alt="" title="" />
+                    </span>
+                    <p>
+                        Derechos Reservados  © Arturismo 2020
+                    </p>
+                </div>
+            </footer>
+        </div> <!--left container ends-->
+    </body>
+</html>
+
