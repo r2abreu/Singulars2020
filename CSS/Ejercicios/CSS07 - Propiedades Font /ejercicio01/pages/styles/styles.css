@@ -113,6 +113,7 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 2.857rem;
+	font: normal small-caps lighter 1rem 'Roboto', sans-serif;
 }
 
 nav ul {
@@ -237,6 +238,7 @@ section h2 {
 .gallery figure figcaption {
 	margin-top: 1.429rem;
 	margin-left: 0.714rem;
+	font: caption;
 }
 
 .gallery-navigation {
