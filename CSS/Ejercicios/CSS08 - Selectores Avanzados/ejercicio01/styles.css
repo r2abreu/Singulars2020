@@ -10,17 +10,21 @@
 }
 
 body {
-	width: 70%;
-	margin: auto;
+	width: 40%;
+	margin: 2rem auto;
 	padding: 2rem 0;
 	font: normal small-caps normal 1rem 'Arial', sans-serif;
 	text-align: center;
-	transition: 0.5s;
+}
+
+article {
+	border: 0.2rem solid #2e83a7;
+	border-radius: 0.5rem;
 }
 
 table {
 	border-collapse: collapse;
-	margin: auto;
+	margin: 2rem auto;
 	display: relative;
 	margin-bottom: 2rem;
 }
@@ -33,20 +37,70 @@ td {
 	padding: 2rem;
 }
 
-td:hover {
+td:first-of-type:hover {
 	background-color: #2e83a7;
-	transform: scale(1.1);
-	color: #fff;
-	border-radius: 0.5rem;
+	transform: rotate(180deg) scale(1.1);
 }
 
-body:hover::after {
-	content: "Pronto podras jugar con JavaScript :)";
+td:nth-of-type(even):hover {
+	transform: scale(1.1);
+	background-color: #2e9fa7;
 }
+td:last-of-type:hover {
+	transform: rotate(-180deg) scale(1.1);
+	background-color: #a72e71;
+}
+
+td:first-of-type:hover,
+td:last-of-type:hover,
+td:nth-of-type(even):hover {
+	color: #fff;
+	border-radius: 0.5rem;
+	transition: 0.7s;
+}
+
+article:hover::after {
+	content: "Pronto podras jugar con JavaScript";
+	width: 70%;
+	border-radius: 0.5rem;
+	color: #fff;
+	padding: 1rem;
+	background-color: #a72e56;
+}
+
+article:hover::before {
+	content: "Lo siento, aun no podras jugar";
+	width: 70%;
+	border-radius: 0.5rem;
+	color: #fff;
+	padding: 1rem;
+	background-color: #a72e56;
+}
+
+p {
+	text-align: initial;
+}
+
+p::selection {
+	text-align: initial;
+	background-color: #a72e71;
+	color: white;
+}
+
+p:only-of-type::first-line {
+	text-decoration: underline;
+}
+
+p:only-of-type::first-letter {
+	font-size: 2rem;
+	color: #2e83a7;
+}
+
+/* Define cuadricula con bordes */
 
 tr:nth-of-type(even) {
 	border-top: 0.1rem solid #2e83a7;
-	border-bottom: 0.1rem solid #2e83a7;
+	border-bottom: 0.1rem solid #0a506e;
 }
 
 col[class="middle"] {
