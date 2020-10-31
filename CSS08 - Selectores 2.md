@@ -28,6 +28,6 @@ Ya hemos visto los selectores basicos que podemos usar en CSS, sin embargo exist
 | Selector | Ejemplo | Descripcion del Ejemplo |
 |----|----|------|
 | `::first-letter` | `p::first-letter` | Aplica estipos a la primera letra del primer parrafo de un **elemento tipo bloque**, pero solo cuando no estan precedidas de algun contenido como imagenes o tablas.  |
-| `::` | `::` | |
-| `::` | `::` | |
-| `::` | `::` | |
+| `::first-line` | `p::first-line` |  Aplica estilos a la primera linea de un **elemento tipo bloque**. Es importante notar que el largo de la primera linea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamano del texto. |
+| `::selection` | `p::selection` | Aplica estilos a aquella parte del documento de nuestro elemento el cual haya sido resaltada por el usuario (por ejemplo, usando el raton para arrastrarlo a lo largo del texto). |
+| `::before` | `p::before` | Crea un pseudo-elemento el cual es el **first-child** de el elemento sleccionado. Se usa a menudo para agregar contenido cosmetico a un elemento con la propiedad `content`. Este elemento sera *inline* de forma predeterminada. |
