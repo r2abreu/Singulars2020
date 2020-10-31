@@ -71,7 +71,7 @@ El problema principal es que existen diferentes formatos de fuentes y generan pr
 | Propiedad | Valor | Descripcion |
 |-----------|-------|-------------|
 | `font-family` | `name` | Es requerido y especifica un nombre que sea usado como el nombre de la familia para luego ser especificado por cada elemento en el cual se desee usar. |
-| `src` | `URL` | Especifica el origen del recurso, en este caso, la fuente en cuestion. |
+| `src` | `URL` | Especifica el origen del recurso, en este caso, la fuente en cuestion. El recurso puede ser local o remoto y adicionalmente, se puede especificar el formato de la fuente: `format("woff")` |
 | `font-display` | `auto, block, swap, fallback, optional` | Determina como se debe mostrar un *font-face* basado en si la fuente ha sido descargada y esta lista para ser usada. |
 | `font-stretch` | `normal, condensed, ultra-condensed, extra-condensed, semi-condensed, expanded, semi-expanded, extra-expanded, ultra-expanded`. | Define el ancho de la fuente, por defecto es `normal`. |
 | `font-style` | `normal, italic, oblique, <deg>` | Especifica el estilo de la fuente. |
