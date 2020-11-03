@@ -86,3 +86,12 @@ nav form input[type="submit"] {
 nav form [type="submit"]:hover {
 	box-shadow: none;
 }
+
+main {
+	background: url(./connected.png) no-repeat 0px 0px, linear-gradient(to top, #d4dae8, #e8eeee);
+	height: 100vh;
+}
+
+main p {
+	margin: 0;
+}
