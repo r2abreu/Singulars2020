@@ -1,0 +1,68 @@
+html {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+tbody th,
+thead th:not(.empty),
+td {
+	border: 0.5px solid #99995a;
+}
+
+td {
+	text-align: center;
+	padding: 1em;
+	background-color: #eeffed;
+	border: 1px solid #9a9c538c;
+}
+
+tr:nth-of-type(5) td {
+	padding: 2rem;
+	background: url(https://support.ezlynx.com/support/wp-content/uploads/2018/10/02182034/checkmark.png) no-repeat
+			center / 2rem,
+		#eeffed;
+}
+
+th {
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.61);
+}
+
+thead th:not(:first-of-type) {
+	background: linear-gradient(to top, #a6fe02, #55ff54);
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	padding: 1em 2.5em;
+	color: #fff;
+}
+
+tbody th {
+	padding: 0 1em;
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+	color: #fff;
+	background: linear-gradient(to right, #a6fe02, #55ff54);
+}
+
+tfoot th,
+tfoot td {
+	background-color: transparent;
+	background: none;
+	border: none;
+}
+
+tfoot th {
+	text-shadow: none;
+}
+
+tfoot td {
+	font-size: 1.5rem;
+	text-shadow: 1px 1px 1px #000;
+	color: #329800;
+	font-weight: 700;
+}
