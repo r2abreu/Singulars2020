@@ -134,30 +134,6 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                     id="username"
                     title="Es necesario el nombre de usuario"
                     pattern="\w*"
-                    required />
-                    <label for="password">Contraseña</label>
-                    <input 
-                    type="password" 
-                    name="password" 
-                    id="password"
-                    title="Es necesario la contrasena"
-                    pattern="\w*"
-                    required />
-                    <input type="submit" value="Accede" />
-                </form>
-            </div>
-        </div>
-        <div id="login" class="modal">
-            <a href="#"></a>
-            <div>
-                <form class="first-form" action="#">
-                    <label for="username">Nombre de Usuario</label>
-                    <input 
-                    type="text" 
-                    name="username" 
-                    id="username"
-                    title="Es necesario el nombre de usuario"
-                    pattern="\w*"
                     autocomplete="off"
                     required />
                     <label for="password">Contraseña</label>
@@ -190,11 +166,11 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                             placeholder="Arturo Gerardo"
                             required
                             />
-                            <label for="username">* Nombre de Usuario</label>
+                            <label for="username-register">* Nombre de Usuario</label>
                             <input 
                             type="text" 
                             name="username" 
-                            id="username"
+                            id="username-register"
                             pattern="\w*"
                             title="Por favor, confirma que no hayan espacios y que los caracteres no tengan simbolos especiales"
                             placeholder="arturo2abreu"
@@ -283,10 +259,10 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                             placeholder="Abreu Gomez"
                             required
                             />
-                            <label for="password">* Contraseña (10 a 15 caracteres)</label>
+                            <label for="password-register">* Contraseña (10 a 15 caracteres)</label>
                             <input 
                             type="password" 
-                            id="password" 
+                            id="password-register" 
                             name="password"
                             maxlength="15"
                             minlength="10"
@@ -303,7 +279,7 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                             pattern="((^[XYZ]\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]$)|(\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]))"
                             title="Por favor, introduce un DNI o CIF valido"
                             placeholder="27349542N"
-                            require /> 
+                            required /> 
                         </div>    <!-- ends right container -->
                     </div> <!-- ends grid area 'datosBasicos' -->
                     <div> <!-- begins of grid area 'direccion' -->

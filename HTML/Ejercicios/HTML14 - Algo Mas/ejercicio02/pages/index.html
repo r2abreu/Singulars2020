@@ -43,12 +43,12 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                 </nav>
                 <div class="search-bar">
                     <label for="query">Busca un destino...</label>
-                    <input type="text" name="query" placeholder="Kerala" />
+                    <input type="text" id="query" name="query" placeholder="Kerala" />
                 </div>
             </header>
             <main>
                 <section>
-                    <h2>Descubre</h2>
+                    <h1>Viaja con Arturismo</h1>
                     <ul class="gallery-header">
                         <li>Descubre</li>
                         <li>Lugares</li>
@@ -119,7 +119,7 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
         <div class="left-container">
             <aside>
                 <article>
-                    <h1>Viaja mas...</h1>
+                    <h2>Viaja mas...</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin leo erat, facilisis nec nisl at, imperdiet gravida magna. Integer blandit tristique sapien, eu congue purus vehicula in. Aenean tristique tincidunt ultrices. Donec orci sem, fermentum quis luctus sed, rutrum ut velit. Nullam enim nunc, pretium a dignissim vitae, porttitor vitae mauris. Mauris erat velit, imperdiet pulvinar sem at, interdum eleifend erat. 
                     </p>
@@ -169,11 +169,11 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                             placeholder="Arturo Gerardo"
                             required
                             />
-                            <label for="username">* Nombre de Usuario</label>
+                            <label for="username-register">* Nombre de Usuario</label>
                             <input 
                             type="text" 
                             name="username" 
-                            id="username"
+                            id="username-register"
                             pattern="\w*"
                             title="Por favor, confirma que no hayan espacios y que los caracteres no tengan simbolos especiales"
                             placeholder="arturo2abreu"
@@ -262,10 +262,10 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                             placeholder="Abreu Gomez"
                             required
                             />
-                            <label for="password">* Contraseña (10 a 15 caracteres)</label>
+                            <label for="password-register">* Contraseña (10 a 15 caracteres)</label>
                             <input 
                             type="password" 
-                            id="password" 
+                            id="password-register" 
                             name="password"
                             maxlength="15"
                             minlength="10"
@@ -282,7 +282,7 @@ Esta website fue realizada con el objetivo de mostrar los conceptos de Layout es
                             pattern="((^[XYZ]\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]$)|(\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]))"
                             title="Por favor, introduce un DNI o CIF valido"
                             placeholder="27349542N"
-                            require /> 
+                            required /> 
                         </div>    <!-- ends right container -->
                     </div> <!-- ends grid area 'datosBasicos' -->
                     <div> <!-- begins of grid area 'direccion' -->

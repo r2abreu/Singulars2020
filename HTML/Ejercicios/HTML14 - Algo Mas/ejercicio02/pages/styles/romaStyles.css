@@ -6,10 +6,17 @@
 
 article h1 {
 	color: #85d48d;
+	font-size: 6.25rem;
+	margin: 0 0 4%;
+	font-weight: 400;
+	text-shadow: 0.438rem 0.313rem 0.313rem #000;
 }
 
 section h2 {
 	color: #85d48d;
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 0;
 }
 
 .gallery .second-figures {
