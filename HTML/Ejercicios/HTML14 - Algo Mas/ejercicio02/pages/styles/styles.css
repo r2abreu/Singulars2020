@@ -1,7 +1,5 @@
 /* GLOBAL APP STYLES */
 
-@import url('./modals.css');
-
 :root {
 	font-size: 16px;
 }
@@ -136,7 +134,6 @@ ul li a {
 ul li a:hover {
 	text-decoration: underline;
 	text-decoration-color: #75bbca;
-	text-decoration-thickness: 2px;
 }
 
 .hamburguer img {
