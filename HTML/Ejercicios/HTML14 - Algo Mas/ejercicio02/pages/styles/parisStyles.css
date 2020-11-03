@@ -1,0 +1,28 @@
+/* PARIS STYLES */
+
+.left-container {
+	background: linear-gradient(180deg, #ffffff00 40%, #000000 100%), url("../../assets/paris/paris.jpg") center/cover;
+}
+
+article h1 {
+	color: #eb7272;
+}
+
+section h2 {
+	color: #eb7272;
+}
+
+.gallery .second-figures {
+	height: 10em;
+}
+
+.gallery figure figcaption {
+	margin-bottom: 0.625rem;
+	margin-left: 0;
+	font-size: 0.875rem;
+	width: 100%;
+}
+
+footer {
+	height: 18.75rem;
+}
