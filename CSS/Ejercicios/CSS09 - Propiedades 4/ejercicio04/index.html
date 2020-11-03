@@ -11,17 +11,116 @@
            <h1>facebook</h1>
         <form>
             <div>
-                <label for="">Correo o telefono</label><br />
-                <input type="text" /><br />
-                <input type="checkbox" /><label>No cerrar sesion</label> 
+                <label for="username-login">Correo o telefono</label><br />
+                <input 
+                type="text" 
+                id="username-login"
+                pattern="([a-zA-Z0-9._!#$%&'*+-/=?^_`{|}~]*@\w*\.\w*)|(^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$)"
+                required
+                title="Por favor, ingresa un formato correcto" /><br />
+                <input id="session" value="true" name="session" type="checkbox" /><label for="session">No cerrar sesion</label> 
             </div>
             <div>
-                <label>Contraseña</label><br />
-                <input type="password" /><br />
+                <label for="password-login">Contraseña</label><br />
+                <input 
+                type="password"
+                id="password-login"
+                pattern="[a-zA-Z0-9]{8,15}"
+                required
+                 /><br />
                 <span>¿Has olvidado la contraseña?</span>
             </div>
             <input type="submit" value="Entrar" />
         </form> 
     </nav>
+    <main>
+        <div></div>
+        <div>
+            <h1>Registrate</h1>
+            <p>Es gratis y lo sera siempre.</p>
+            <form action="">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" />
+                <label for="lastname">Apellidos</label>
+                <input type="text" id="lastname" />
+                <label for="username">Correo o telefono</label>
+                <input type="text" id="username" />
+                <label for="username-repeat">Vuelve a introducir el correo electronico o el numero telefonico</label>
+                <input type="text" />
+                <label for="password">Contrasena nueva</label>
+                <input type="text" />
+                <label for="dob">Fecha de Nacimiento</label>
+                <select id="dob"><br />
+                    <option value="">Dia</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select>
+                    <option value="">Mes</option>
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                </select>
+                <select>
+                    <option value="">Año</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1994">1994</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                </select>
+                <p>
+                    ¿Por qué tengo que dar mi información de fecha de nacimiento?
+                </p>
+                <input id="female" type="radio" name="sex" value="female" /><label for="female">Mujer</label>
+                <input type="radio" name="sex" id="male" /><label>Hombre</label>
+                <p>Al hacer click en Terminado, aceptas las <span>Condiciones</span> y confirmas que has leido nuestra <span>Politica de datos</span>, incluido el <span>Uso de cookies</span>.</p>
+                <input type="submit" value="Terminado" />
+                <hr />
+                <p><span>Crea una pagina</span> para un personaje publico, un grupo de musica o un negocio.</p>
+            </form>
+        </div>
+    </main>
     </body>
 </html>
