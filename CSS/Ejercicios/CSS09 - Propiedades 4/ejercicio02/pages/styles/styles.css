@@ -297,3 +297,29 @@ table caption {
 	font-weight: 700;
 	text-shadow: 1px 4px 10px rgb(0, 0, 0);
 }
+
+.left-container ul {
+	color: #fff;
+	padding: 0;
+	margin: auto;
+	width: 70%;
+	list-style-position: inside;
+	padding: 0.8em;
+	background-color: rgba(0, 0, 0, 0.692);
+	list-style-type: none;
+	border-radius: 0.5em;
+}
+
+.left-container aside > ul > li ul {
+	background-color: transparent;
+}
+
+.left-container aside > ul > li:first-of-type > ul li::before {
+	content: "⛪ ";
+}
+.left-container aside > ul > li:nth-of-type(2) > ul li::before {
+	content: "🏘 ";
+}
+.left-container aside > ul > li:last-of-type > ul li::before {
+	content: "🏞 ";
+}
