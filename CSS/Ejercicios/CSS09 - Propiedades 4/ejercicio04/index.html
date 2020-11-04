@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Bienvenido a Fakebook</title>
         <link href="./styles.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
@@ -11,7 +11,7 @@
            <h1>facebook</h1>
         <form>
             <div>
-                <label for="username-login">Correo o telefono</label><br />
+                <label for="username-login">Correo o teléfono</label><br />
                 <input 
                 type="text" 
                 id="username-login"
@@ -40,85 +40,90 @@
             </p>
         </div>
         <div>
-            <h1>Registrate</h1>
-            <p>Es gratis y lo sera siempre.</p>
+            <h2>Registrarte</h2>
+            <p>Es gratis y lo será siempre.</p>
             <form action="">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" />
+                <div>
+                    <label for="name">Nombre</label>
+                <input type="text" id="name" placeholder="Nombre"/>
                 <label for="lastname">Apellidos</label>
-                <input type="text" id="lastname" />
+                <input type="text" id="lastname" placeholder="Apellidos" />
+                </div>
                 <label for="username">Correo o telefono</label>
-                <input type="text" id="username" />
-                <label for="username-repeat">Vuelve a introducir el correo electronico o el numero telefonico</label>
-                <input type="text" />
-                <label for="password">Contrasena nueva</label>
-                <input type="text" />
-                <label for="dob">Fecha de Nacimiento</label>
-                <select id="dob"><br />
-                    <option value="">Dia</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                </select>
-                <select>
-                    <option value="">Mes</option>
-                    <option value="Enero">Enero</option>
-                    <option value="Febrero">Febrero</option>
-                    <option value="Marzo">Marzo</option>
-                    <option value="Abril">Abril</option>
-                    <option value="Mayo">Mayo</option>
-                    <option value="Junio">Junio</option>
-                    <option value="Julio">Julio</option>
-                    <option value="Agosto">Agosto</option>
-                    <option value="Septiembre">Septiembre</option>
-                    <option value="Octubre">Octubre</option>
-                    <option value="Noviembre">Noviembre</option>
-                    <option value="Diciembre">Diciembre</option>
-                </select>
-                <select>
-                    <option value="">Año</option>
-                    <option value="1992">1992</option>
-                    <option value="1993">1993</option>
-                    <option value="1994">1994</option>
-                    <option value="1995">1995</option>
-                    <option value="1996">1996</option>
-                    <option value="1997">1997</option>
-                    <option value="1998">1998</option>
-                    <option value="1999">1999</option>
-                </select>
-                <p>
-                    ¿Por qué tengo que dar mi información de fecha de nacimiento?
-                </p>
-                <input id="female" type="radio" name="sex" value="female" /><label for="female">Mujer</label>
-                <input type="radio" name="sex" id="male" /><label>Hombre</label>
+                <input type="text" id="username" placeholder="Correo electrónico o número de movil"/>
+                <label for="username-repeat">Vuelve a introducir el correo electronico o el número de movil</label>
+                <input type="text" placeholder="Vuelve a introducir el correo electrónico o el ..."/>
+                <label for="password">Contraseña nueva</label>
+                <input type="text" placeholder="Contraseña nueva"/>
+                <label for="dob">Fecha de nacimiento</label>
+                <div class="select-menu">
+                    <select id="dob"><br />
+                        <option value="">Dia</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select>
+                        <option value="">Mes</option>
+                        <option value="Enero">01</option>
+                        <option value="Febrero">02</option>
+                        <option value="Marzo">03</option>
+                        <option value="Abril">04</option>
+                        <option value="Mayo">05</option>
+                        <option value="Junio">06</option>
+                        <option value="Julio">07</option>
+                        <option value="Agosto">08</option>
+                        <option value="Septiembre">09</option>
+                        <option value="Octubre">10</option>
+                        <option value="Noviembre">11</option>
+                        <option value="Diciembre">12</option>
+                    </select>
+                    <select>
+                        <option value="">Año</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                    </select>
+                    <p>¿Por qué tengo que dar mi información de fecha de nacimiento?
+                    </p>
+                </div>
+                <div>
+                    <input id="female" type="radio" name="sex" value="female" /><label for="female">Mujer</label>
+                    <input type="radio" name="sex" id="male" /><label for="male">Hombre</label>
+                </div>
                 <p>Al hacer click en Terminado, aceptas las <span>Condiciones</span> y confirmas que has leido nuestra <span>Politica de datos</span>, incluido el <span>Uso de cookies</span>.</p>
                 <input type="submit" value="Terminado" />
                 <hr />

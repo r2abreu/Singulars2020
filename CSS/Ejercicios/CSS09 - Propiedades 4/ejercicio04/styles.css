@@ -11,6 +11,7 @@ html {
 body {
 	margin: 0;
 	font-family: Arial;
+	background: linear-gradient(to top, #d4dae8, #e8eeee);
 }
 
 nav {
@@ -43,6 +44,10 @@ nav form {
 nav form div {
 	margin: 0 1em;
 	min-height: 72px;
+}
+
+nav form div > label:first-of-type {
+	font-size: 0.8em;
 }
 
 nav form label:first-child {
@@ -81,17 +86,168 @@ nav form input[type="submit"] {
 	font-weight: 500;
 	cursor: pointer;
 	max-height: 25px;
+	margin-bottom: 0.4em;
 }
 
-nav form [type="submit"]:hover {
+[type="submit"]:hover {
 	box-shadow: none;
+	cursor: pointer;
 }
 
 main {
-	background: url(./connected.png) no-repeat 0px 0px, linear-gradient(to top, #d4dae8, #e8eeee);
+	background: url(./connected.png) no-repeat 20px 110px/ 45%;
 	height: 100vh;
+	max-width: 1300px;
+	margin: 0.1em auto;
 }
 
-main p {
+main:first-child p {
 	margin: 0;
+}
+
+main {
+	display: flex;
+}
+
+main > div:last-of-type {
+	margin-left: 10em;
+}
+
+main > div:first-of-type p {
+	letter-spacing: -1px;
+	font-size: 1.1em;
+	width: 48%;
+	font-weight: 700;
+	color: #0a3c6b;
+	text-shadow: 1px 1px 1px #0a3c6b1a;
+	margin-top: 2.5em;
+}
+
+main div:last-child {
+	width: 40%;
+	min-width: 462px;
+	max-width: 462px;
+}
+
+main form {
+	display: flex;
+	flex-direction: column;
+}
+
+main form > div {
+	width: 100%;
+}
+
+main form label:not([for="dob"]):not([for$="ale"]) {
+	display: none;
+}
+
+main form input {
+	border-radius: 0.2em;
+	border: 1px solid #3958953f;
+	padding: 0.5em 0.3em;
+	color: #2b4677b0;
+	margin: 0.2em 0;
+	letter-spacing: -1px;
+	font-size: 1.2em;
+}
+
+main form input[id="name"],
+main form input[id="lastname"] {
+	width: 49%;
+}
+
+main form input[id="lastname"] {
+	margin-left: 1%;
+}
+
+label[for="dob"] {
+	margin: 0.5em 0 0.2em;
+}
+
+label[for$="ale"] {
+	margin-left: 0.3em;
+}
+
+input[type="radio"]:first-of-type {
+	margin-left: 0.2em;
+}
+
+input[id="male"] {
+	margin-left: 0.5em;
+}
+
+.select-menu {
+	display: flex;
+	margin: 0.2em 0;
+	width: 72%;
+	margin-bottom: 0.8em;
+}
+
+.select-menu select {
+	width: min-content;
+	background: #fff;
+	border: 1px solid #3958953f;
+	font-size: 0.7em;
+}
+
+.select-menu p {
+	font-size: 0.6em;
+	margin: 0 0 0 1em;
+	color: #253783;
+	cursor: pointer;
+}
+
+h2 {
+	font-size: 1.8em;
+	color: rgba(0, 0, 0, 0.884);
+	margin-bottom: 0;
+}
+
+form > p:first-of-type {
+	font-size: 0.6em;
+	width: 59%;
+	color: rgba(0, 0, 0, 0.514);
+}
+
+form > p:first-of-type span {
+	cursor: pointer;
+	color: #253783;
+}
+
+main input[type="submit"] {
+	width: 33%;
+	padding: 0.4em 2em;
+	font-size: 1em;
+	background: linear-gradient(to bottom, #62aa51, #598842);
+	color: #fff;
+	box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.623);
+	font-weight: 500;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.589);
+}
+
+hr {
+	width: 100%;
+	color: #39589536;
+}
+
+main > div form > p:last-of-type {
+	color: rgba(0, 0, 0, 0.514);
+	font-weight: 600;
+	font-size: 0.8em;
+}
+
+main > div form > p:last-of-type span {
+	cursor: pointer;
+	color: #253683d0;
+}
+
+@media screen and (max-width: 900px) {
+	main > div:first-of-type {
+		display: none;
+	}
+
+	main {
+		background: linear-gradient(to top, #d4dae8, #e8eeee);
+	}
 }
