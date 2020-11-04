@@ -45,16 +45,39 @@
             <form action="">
                 <div>
                     <label for="name">Nombre</label>
-                <input type="text" id="name" placeholder="Nombre"/>
+                <input type="text" id="name" placeholder="Nombre"
+                pattern="\w*\s*\w*"
+                required/>
                 <label for="lastname">Apellidos</label>
-                <input type="text" id="lastname" placeholder="Apellidos" />
+                <input 
+                type="text" 
+                id="lastname" 
+                placeholder="Apellidos"
+                required 
+                pattern="\w*\s*\w*"
+                />
                 </div>
                 <label for="username">Correo o telefono</label>
-                <input type="text" id="username" placeholder="Correo electrónico o número de movil"/>
+                <input 
+                type="text" 
+                id="username" 
+                placeholder="Correo electrónico o número de movil"
+                pattern="([a-zA-Z0-9._!#$%&'*+-/=?^_`{|}~]*@\w*\.\w*)|(^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$)"
+                required
+                />
                 <label for="username-repeat">Vuelve a introducir el correo electronico o el número de movil</label>
-                <input type="text" placeholder="Vuelve a introducir el correo electrónico o el ..."/>
+                <input 
+                type="text" 
+                placeholder="Vuelve a introducir el correo electrónico o el ..."
+                pattern="([a-zA-Z0-9._!#$%&'*+-/=?^_`{|}~]*@\w*\.\w*)|(^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$)"
+                required/>
                 <label for="password">Contraseña nueva</label>
-                <input type="text" placeholder="Contraseña nueva"/>
+                <input 
+                type="password" 
+                placeholder="Contraseña nueva"
+                required
+                pattern="[a-zA-Z0-9]{8,15}"
+                />
                 <label for="dob">Fecha de nacimiento</label>
                 <div class="select-menu">
                     <select id="dob"><br />

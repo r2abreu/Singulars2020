@@ -9,9 +9,10 @@ html {
 }
 
 body {
+	height: 100vh;
 	margin: 0;
 	font-family: Arial;
-	background: linear-gradient(to top, #d4dae8, #e8eeee);
+	background: linear-gradient(to top, #d4dae8, #fff);
 }
 
 nav {
@@ -96,9 +97,9 @@ nav form input[type="submit"] {
 
 main {
 	background: url(./connected.png) no-repeat 20px 110px/ 45%;
-	height: 100vh;
 	max-width: 1300px;
 	margin: 0.1em auto;
+	margin-bottom: 0;
 }
 
 main:first-child p {
@@ -121,6 +122,7 @@ main > div:first-of-type p {
 	color: #0a3c6b;
 	text-shadow: 1px 1px 1px #0a3c6b1a;
 	margin-top: 2.5em;
+	margin-left: 0.4em;
 }
 
 main div:last-child {
@@ -202,6 +204,8 @@ h2 {
 	font-size: 1.8em;
 	color: rgba(0, 0, 0, 0.884);
 	margin-bottom: 0;
+	margin-top: 0.4em;
+	letter-spacing: -1px;
 }
 
 form > p:first-of-type {
@@ -229,12 +233,15 @@ main input[type="submit"] {
 hr {
 	width: 100%;
 	color: #39589536;
+	margin-top: 1em;
 }
 
 main > div form > p:last-of-type {
 	color: rgba(0, 0, 0, 0.514);
 	font-weight: 600;
 	font-size: 0.8em;
+	margin-top: 0.2em;
+	margin-bottom: 0;
 }
 
 main > div form > p:last-of-type span {
