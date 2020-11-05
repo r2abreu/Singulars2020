@@ -8,6 +8,8 @@ Todos los elementos HTML pueden ser considerados como cajas, los cuales a su vez
 
 Es el area que aparece fuera del limite del borde, puede ser usado este margen para crear una brecha entre los bordes de dos cajas adyacientes. 
 
+Es posible especificar el margen en cada lado del elemento, sin embargo tambien se puede usar un atajo para declarar todos los lados en una sola linea, siguiendo el orden de las agujas del reloj. 
+
 ### Border 
 
 Cada caja tiene un border (incluso si no es visible o si se especifica que su ancho sea de 0). El borde separa el limite de una caja con la otra: 
@@ -21,7 +23,12 @@ Cada caja tiene un border (incluso si no es visible o si se especifica que su an
 
 #### Outline 
 
-El outline es una linea que se dibuja alrededor de los elementos, sin embargo esta fuera de los bordes, su tamano no es computado en el tamano total de la caja
+El outline es una linea que se dibuja alrededor de los elementos, sin embargo esta fuera de los bordes, su tamano no es computado en el tamano total de la caja. Los bordes y los *outlines* son muy similares, sin embargo estas son algunas de las diferencias. 
+
+* Los *outlines* nunca toman espacio, son dibujados fuera del contenido de un elemento. 
+* De acuerdo a la especificaciones, los *outlines* no tienen que se rectangulares, aunque casi siempre lo son. 
+
+Algo importante a tener en cuenta con los *outline* es que al darle un vlaor de `none` o `0`, esto removera los valores predeterminados de `focus`. Si se puede interactuar con un elemento, este deberia tener un indicador visual. Por lo cual, en caso de que se desee anular el *outline*, es necesario entonces dar un estilo obvio de *focus* al elemento en cuestion.
 
 ## Padding 
 
@@ -55,3 +62,11 @@ box-sizing: content-box // Modelo de cajas estandar
 box-sizing: border-box // Modelo de cajas alternativo 
 ```
 
+## Atajos para Margenes, Padding, Border entre otros (Reloj)
+
+Los atajos que siguen el patron de las agujas del reloj o *clockwise* son versatiles y pueden funcionar de forma distinta dependiendo de cuantos valores tome la propiedad. 
+
+* 1 valor: En este caso, con un valor nos referimos a los cuatro lados del elemento. 
+* 2 valores: Nos referiremos entonces a un valor vertical y otro horizontal. 
+* 3 valores: De esta manera, podemos especificar un valor para el tope, un valor para ambos lados horizontales y otro valor para el inferior.
+* 4 valores: Asi especicaremos cada valor de forma separada. 
