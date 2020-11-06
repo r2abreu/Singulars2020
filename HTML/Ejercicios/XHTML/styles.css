@@ -1,0 +1,178 @@
+@font-face {
+	font-family: "Open Sans";
+	src: url(./fonts/openSans/OpenSans-Bold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url(./fonts/openSans/OpenSans-BoldItalic.ttf);
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url(./fonts/openSans/OpenSans-Italic.ttf);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url(./fonts/openSans/OpenSans-Light.ttf);
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: "Baskerville";
+	src: url(./fonts/baskerville/LibreBaskerville-Bold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Baskerville";
+	src: url(./fonts/baskerville/LibreBaskerville-Italic.ttf);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Baskerville";
+	src: url(./fonts/baskerville/LibreBaskerville-Regular.ttf);
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+body {
+	background: linear-gradient(180deg, rgba(255, 128, 0, 0.033), 3em, rgba(255, 216, 0, 0) 33em),
+		linear-gradient(
+				90deg,
+				hsla(34deg, 0%, 96%, 0.98) 5%,
+				10%,
+				hsla(34deg, 38%, 99%, 0.95) 25%,
+				33%,
+				hsla(34deg, 38%, 99%, 1) 50%,
+				67%,
+				hsla(34deg, 38%, 99%, 0.975) 75%,
+				90%,
+				hsla(34deg, 0%, 96%, 0.98) 95%
+			)
+			0 0 / 100% 100% no-repeat,
+		linear-gradient(179deg, hsla(34deg, 38%, 99%, 1) 11em, hsla(34deg, 38%, 99%, 0) 13em),
+		linear-gradient(0deg, hsla(34deg, 38%, 99%, 1) 23em, hsla(34deg, 38%, 99%, 0) 42em), url(./patron.png) 0 0;
+	font-family: "Open Sans", arial, sans-serif;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav a {
+	font-family: "Barskerville";
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.705);
+	font-size: 10em;
+	width: min-content;
+	margin-left: 4rem;
+	flex-grow: 2;
+}
+
+nav figure {
+	width: 15%;
+	margin: 0;
+	flex-grow: 1;
+}
+
+aside {
+	display: initial;
+}
+
+aside ul li {
+	text-transform: capitalize;
+}
+
+a:link:not(#hero) {
+	color: rgba(0, 0, 255, 0.733);
+	text-decoration: none;
+}
+
+a:visited:not(#hero) {
+	color: #304ae0;
+}
+
+a:hover:not(#hero) {
+	text-decoration: underline;
+}
+a:focus:not(#hero) {
+	color: #601fb4;
+}
+a:active:not(#hero) {
+	color: #601fb4;
+}
+
+.nav-form {
+	width: 15%;
+	flex-grow: 1;
+}
+
+.nav-form form {
+	text-align: center;
+}
+
+.nav-form input {
+	margin: 1em auto;
+	width: 60%;
+}
+
+main,
+hr {
+	display: flex;
+	max-width: 1000px;
+	margin: auto;
+	font-size: 1.7em;
+	line-height: 1.5;
+}
+
+hr {
+	color: rgba(0, 0, 0, 0.26);
+}
+
+article {
+	width: 80%;
+}
+
+article h2 {
+	font-family: "Baskerville";
+	font-style: italic;
+}
+
+.scrolled {
+	position: sticky;
+	top: 20px;
+	left: 100%;
+	width: 15%;
+}
+
+.scrolled ul {
+	padding: 0;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+figure {
+	width: 50rem;
+	margin: auto;
+}
+
+figure img {
+	width: 100%;
+	background-size: contain;
+}
