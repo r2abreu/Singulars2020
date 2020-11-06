@@ -176,3 +176,12 @@ figure img {
 	width: 100%;
 	background-size: contain;
 }
+
+span {
+	color: rgba(0, 0, 0, 0.418);
+	font-weight: bold;
+}
+
+p time {
+	color: rgba(0, 0, 0, 0.418);
+}
