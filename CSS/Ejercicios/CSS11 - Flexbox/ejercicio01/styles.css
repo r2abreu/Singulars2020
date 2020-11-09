@@ -1,11 +1,32 @@
 html {
 	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
 }
-
 *,
 ::before,
 ::after {
 	box-sizing: inherit;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(180deg, rgba(255, 128, 0, 0.033), 3em, rgba(255, 216, 0, 0) 33em),
+		linear-gradient(
+				90deg,
+				hsla(34deg, 0%, 96%, 0.98) 5%,
+				10%,
+				hsla(34deg, 38%, 99%, 0.95) 25%,
+				33%,
+				hsla(34deg, 38%, 99%, 1) 50%,
+				67%,
+				hsla(34deg, 38%, 99%, 0.975) 75%,
+				90%,
+				hsla(34deg, 0%, 96%, 0.98) 95%
+			)
+			0 0 / 100% 100% no-repeat,
+		linear-gradient(179deg, hsla(34deg, 38%, 99%, 1) 11em, hsla(34deg, 38%, 99%, 0) 13em),
+		linear-gradient(0deg, hsla(34deg, 38%, 99%, 1) 23em, hsla(34deg, 38%, 99%, 0) 42em),
+		url(./assets/pattern.png) 0 0, url(./assets/pattern.png) 250px -50px, hsla(34deg, 38%, 99%, 1);
 }
 
 main {
@@ -24,6 +45,7 @@ main > div {
 figure {
 	margin: auto;
 	flex: 1 1 150px;
+	margin: auto 0.2em;
 }
 
 img {
