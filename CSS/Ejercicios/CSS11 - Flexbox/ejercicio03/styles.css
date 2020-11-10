@@ -80,6 +80,7 @@ main {
 	text-align: right;
 	font-style: italic;
 	margin: 0;
+	margin-right: 1em;
 	font-size: 0.6em;
 }
 
@@ -226,6 +227,10 @@ h2 {
 footer {
 	padding: 2em 1em;
 	text-align: right;
+}
+
+hr {
+	color: var(--secondary-color);
 }
 
 @media screen and (max-width: 880px) {
