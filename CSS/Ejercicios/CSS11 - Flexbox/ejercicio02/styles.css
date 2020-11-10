@@ -1,3 +1,7 @@
+:root {
+	--border: 1px solid #000;
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -6,24 +10,180 @@ html {
 ::before,
 ::after {
 	box-sizing: inherit;
-	border: 1px solid #000;
 }
 
 body {
 	max-width: 1000px;
 	margin: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	border: var(--border);
+	padding: 1em;
+}
+
+figure {
+	width: 100px;
+	height: 100px;
+}
+
+figure img {
+	width: 100%;
+}
+
+.banner,
+.nav-form,
+main {
+	margin-bottom: 0.5em;
 }
 
 .banner {
-	display: flex;
-	padding: 2em;
+	position: relative;
+	padding: 3em;
 	align-items: center;
+	text-align: center;
+	border: var(--border);
+}
+
+.banner figure {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	margin: 0;
 }
 
 .banner a {
 	flex: 2;
 	font-size: 2em;
-	padding-left: 5em;
 	color: #000;
 	text-decoration: none;
+}
+
+.nav-form {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav {
+	margin-right: 0.7em;
+	flex: 2;
+	border: var(--border);
+}
+
+.nav-form form {
+	border: var(--border);
+	padding: 0.5em;
+	width: 18em;
+}
+
+form input {
+	width: 10%;
+}
+
+/* Not accesible way to hide labels, only for educational purposes */
+
+.nav-form form label {
+	display: none;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+nav ul li {
+	margin: auto 1em;
+}
+
+.nav-form form {
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav-form form input:not([type="submit"]) {
+	width: 6em;
+	padding: 0.1em 0;
+}
+
+[type="submit"] {
+	background-color: #c4c4c4;
+	border: var(--border);
+	padding: 0.1em 0;
+	min-width: 3em;
+}
+
+main {
+	border: var(--border);
+	padding: 1em;
+}
+
+main table {
+	margin: 0 1em 0 3em;
+	float: right;
+	border-collapse: collapse;
+}
+
+main th,
+main td {
+	border: 1px solid #000;
+	padding: 0.2em;
+}
+
+main > div:first-of-type table th:nth-of-type(2) {
+	padding-right: 10vw;
+}
+
+main > div:first-of-type table th {
+	background-color: #c4c4c4;
+}
+
+.gallery {
+	display: flex;
+	border: var(--border);
+	align-items: center;
+	justify-content: space-around;
+	padding: 1em 0;
+	flex-wrap: wrap;
+}
+
+.gallery figure {
+	margin: 1em 0;
+}
+
+footer {
+	border: var(--border);
+	padding: 2em 1em;
+	text-align: right;
+}
+
+@media screen and (max-width: 750px) {
+	main table {
+		float: none;
+		margin: auto;
+	}
+
+	.nav-form {
+		flex-direction: column;
+	}
+
+	.nav-form form {
+		width: 100%;
+	}
+
+	.nav-form nav {
+		margin: 0 0 0.5em 0;
+	}
+}
+
+@media screen and (max-width: 590px) {
+	.banner figure {
+		display: none;
+	}
+
+	nav ul {
+		justify-content: center;
+		min-height: 3em;
+		align-content: space-between;
+	}
 }
