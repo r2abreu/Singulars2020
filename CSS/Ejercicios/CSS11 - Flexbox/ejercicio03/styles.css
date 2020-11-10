@@ -63,7 +63,7 @@ main {
 
 .banner figure {
 	position: absolute;
-	top: 0px;
+	top: 40px;
 	left: 20px;
 	margin: 0;
 }
@@ -125,7 +125,7 @@ nav ul li {
 nav a {
 	text-decoration: none;
 	color: #383232;
-	font: menu;
+	font-variant: small-caps;
 	font-size: 1.5em;
 }
 
@@ -183,16 +183,22 @@ table tr:nth-of-type(2n) {
 
 table th,
 table td {
-	padding: 0.2em;
+	padding: 0.4em;
 }
 
-table th:nth-of-type(2) {
-	padding-right: 10vw;
+table th {
+	padding-right: 2vw;
 }
 
 table th {
 	background-color: var(--primary-color);
 	color: white;
+}
+
+.banner {
+	background-color: var(--primary-color);
+	border-radius: 0.3em;
+	padding: 2em;
 }
 
 h1:not(.banner),
@@ -203,7 +209,12 @@ h2 {
 	text-decoration: underline;
 }
 
+h2 {
+	color: var(--primary-color);
+}
+
 .banner {
+	background-color: #79aedce7;
 	font-size: 2em;
 }
 
@@ -233,6 +244,15 @@ hr {
 	color: var(--secondary-color);
 }
 
+section {
+	text-align: center;
+}
+
+main > div p:first-of-type::first-letter {
+	font-size: 2em;
+	font-family: 'Merriweather';
+	color: var(--secondary-color);
+}
 @media screen and (max-width: 880px) {
 	main table {
 		float: none;
@@ -262,6 +282,10 @@ hr {
 	.banner figure {
 		display: none;
 	}
+
+	table {
+		width: 80%;
+	}
 }
 
 @media screen and (max-width: 590px) {
@@ -269,5 +293,9 @@ hr {
 		justify-content: center;
 		min-height: 3em;
 		align-content: space-between;
+	}
+
+	iframe {
+		width: 100%;
 	}
 }
