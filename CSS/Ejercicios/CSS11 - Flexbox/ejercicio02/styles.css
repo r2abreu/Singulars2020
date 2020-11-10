@@ -1,0 +1,29 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+	border: 1px solid #000;
+}
+
+body {
+	max-width: 1000px;
+	margin: auto;
+}
+
+.banner {
+	display: flex;
+	padding: 2em;
+	align-items: center;
+}
+
+.banner a {
+	flex: 2;
+	font-size: 2em;
+	padding-left: 5em;
+	color: #000;
+	text-decoration: none;
+}
