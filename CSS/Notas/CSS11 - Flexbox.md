@@ -70,3 +70,43 @@ Esta propiedad establece la distribucion de espacio entre y alrededor de los ite
 | `align-self` | `auto`, `flex-start`,`flex-end`, `center`, `baseline`, `stretch` | `auto` |
 
 
+## Propiedad `flex`
+
+Esta propiedad es un atajo que reune las propiedades `flex-grow`, `flex-shrink` y `flex-basis`, es raro que se usen estas propiedades de forma separada, mas comun es verlas agrupadas en la propiedad `flex`. 
+
+Es posible darle valores separados a cada propiedad, como tambien es posible darle valores prefeterminados, como los siguientes: 
+
+* `flex:initial` = `0 1 auto`
+* `flex:auto` = `1 1 auto`
+* `flex: none` = `0 0 auto`
+* `flex: <integral-positivo>`
+
+### `initial`: 
+
+El tamano del item sera dado con respecto a sus propiedades `height` y `width`, se encojera a su tamano minimo para poder llenar el contenedor, pero no crecera para absorber ningun espacio adicional al `flex-basis` dentro del contenedor. Es el equivalente a `flex: 0 1 auto`.
+
+### `auto`:
+
+EL tamano del item sera dado con especto a sus propiedades `height` y `width`, sin embargo crece para asorber cualquier espacio extra en el contenedor flex y tambien se encojera para poder encajar en el contenedor de hacer falta. Es el equivalente a `flex: 1 1 auto`.
+
+### `none`
+
+EL tamano del item sera dado con especto a sus propiedades `height` y `width`. Es completamente inflexible: no se encojera ni crecera a su contenedor flex. Es el equivalente a `flex: 0 0 auto`.
+
+La propiedad `flex` puede ser especificada usando uno, dos o tres valores, estas son las sintaxis: 
+
+* 1 valor: 
+    * En este caso, si el valor es un integral, se asumira que pertenece a la propiedad `flex-grow`, se asumira tambien un valor `flex-shrink` de 1 y un `flex-basis` de 0.
+    * Tambien es posible usar de un solo valor, los valores predeterminados mencionados antes: `auto`, `none`, `initial`.
+* 2 valores: 
+    * En este caso el primer valor, debe ser un integral positivo el cual representara el `flex-grow`. 
+    * El segundo valor debe ser un valor valido de ancho, el cual sera interpretado como `flex-basis`.
+* 3 valores: 
+    * En este caso, los valores deben ser especificados en el siguiente orden:
+        1. Un integral positivo para `flex-grow`.
+        2. Un integral positivo para `flex-shrink`.
+        3. Un valor valido de ancho para `flex-basis`.
+
+## Ordenando Elementos Flexibles 
+
+Usando la propiedad `order` podemos establecer el orden de los elementos en el contenedor, es importante tener en cuenta que esto no cambiara el orden de los elementos en el DOM, tan solo es la respresentacion grafica de los elementos en el contenedor. 
