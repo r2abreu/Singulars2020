@@ -146,7 +146,8 @@ section figure img {
 	border-radius: 0.5em;
 }
 
-main > a:link {
+main > a:link,
+[type="submit"] {
 	display: block;
 	width: 8em;
 	text-align: center;
@@ -158,9 +159,11 @@ main > a:link {
 	text-transform: capitalize;
 	border-radius: 0.3em;
 	transition: all 200ms ease-in;
+	cursor: pointer;
 }
 
-main > a:hover {
+main > a:hover,
+[type="submit"] {
 	background-color: #000;
 	transform: scale(1.02);
 	color: #fff;
@@ -183,6 +186,23 @@ footer {
 	font-size: 1.2em;
 }
 
+footer div,
+footer span {
+	flex: 1 1 33%;
+}
+
+footer div:first-of-type {
+	align-self: flex-end;
+}
+
+footer span {
+	font-size: 0.8em;
+}
+
 footer div {
 	text-align: center;
+}
+
+footer .logo {
+	margin-left: auto;
 }

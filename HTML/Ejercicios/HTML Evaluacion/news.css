@@ -1,0 +1,29 @@
+section div {
+	align-self: flex-start;
+	margin: auto 2em;
+	writing-mode: initial;
+	text-orientation: initial;
+}
+
+section div h2 {
+	letter-spacing: -0.1em;
+}
+
+section {
+	align-items: center;
+	margin: 10em auto;
+}
+
+section figure {
+	max-width: 400px;
+	max-height: 400px;
+}
+
+section:nth-of-type(2n) div {
+	order: 1;
+}
+
+figure figcaption {
+	text-align: center;
+	margin-top: 1em;
+}

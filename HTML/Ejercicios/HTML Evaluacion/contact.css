@@ -1,0 +1,27 @@
+form fieldset {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	border: none;
+}
+
+[type="submit"] {
+	background-color: #be0029;
+}
+
+fieldset label {
+	margin: 1em 0;
+}
+
+textarea {
+	height: 10em;
+}
+
+article {
+	text-align: center;
+}
+
+iframe {
+	margin: auto;
+	width: 50%;
+}

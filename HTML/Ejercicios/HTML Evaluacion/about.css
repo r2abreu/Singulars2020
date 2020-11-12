@@ -1,0 +1,20 @@
+main ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+section div {
+	align-self: flex-start;
+	margin-right: 2em;
+	writing-mode: initial;
+	text-orientation: initial;
+}
+
+section div span {
+	font-size: 1.5em;
+	margin-top: 2em;
+}
+
+iframe {
+	margin-bottom: 2em;
+}

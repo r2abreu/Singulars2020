@@ -1,0 +1,11 @@
+section {
+	flex-wrap: wrap;
+	margin-bottom: 1em;
+}
+
+section figure {
+	flex: 1 1 200px;
+	min-width: 300px;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
