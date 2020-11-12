@@ -7,3 +7,143 @@ html {
 ::after {
 	box-sizing: inherit;
 }
+
+a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #be0029;
+}
+
+body {
+	margin: auto;
+	max-width: 1000px;
+	padding: 2em;
+	font-family: 'Monserrat', arial, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2em auto;
+	font-family: 'Exo 2', 'sans-serif';
+	text-transform: capitalize;
+	font-weight: 400;
+}
+
+header figure {
+	margin: auto 0;
+	cursor: pointer;
+	flex: 1 1 120px;
+	max-width: 120px;
+	margin-right: 2em;
+}
+
+figure img {
+	width: 100%;
+}
+
+header nav:first-of-type {
+	flex: 1 1 200px;
+}
+
+header nav:last-of-type {
+	flex: 1 1 200px;
+}
+
+header nav:first-of-type ul,
+header nav:last-of-type ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+}
+
+header nav:first-of-type ul {
+	justify-content: flex-start;
+	margin-left: 3.6em;
+}
+
+header nav:last-of-type ul {
+	justify-content: flex-end;
+}
+
+header nav:first-of-type ul li:not(first-of-type) {
+	margin-left: 1.5em;
+}
+
+header nav:last-of-type ul li:not(:first-of-type) {
+	margin-left: 0.5em;
+}
+
+li svg {
+	width: 1.2em;
+}
+
+main {
+	margin: 2em auto;
+}
+
+main h1 {
+	font-family: 'Exo 2', sans-serif;
+	font-size: 8rem;
+	margin: 0;
+}
+
+main span {
+	text-transform: lowercase;
+	font-size: 2em;
+}
+
+main section {
+	display: flex;
+	margin-top: 2em;
+}
+
+section div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1 1 100px;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+}
+
+section div h2 {
+	font-size: 5em;
+	letter-spacing: -10px;
+	margin: 0;
+}
+
+section div h2:last-of-type {
+	color: #be0029;
+}
+
+section figure {
+	flex: 1 1 20rem;
+	margin: 0;
+}
+
+section figure img {
+	border-radius: 0.5em;
+}
+
+main a:link {
+	display: block;
+	width: 8em;
+	text-align: center;
+	background-color: #000;
+	padding: 0.7em;
+	margin: 0.3em 0 0 auto;
+	font-size: 1.3em;
+	color: #fff;
+	text-transform: capitalize;
+	border-radius: 0.3em;
+}
