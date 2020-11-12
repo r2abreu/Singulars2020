@@ -15,6 +15,13 @@ section div span {
 	margin-top: 2em;
 }
 
+h2 {
+	font-size: 5em;
+	letter-spacing: -10px;
+	margin: 0;
+	color: #be0029;
+}
+
 iframe {
 	margin-bottom: 2em;
 }

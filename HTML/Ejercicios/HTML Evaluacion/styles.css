@@ -107,8 +107,10 @@ main h1 {
 }
 
 main > span {
+	color: rgba(0, 0, 0, 0.493);
 	text-transform: lowercase;
 	font-size: 2em;
+	font-style: italic;
 }
 
 main section {
