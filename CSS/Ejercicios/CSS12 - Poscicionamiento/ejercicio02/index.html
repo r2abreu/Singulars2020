@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Arturo Abreu"/>
+        <meta name="description" content="La Cocina de Manolo, donde lo que importa es el sabor" />
+        <link href="./assets/logo.png" rel="icon" type="img/png" />
+        <title>La Cocina de Manolo</title>
+        <link href="./styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+            <div class="banner">
+                <figure>
+                    <img src="./assets/logo.png" alt="logo" title="La Cocina de Manolo" />
+                </figure>
+                <a class="hero" href="#">La Cocina de Manolo</a>
+                <p>...donde lo que importa es el sabor</p>
+            </div>
+            <div class="nav-form">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#">Recetas</a>
+                        </li>
+                        <li>
+                            <a href="#">Menú</a>
+                        </li>
+                        <li>
+                            <a href="#">Vídeos</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form id="access">
+                    <label for="username">User</label>
+                    <input id="username" type="text" placeholder="Usuario" pattern="\w*{5,11}" required />
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Clave" pattern="\w*" minlength="5" maxlength="11" required />
+                    <input type="submit" value="Acceder" />
+                </form>
+                <a href="#access" target="_top">Inicia Sesión</a>
+            </div>
+        </header>
+        <hr />
+        <main>
+            <h1>La Mejor Tortilla Española</h1>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ingredientes</th>
+                            <th>Calorías</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Patata</td>
+                            <td>100</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Huevo</td>
+                            <td>200</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Cebolla</td>
+                            <td>50</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Aceite de Oliva</td>
+                            <td>300</td>
+                            <td>2 vasos</td>
+                        </tr>
+                    </tbody>
+                    <caption>Tabla Nutricional</caption>
+                </table>
+                <h2>Elaboración</h2>
+                <p>
+                    Pela y pica la cebolla en dados medianos. Limpia el pimiento verde, retírale el tallo y las pepitas y córtalo en dados.Si las patatas estuvieran sucias, pásalas por agua. Pélalas, córtalas por la mitad a lo largo y después corta cada trozo en medias lunas finas de 1/2 centímetros. 
+                </p>
+            </div>
+            <p>
+                Introduce todo en la sartén, sazona a tu gusto y fríe a fuego suave durante 25-30 minutos. Retira la fritada y escúrrela. Pasa el aceite a un recipiente y resérvalo. Limpia la sartén con papel absorbente de cocina.
+            </p>
+            <p>
+                Casca los huevos, colócalos en un recipiente grande y bátelos. Sálalos a tu gusto, agrega la fritada de patatas, cebolla y pimiento y mezcla bien. Coloca la sartén nuevamente en el fuego, agrega un chorrito del aceite reservado y agrega la mezcla. Remueve un poco con una cuchara de madera y espera (20 segundos) a que empiece a cuajarse. 
+            </p>
+            <p>
+                Separa los bordes, cubre la sartén con un plato de mayor diámetro que la sartén y dale la vuelta. Échala de nuevo para que cuaje por el otro lado.
+            </p>
+            <h2>Receta de Tortilla en Video</h2>
+            <section>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/w_3YM-DZVOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <h2>Más Recetas de Manolo</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="./assets/food1.jpg" alt="Patatas al Horno" title="Patatas Horneadas" />
+                    <figcaption>
+                        Patatas al Horno
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="./assets/food2.jpeg" alt="Calamares Rebosados" title="Calamares" />
+                    <figcaption>Calamares Rebosados</figcaption>
+                </figure>
+                <figure>
+                    <img src="./assets/food3.jpg" alt="Hamburguesa de Pollo" title="Hamburguesa de Pollo" />
+                    <figcaption>Hamburguesa de Pollo</figcaption>
+                </figure>
+                <figure>
+                    <img src="./assets/food4.jpeg" alt="Pasta Carbonara" title="Pasta Carbonara" />
+                    <figcaption>Pasta Carbonara</figcaption>
+                </figure>
+                <figure>
+                    <img src="./assets/food5.jpg" alt="Pollo Horneado" title="Pollo Horneado" />
+                    <figcaption>Pollo Horneado</figcaption>
+                </figure>
+                <figure>
+                    <img src="./assets/food6.jpg" alt="Ensalada Cesar" title="Ensalada Cesar" />
+                    <figcaption>Ensalada Cesar</figcaption>
+                </figure>
+            </div>
+        </main>
+        <hr />
+        <footer>
+            <span>La Cocina de Manolo 2020 &reg; todos los derechos reservados</span>
+        </footer>
+    </body>
+</html>
