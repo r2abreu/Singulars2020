@@ -16,7 +16,7 @@
                 <figure>
                     <img src="./assets/logo.png" alt="logo" title="La Cocina de Manolo" />
                 </figure>
-                <a class="hero" href="#">La Cocina de Manolo</a>
+                <a class="hero" href="">La Cocina de Manolo</a>
                 <p>...donde lo que importa es el sabor</p>
             </div>
             <div class="nav-form">
@@ -46,7 +46,6 @@
                     <input id="password" type="password" placeholder="Clave" pattern="\w*" minlength="5" maxlength="11" required />
                     <input type="submit" value="Acceder" />
                 </form>
-                <button>Inicia Sesión</button>
             </div>
         </header>
         <hr />
@@ -139,13 +138,15 @@
         </footer>
     </body>
         <script>
-            const button = document.querySelector('form + button');
-            const form = document.getElementById('access')
+            // const form = document.getElementById('access')
+            // const arrow = document.querySelector('#access::before');
 
-            button.addEventListener('click', (event) => {
-                form.style.top = "0"
-                button.style.display = 'none'
-            })
+            // form.addEventListener('mouseenter', (event) => {
+            //     form.style.right = "0"
+                
+            // })
+
+         
 
             
         </script>

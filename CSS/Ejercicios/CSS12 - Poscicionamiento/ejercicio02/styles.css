@@ -37,6 +37,7 @@ body {
 	margin: auto;
 	font-family: 'Open Sans', sans-serif;
 	padding: 1em;
+	overflow-x: hidden;
 	background-color: rgba(255, 255, 255, 0.966);
 }
 
@@ -97,19 +98,28 @@ nav {
 }
 
 .nav-form form {
-	padding: 0.5em;
-	width: 18em;
-	top: -500px;
-	right: 0;
+	padding: 1em;
+	background-color: #fff;
+	width: 23em;
+	right: -345px;
 	max-height: 288px;
 	display: flex;
-	position: absolute;
+	position: fixed;
 	justify-content: space-around;
+	box-sizing: content-box;
+	border-radius: 0.5em;
 	transition: all 200ms ease-in;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.212);
 }
 
-.show-form {
-	top: 0;
+.nav-form form::before {
+	content: '⬅️';
+	margin-right: 1em;
+	font-size: 2em;
+}
+
+.nav-form form:hover {
+	right: 0px;
 }
 
 form input {
@@ -279,8 +289,15 @@ main > div p:first-of-type::first-letter {
 	}
 
 	.nav-form form {
+		position: static;
+		background-color: transparent;
+		box-shadow: none;
 		justify-content: center;
-		width: 100%;
+		width: 18rem;
+	}
+
+	.nav-form form:before {
+		content: none;
 	}
 
 	.nav-form form input {
