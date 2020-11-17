@@ -1,0 +1,121 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font: menu;
+}
+
+main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+article {
+	display: flex;
+	align-items: flex-start;
+	border-radius: 0.5em;
+	background-color: #f05365;
+	padding: 1em;
+}
+
+nav {
+	width: 100%;
+	padding: 1em;
+	border-radius: 0.5em;
+}
+
+nav ul {
+	display: flex;
+	align-items: flex-start;
+	list-style-type: none;
+	position: relative;
+	padding: 0;
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+}
+
+nav ul li {
+	background-color: #4dccbd;
+	padding: 0.7em;
+}
+
+.submenu li {
+	padding: 1em 0;
+	box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.37);
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	color: #fff;
+}
+
+nav:first-of-type .submenu {
+	top: 35px;
+	left: 0;
+	width: 200px;
+}
+
+nav ul:not(:first-of-type) li {
+	padding: 0em 2em;
+}
+
+nav ul li:first-of-type:hover ul {
+	display: initial;
+}
+
+nav:last-of-type {
+	margin-left: 2em;
+}
+
+nav:last-of-type > ul {
+	width: min-content;
+	margin: auto 0em;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+nav > ul > li {
+	display: relative;
+}
+
+nav:last-of-type .submenu {
+	position: absolute;
+	right: -100px;
+	top: 0;
+}
+
+.submenu li {
+	padding-left: 0.3em;
+}
+
+.submenu li:first-of-type {
+	border-top-right-radius: 0.5em;
+}
+
+.submenu li:last-of-type {
+	border-bottom-right-radius: 0.5em;
+}
+
+.submenu li:hover {
+	background-color: #231651;
+}
+
+@media screen and (max-width: 583px) {
+	article {
+		flex-direction: column;
+	}
+
+	nav:last-of-type {
+		margin: 7em 0;
+	}
+}
