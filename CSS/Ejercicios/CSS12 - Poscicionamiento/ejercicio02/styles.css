@@ -41,6 +41,10 @@ body {
 	background-color: rgba(255, 255, 255, 0.966);
 }
 
+header {
+	display: initial;
+}
+
 figure {
 	width: 100px;
 	height: 100px;
@@ -87,9 +91,13 @@ main {
 
 .nav-form {
 	display: flex;
-	position: relative;
+	background-color: #fff;
+
+	box-shadow: -0px 2px 10px -1px rgba(0, 0, 0, 0.185);
 	justify-content: space-between;
 	align-items: center;
+	position: sticky;
+	top: 0;
 }
 
 nav {
