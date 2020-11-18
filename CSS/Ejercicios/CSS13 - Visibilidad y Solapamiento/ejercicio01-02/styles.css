@@ -96,6 +96,7 @@ nav:last-of-type .submenu {
 
 .submenu li {
 	padding-left: 0.3em;
+	transition: all 200ms ease-in;
 }
 
 .submenu li:first-of-type {
