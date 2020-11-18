@@ -151,3 +151,25 @@ nav:last-of-type .submenu {
 	top: 0;
 	left: 100px;
 }
+
+section:last-of-type .submenu {
+	display: initial;
+	position: absolute;
+	overflow: hidden;
+	transition: 0.5s ease-in;
+}
+
+section:last-of-type nav:first-of-type .submenu {
+	max-height: 0;
+}
+
+section:last-of-type nav:last-of-type .submenu {
+	max-width: 0;
+}
+
+section:last-of-type nav:first-of-type .menu > li:hover .submenu {
+	max-height: 500px;
+}
+section:last-of-type nav:last-of-type .menu > li:hover .submenu {
+	max-width: 500px;
+}
