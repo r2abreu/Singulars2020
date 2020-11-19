@@ -35,6 +35,9 @@ nav li:hover {
 a[class*="button"]:hover {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.562); }
 
+a[class*="button"] {
+  font-weight: bold; }
+
 header {
   background-color: #ff7700;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
@@ -254,16 +257,105 @@ footer {
   background-color: #ff7700;
   color: #fff;
   font-weight: bold; }
-  footer div {
+  footer .top {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto; }
+    footer .top h2 {
+      color: rgba(0, 0, 0, 0.733); }
+  footer .bottom {
     display: flex;
     align-items: baseline;
     justify-content: space-around; }
+  footer .social {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 40%; }
+    footer .social select {
+      width: 20%;
+      min-width: 120px;
+      appearance: none;
+      background-color: #ff7700;
+      background-image: url(../assets/down-arrow.svg);
+      background-size: 1.2em;
+      background-position-x: 80%;
+      background-position-y: 50%;
+      background-repeat: no-repeat;
+      border: 0;
+      color: #fff;
+      font-weight: bold; }
+  footer .links {
+    display: flex;
+    flex: 1 1 40%;
+    justify-content: center; }
+    footer .links ul li:first-of-type {
+      color: rgba(0, 0, 0, 0.733); }
+    footer .links ul > * + * {
+      margin: 0.4em 0; }
   footer hr {
     width: 70%;
-    margin: auto; }
+    margin: 0.5 auto; }
   footer figure {
     position: relative;
     width: 100px; }
+
+/* ASIDE */
+aside {
+  width: 40%;
+  position: fixed;
+  top: 100px;
+  right: -40%;
+  z-index: 4;
+  background-color: #fff;
+  transition: transform 300ms ease-in;
+  padding: 2em;
+  border-bottom-left-radius: 1em;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.664); }
+  aside:hover {
+    transform: translateX(-100%); }
+  aside:hover figure img {
+    transform: rotate(-2turn); }
+  aside div h2 {
+    margin: 0; }
+  aside form {
+    display: flex;
+    flex-direction: column; }
+    aside form textarea {
+      height: 30%; }
+    aside form label {
+      margin-top: 0.5em; }
+    aside form input:not([type="submit"]),
+    aside form textarea {
+      margin: 0.5em 0;
+      border-radius: 0.3em;
+      padding: 0.4em; }
+    aside form input,
+    aside form textarea {
+      border: 1px solid #c4c4c4; }
+    aside form [type="submit"] {
+      width: 20%;
+      min-width: 140px;
+      align-self: flex-end;
+      background-color: #cf33a3;
+      color: #fff;
+      padding: 1em 0;
+      margin-top: 0.5em;
+      font-weight: bold;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.247);
+      border-radius: 0.5em; }
+  aside figure {
+    width: 4em;
+    position: absolute;
+    left: -62px;
+    top: 0;
+    background-color: #fff;
+    padding: 0.5em;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    box-shadow: -5px 1px 5px -1px rgba(0, 0, 0, 0.664); }
+    aside figure img {
+      transition: transform 300ms ease-in; }
 
 @media screen and (min-width: 1500px) {
   header {
@@ -301,7 +393,16 @@ footer {
         margin: 0.5em 1em; }
     header nav a {
       width: 90%;
-      text-align: center; } }
+      text-align: center; }
+  footer .top {
+    flex-direction: column; }
+    footer .top .social {
+      margin-bottom: 0.5em; }
+    footer .top .links {
+      flex-wrap: wrap; }
+      footer .top .links ul {
+        padding: 0;
+        margin: auto 1em; } }
 
 @media screen and (max-width: 630px) {
   .hero div {
@@ -310,7 +411,11 @@ footer {
     .hero div a {
       margin: 0.5em 0;
       width: 100%;
-      text-align: center; } }
+      text-align: center; }
+  footer .top {
+    display: none; }
+  aside {
+    display: none; } }
 
 @media screen and (max-width: 470px) {
   .hero h1 {
