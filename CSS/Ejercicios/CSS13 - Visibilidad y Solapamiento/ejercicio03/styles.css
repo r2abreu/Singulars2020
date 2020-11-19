@@ -112,6 +112,7 @@ main {
 	background-color: var(--primary-color);
 	transition: max-height 400ms;
 	box-shadow: -0px 10px 10px -1px rgba(0, 0, 0, 0.185);
+	z-index: 1;
 }
 
 .submenu li {
@@ -338,6 +339,10 @@ main > div p:first-of-type::first-letter {
 		flex-direction: column;
 	}
 
+	.nav-form nav {
+		align-self: flex-start;
+	}
+
 	.nav-form form {
 		position: static;
 		background-color: transparent;
@@ -371,7 +376,7 @@ main > div p:first-of-type::first-letter {
 }
 
 @media screen and (max-width: 590px) {
-	nav ul {
+	nav ul:not(.submenu) {
 		justify-content: center;
 		min-height: 3em;
 		align-content: space-between;
@@ -379,5 +384,17 @@ main > div p:first-of-type::first-letter {
 
 	iframe {
 		width: 100%;
+	}
+
+	.nav-form li:nth-of-type(2) .submenu {
+		left: -50px;
+	}
+
+	.banner {
+		padding-bottom: 0.5em;
+	}
+
+	.banner .hero {
+		font-size: 1em;
 	}
 }
