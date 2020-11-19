@@ -327,7 +327,7 @@ section {
 main > div p:first-of-type::first-letter {
 	font-size: 2em;
 	font-family: 'Merriweather';
-	color: var(--secondary-color);
+	color: var(--primary-color);
 }
 @media screen and (max-width: 880px) {
 	main table {

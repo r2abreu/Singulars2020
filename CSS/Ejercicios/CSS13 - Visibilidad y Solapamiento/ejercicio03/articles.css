@@ -15,8 +15,18 @@ section article figure {
 	height: 320px;
 }
 
+section article:nth-of-type(2n) figure {
+	margin-left: 0;
+}
+
 section article:nth-of-type(2n + 1) figure {
 	float: right;
+	margin-right: 0;
+}
+
+section article:nth-of-type(2n + 1) h3,
+section article:nth-of-type(2n + 1) span {
+	text-align: right;
 }
 img {
 	width: 100%;
@@ -33,8 +43,40 @@ section h3 {
 	font-size: 2em;
 	text-align: left;
 	color: var(--secondary-color);
+	margin-bottom: 0.3em;
 }
 
-p {
+section span {
+	margin-bottom: 0.5em;
+	text-align: left;
+	display: block;
+	color: var(--primary-color);
+}
+
+section p {
 	text-align: justify;
+}
+
+section p:first-of-type {
+	margin-top: 5em;
+}
+
+section p:last-of-type {
+	margin-bottom: 2em;
+}
+
+section p:first-of-type::first-letter {
+	font-size: 5em;
+	font-family: 'Merriweather';
+	color: var(--secondary-color);
+}
+
+section p:first-of-type::first-line {
+	line-height: 0;
+}
+
+section a[href="to"]:hover,
+section a[href="to"]:link {
+	color: var(--primary-color);
+	font-style: italic;
 }
