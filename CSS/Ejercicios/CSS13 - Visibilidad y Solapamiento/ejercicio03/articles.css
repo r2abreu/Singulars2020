@@ -1,0 +1,40 @@
+:root {
+	--border: 1px solid #000;
+	--primary-color: #79addc;
+	--secondary-color: #ffc09f;
+	cursor: url(./assets/knife.png), auto;
+}
+
+section figure {
+	width: 20em;
+}
+
+section article figure {
+	float: left;
+	margin-bottom: 2.5em;
+	height: 320px;
+}
+
+section article:nth-of-type(2n + 1) figure {
+	float: right;
+}
+img {
+	width: 100%;
+}
+
+h2 {
+	text-decoration: none;
+	font-style: initial;
+	text-align: left;
+	font-size: 3em;
+}
+
+section h3 {
+	font-size: 2em;
+	text-align: left;
+	color: var(--secondary-color);
+}
+
+p {
+	text-align: justify;
+}

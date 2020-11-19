@@ -20,7 +20,7 @@ a:link:not(.hero) {
 }
 
 a:visited:not(.hero) {
-	color: #6394be;
+	color: #fff;
 }
 
 a:hover:not(.hero) {
