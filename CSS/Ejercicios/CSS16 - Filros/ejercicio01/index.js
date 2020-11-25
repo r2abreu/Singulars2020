@@ -50,3 +50,14 @@ const dropShadow = (target) => {
 	document.getElementById('dropShadowLabel').textContent = `drop-shadow(${x}px ${y}px ${b}px ${c})`;
 	image.style.filter = `drop-shadow(${x}px ${y}px ${b}px ${c})`;
 };
+
+const button = document.querySelector('button');
+button.addEventListener('click', (event) => {
+	elements.forEach((element) => {
+		element.value = 0;
+	});
+	spans.forEach((span) => {
+		span.textContent = '';
+	});
+	image.style.filter = 'initial';
+});
