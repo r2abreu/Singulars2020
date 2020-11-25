@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>Funciones de Filtro</h1>
+                <figure>
+                    <img src="./flower.jpg" alt="flower" title="Flor" />
+                </figure>
+            </section>
+            <div>
+                <div>
+                    <label for="blur">Blur Pixels</label><span class="blur"></span>
+                    <input type="range" max="100" id="blur" value="0" />
+                    <label for="brightness">Brightness Percentage</label><span class="brightness"></span>
+                    <input type="range" max="100" id="brightness" value="100" />
+                    <label for="contrast">Contrast Percentage</label><span class="contrast"></span>
+                    <input type="range" id="contrast" value="100" />
+                    <label for="grayscale">Grayscale Percentage</label><span class="grayscale"></span>
+                    <input type="range" max="100" id="grayscale" value="0" />
+                    <label for="hueRotate">Hue Rotate Degrees</label><span class="hue-rotate"></span>
+                    <input type="range" max="360" id="hue-rotate" value="100" />
+                </div>
+                <div>
+                    <label for="invert">Invert Percentage</label><span class="invert"></span>
+                    <input type="range" max="100" id="invert" value="100" />
+                    <label for="opacity">Opacity Percentage</label><span class="opacity"></span>
+                    <input type="range" max="100" id="opacity" value="100" />
+                    <label for="saturate">Saturate Percentage</label><span class="saturate"></span>
+                    <input type="range" max="100" id="saturate" value="100" />
+                    <label for="sepia">Sepia Percentage</label><span class="sepia"></span>
+                    <input type="range" max="100" id="sepia" value="0" />
+                    <label>Drop Shadow (x,y,b,c)</label><span id="dropShadowLabel"></span>
+                    <input type="range" max="100" id="dropX" value="0" />
+                    <input type="range" max="100" id="dropY" value="0" />
+                    <input type="range" max="100" id="dropBlur" value="0" />
+                    <input type="color" max="100" id="dropColor" value="0" />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
