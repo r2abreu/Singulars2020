@@ -10,14 +10,28 @@ html {
 	margin: 0;
 }
 
-a {
+a:link {
 	text-decoration: none;
+	color: #000;
+}
+
+a:visited {
+	color: #838383;
+}
+
+a:active {
+	color: #0f0;
+}
+
+a:focus {
+	color: #c4c4c4;
 }
 
 header {
 	font-family: 'Cinzel', serif;
 	padding: 2em;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 }
 
@@ -27,8 +41,10 @@ header h1 {
 }
 
 header nav {
-	font: menu;
+	font-family: 'Big Shoulders Stencil Text', cursive;
+	text-transform: uppercase;
 	flex: 1 1 50%;
+	font-size: 1.2rem;
 }
 
 header nav ul {
