@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Media Queries | Ejercicio 01</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 10px;
+            }
+            body {
+                padding: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            header {
+                background-color: #f99;
+                grid-area: cabecera;
+            }
+
+            aside {
+                background-color: #99f;
+                grid-area: lateral;
+            }
+
+            main {
+                background-color: #9ff;
+                grid-area: principal
+            }
+
+            footer {
+                background-color: #f9f;
+                grid-area: pie;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas: 'cabecera cabecera' 'lateral principal' 'pie pie';
+                gap: 10px;
+            }
+
+            @media screen and (max-width: 400px) {
+                .grid-container {
+                    grid-template-areas: 'cabecera' 'principal' 'lateral' 'pie';
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Ejemplo de Media Queries</h1>
+        <div class="grid-container">
+            <header>header</header>
+            <aside>aside</aside>
+            <main>main</main>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>
