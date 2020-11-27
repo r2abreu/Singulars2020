@@ -1,0 +1,97 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 2em;
+	display: grid;
+	gap: 1em;
+	max-width: 1000px;
+	margin: auto;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas: "header header nav" "izq article article" "izq article-2 article-2" "footer figure summary";
+	font-family: Arial, Helvetica, sans-serif;
+	max-height: 100%;
+}
+
+header,
+nav,
+aside,
+article,
+.article-2,
+footer,
+figure,
+summary {
+	padding: 1em;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+/* Fifth Section */
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+aside {
+	grid-area: izq;
+}
+
+article {
+	grid-area: article;
+}
+.article-2 {
+	grid-area: article-2;
+}
+
+footer {
+	grid-area: footer;
+}
+
+summary {
+	grid-area: summary;
+}
+
+figure {
+	grid-area: figure;
+	margin: 0;
+}
+
+header,
+nav {
+	background-color: #ff4945;
+}
+
+aside {
+	background-color: #ffa931;
+}
+
+article,
+summary {
+	background-color: #9b0579;
+}
+
+footer,
+figure,
+summary {
+	background-color: #00778f;
+}
+
+@media screen and (max-width: 400px) {
+	body {
+		grid-template-areas: "header nav" "izq article" "izq article-2" "footer summary";
+	}
+
+	figure {
+		display: none;
+	}
+}
