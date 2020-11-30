@@ -1,0 +1,203 @@
+/* reset */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:link {
+	color: #fff;
+}
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+	list-style-type: none;
+	font-weight: bold;
+}
+
+/* navbar */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 0;
+	height: min-content;
+	background-color: #63666a;
+	color: #fff;
+}
+
+header > figure:not(:only-of-type) {
+	flex: 1 1 15%;
+}
+
+header nav {
+	display: flex;
+	font-variant: small-caps;
+	align-items: center;
+	width: 1000px;
+	margin: auto;
+	transition: all 200ms ease-in;
+}
+
+header nav figure {
+	width: 10em;
+}
+
+header nav figure img {
+	width: 100%;
+}
+
+header nav ul {
+	display: flex;
+	flex: 1 1 80%;
+	margin: 0 1em;
+	justify-content: space-around;
+}
+
+header div {
+	display: flex;
+	justify-content: space-around;
+	flex: 1 1 10%;
+	text-align: right;
+}
+
+header nav div figure {
+	width: 15px;
+}
+
+header nav div figure img {
+	width: 100%;
+}
+
+header > figure {
+	display: none;
+}
+
+.expand {
+	height: 100vh;
+}
+
+/* main */
+
+main .carousel {
+	display: flex;
+	overflow: hidden;
+	position: relative;
+	align-items: stretch;
+	height: 40em;
+	width: 200vw;
+}
+
+main .carousel figure {
+	width: 100%;
+	margin: 0 auto;
+}
+
+main .carousel figure img {
+	height: 100%;
+	width: 100%;
+}
+
+main .carousel button {
+	position: absolute;
+	top: 50%;
+	background: transparent;
+	color: #fff;
+	font-weight: 700;
+	font-size: 3em;
+	border: none;
+	z-index: 1;
+	cursor: pointer;
+}
+
+main .carousel .next {
+	right: 100vw;
+}
+
+main .carousel .previous {
+	left: 0;
+}
+
+/* media queries */
+
+@media screen and (max-width: 850px) {
+	header {
+		overflow: auto;
+		transition: all 400ms ease-in;
+		height: 3em;
+	}
+
+	header nav {
+		flex-direction: column;
+		height: 100%;
+	}
+
+	header nav figure {
+		margin: 2em auto;
+	}
+
+	header nav ul {
+		flex-direction: column;
+		justify-content: flex-start;
+		flex: 1 1 30%;
+		width: 100%;
+	}
+
+	header nav ul a {
+		text-decoration: none;
+		font-variant: small-caps;
+	}
+
+	header nav ul li {
+		padding: 1em 0.5em;
+	}
+
+	header nav ul li:first-of-type {
+		border-top: 2px solid #fff;
+	}
+
+	header nav ul li:last-of-type {
+		border-bottom: 2px solid #fff;
+	}
+
+	header nav ul li:not(:first-of-type),
+	header nav ul li:not(:last-of-type) {
+		border-bottom: 2px solid #fff;
+	}
+
+	header nav div {
+		display: none;
+	}
+
+	header > figure {
+		display: block;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+	}
+
+	header [title="Menu"] {
+		text-align: center;
+		height: 1em;
+	}
+
+	header [title="Menu"] img {
+		width: 100%;
+	}
+}
