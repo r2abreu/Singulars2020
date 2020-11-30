@@ -83,3 +83,10 @@ calculateButton.addEventListener('click', function(event) {
 window.alert('Se esta cargando la web');
 window.confirm('Seguira haciendo cosas digas lo que digas');
 window.prompt('Si tienes alguna queja escribela aqui');
+
+// Ejercicio 08
+
+const lastImage = document.querySelector('div:last-of-type img');
+const parragraph = document.createElement('p');
+parragraph.textContent = lastImage.src;
+document.body.appendChild(parragraph);
