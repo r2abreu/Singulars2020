@@ -20,10 +20,10 @@ inputBaja.addEventListener('click', function(event) {
 
 const image = document.querySelector('img');
 image.addEventListener('mouseenter', function(event) {
-	this.src = './on.svg';
+	this.src = './assets/on.svg';
 });
 image.addEventListener('mouseleave', function(event) {
-	this.src = './off.svg';
+	this.src = './assets/off.svg';
 });
 
 const button = document.querySelector('button');
