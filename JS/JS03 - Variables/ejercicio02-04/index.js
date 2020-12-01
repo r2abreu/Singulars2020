@@ -35,9 +35,9 @@ const calcTemp = ({ target }) => {
 	let farenheit = document.querySelector('#farenheit');
 	let celsius = document.querySelector('#celsius');
 	if (target.id === 'farenheit') {
-		celsius.value = Math.round((farenheit.value - 32) * 5 / 9);
+		celsius.value = `${Math.round((farenheit.value - 32) * 5 / 9)} C`;
 	} else {
-		farenheit.value = Math.round(celsius.value * 9 / 5 + 32);
+		farenheit.value = `${Math.round(celsius.value * 9 / 5 + 32)} F`;
 	}
 };
 
@@ -47,8 +47,8 @@ const calcDistance = ({ target }) => {
 	let kilometers = document.querySelector('#kilometers');
 	let miles = document.querySelector('#miles');
 	if (target.id === 'kilometers') {
-		miles.value = Math.round(kilometers.value / 1.609);
+		miles.value = `${Math.round(kilometers.value / 1.609)} millas`;
 	} else {
-		kilometers.value = Math.round(miles.value * 1.609);
+		kilometers.value = `${Math.round(miles.value * 1.609)} km`;
 	}
 };
