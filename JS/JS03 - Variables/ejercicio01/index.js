@@ -8,16 +8,16 @@ let output = document.querySelector('output');
 const calculate = ({ value }) => {
 	switch (value) {
 		case 'sum':
-			output.textContent = parseFloat(num1.value) + +num2.value;
+			output.textContent = parseFloat(num1.value) + +num2.value + +num3.value;
 			break;
 		case 'substract':
-			output.textContent = parseFloat(num1.value) - +num2.value;
+			output.textContent = parseFloat(num1.value) - +num2.value - +num3.value;
 			break;
 		case 'multiply':
-			output.textContent = parseFloat(num1.value) * +num2.value;
+			output.textContent = parseFloat(num1.value) * +num2.value * +num3.value;
 			break;
 		case 'divide':
-			output.textContent = parseFloat(num1.value) / +num2.value;
+			output.textContent = parseFloat(num1.value) / +num2.value / +num3.value;
 			break;
 		default:
 			console.log('Por favor, revisa los campos');
