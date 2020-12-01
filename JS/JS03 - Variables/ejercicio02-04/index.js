@@ -1,25 +1,24 @@
-window.addEventListener('DOMContentLoaded', function(event) {
+window.addEventListener('DOMContentLoaded', function() {
+	// Select inputs
 	const triangleInputs = document.querySelectorAll('.triangle');
-	triangleInputs.forEach((input) => {
-		input.addEventListener('keyup', function(event) {
-			calcTriangle();
-		});
-	});
-
-	const temperatureInputs = document.querySelectorAll('.temperature');
-	temperatureInputs.forEach((input) => {
-		input.addEventListener('keyup', function(event) {
-			event.key === 'Enter' ? calcTemp(event) : null;
-		});
-	});
-
 	const distanceInputs = document.querySelectorAll('.distance');
-	distanceInputs.forEach((input) => {
-		input.addEventListener('keyup', function(event) {
-			event.key === 'Enter' ? calcDistance(event) : null;
+	const temperatureInputs = document.querySelectorAll('.temperature');
+
+	// Add Event Listeners
+
+	const calculo = (nodes, method) => {
+		nodes.forEach((input) => {
+			input.addEventListener('keyup', function(event) {
+				event.key === 'Enter' ? method(event) : null;
+			});
 		});
-	});
+	};
+	calculo(triangleInputs, calcTriangle);
+	calculo(distanceInputs, calcDistance);
+	calculo(temperatureInputs, calcTemp);
 });
+
+// Event Handlers
 
 // Ejercicio 02: Triangulo
 
@@ -27,7 +26,7 @@ const calcTriangle = () => {
 	let height = document.querySelector('#height');
 	let base = document.querySelector('#base');
 	let area = height.value * base.value / 2;
-	document.querySelector('p:first-of-type span').textContent = area;
+	document.querySelector('p:nth-of-type(2) span').textContent = area;
 };
 
 // Ejercicio 03: Grados
@@ -42,7 +41,7 @@ const calcTemp = ({ target }) => {
 	}
 };
 
-// Ejercicio 04: Km to miles
+// Ejercicio 04: Distancias
 
 const calcDistance = ({ target }) => {
 	let kilometers = document.querySelector('#kilometers');
