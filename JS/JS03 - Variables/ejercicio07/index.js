@@ -1,4 +1,4 @@
-// Esperar por input del usuario
+// Event Listener
 
 globalThis.addEventListener('DOMContentLoaded', function() {
 	const buttons = document.querySelectorAll('[type="submit"], [type=reset]');
@@ -29,16 +29,10 @@ const showResult = () => {
 	}
 };
 
+// Validate inputs
+
 const validator = (input) => {
 	return parseFloat(input.value) && input.value > 0;
-};
-
-// Reset Inputs
-
-const resetInputs = () => {
-	document.querySelectorAll('input:not([type="submit"]):not([type="reset"])').forEach((input) => {
-		input.value = '';
-	});
 };
 
 // Calculate Rate
@@ -59,10 +53,20 @@ const calculateRate = (inputs) => {
 		}
 	};
 
+	// Calculate Extra weights and formats result
+
 	let extraWeight = package.weight / 100 * 0.1;
 	let extraVolume = package.volume() * 0.005;
 	return Intl.NumberFormat('es-ES', {
 		style: 'currency',
 		currency: `EUR`
 	}).format(BASERATE + extraVolume + extraWeight);
+};
+
+// Reset Inputs
+
+const resetInputs = () => {
+	document.querySelectorAll('input:not([type="submit"]):not([type="reset"])').forEach((input) => {
+		input.value = '';
+	});
 };

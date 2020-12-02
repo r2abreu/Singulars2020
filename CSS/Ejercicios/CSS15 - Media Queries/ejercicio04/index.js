@@ -24,65 +24,48 @@ mediaQueryList.addListener(expandTrigger);
 
 // Carousel
 
-const images = document.querySelectorAll('.carousel img');
-console.log(images);
-let index = '0';
-let amount = '0';
-let currTransl = [];
-let translationComplete = true;
+let buttons = document.querySelectorAll('button');
+let [ right, left ] = buttons;
+let images = document.querySelectorAll('main figure');
+let slideWidth = images[0].getBoundingClientRect().width;
+let carousel = document.querySelector('.carousel');
+console.log(carousel);
 
-const transitionComplete = () => {
-	translationComplete = true;
-};
-
-amount = document.querySelectorAll('img').length;
-
-images.forEach((image) => {
-	currTransl[image] = -200;
-	image.addEventListener('transitionend', transitionComplete);
+buttons.forEach((button) => {
+	button.addEventListener('click', function(event) {
+		moveSlide(event.target);
+	});
 });
 
-const right = () => {
-	console.log('right');
-	if (translationComplete) {
-		translationComplete = false;
-		index--;
-		if (index === -1) {
-			index = amount - 1;
-		}
-		const outerIndex = index % amount;
-		images.forEach((image) => {
-			image.style.opacity = '1';
-			image.style.transform = `translate(${currTransl[image] + 200}px)`;
-			currTransl[image] = currTransl[image] + 200;
-		});
-		const outerImage = images[outerIndex];
-		outerImage.style.transform = `translate(${currTransl[outerIndex] - 200 * amount}px)`;
-		outerImage.style.opacity = '0.5';
-		currTransl[outerIndex] = currTransl[outerIndex] - 200 * amount;
+images.forEach((image, index) => {
+	image.style.left = `${slideWidth * index}px`;
+});
+
+carousel.addEventListener('transitionend', function(event) {});
+
+const moveSlide = (target) => {
+	let currentSlide = document.querySelector('.current');
+	let targetSlide;
+	if (target.className === 'next') {
+		targetSlide = currentSlide.nextElementSibling;
+	} else {
+		targetSlide = currentSlide.previousElementSibling;
 	}
+	let amountToMove = targetSlide.style.left;
+	carousel.style.transform = `translatex(-${amountToMove})`;
+	currentSlide.classList.toggle('current');
+	targetSlide.classList.toggle('current');
 };
 
-const left = () => {
-	console.log('left');
-	if (translationComplete) {
-		translationComplete = false;
-		index++;
-		let outerIndex = (index - 1) % amount;
-		images.forEach((image) => {
-			image.style.opacity = '1';
-			image.style.transform = `translate(${currTransl[image] - 200}px)`;
-			let outerImage = images[outerIndex];
-			outerImage.style.transform = `translate(${currTransl[outerIndex] + 200 * amount}px)`;
-			outerImage.style.opacity = '0.5';
-			currTransl[outerIndex] = currTransl[outerIndex] + 200 * amount;
-		});
+carousel.addEventListener('transitionend', function(event) {
+	if (carousel.firstElementChild.classList.contains('current')) {
+		left.classList.add('hidden');
+	} else {
+		left.classList.remove('hidden');
 	}
-};
-
-const nextBtn = document.querySelector('.next');
-const previousBtn = document.querySelector('.previous');
-console.log(nextBtn);
-
-nextBtn.addEventListener('click', right);
-previousBtn.addEventListener('click', left);
+	if (carousel.lastElementChild.classList.contains('current')) {
+		right.classList.add('hidden');
+	} else {
+		right.classList.remove('hidden');
+	}
+});
