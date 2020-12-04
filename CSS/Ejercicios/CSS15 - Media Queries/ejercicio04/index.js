@@ -29,7 +29,7 @@ let [ right, left ] = buttons;
 let images = document.querySelectorAll('main figure');
 let slideWidth = images[0].getBoundingClientRect().width;
 let carousel = document.querySelector('.carousel');
-console.log(carousel);
+console.log(slideWidth);
 
 buttons.forEach((button) => {
 	button.addEventListener('click', function(event) {
