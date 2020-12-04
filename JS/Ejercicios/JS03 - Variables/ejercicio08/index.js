@@ -15,7 +15,11 @@ console.log(cityDistanceInput, highwayDistanceInput);
 });
 
 let showValues = () => {
-	document.querySelector('output').textContent = tripCost();
+	if ([ cityDistanceInput, highwayDistanceInput ].every(validator)) {
+		document.querySelector('output').textContent = tripCost();
+	} else {
+		document.querySelector('output').textContent = 'Por favor, asegurate que los valores son correctos';
+	}
 };
 
 let tripCost = () => {
@@ -34,4 +38,8 @@ let resetValues = () => {
 	inputs.forEach((input) => {
 		input.type === 'submit' || input.type === 'reset' ? null : (input.value = null);
 	});
+};
+
+const validator = (input) => {
+	return parseFloat(input.value) && input.value > 0;
 };
