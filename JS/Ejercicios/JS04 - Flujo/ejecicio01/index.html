@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JavaScript Flujos | Ejercicio 01</title>
+    <link rel="stylesheet" href="./sobrio.css" type="text/css"/>
+    <script src="./index.js" defer="defer"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Calculadora de iva.</h1>
+      <label for="price">Ingresa un precio.</label>
+      <input type="text" required="required" id="price"/>
+      <label for="iva">Selecciona el porcentaje de IVA.</label>
+      <select id="iva">
+        <option>Selecciona un porcentaje</option>
+        <option value="1.21">Normal (21%)</option>
+        <option value="1.1">Reducido (10%)</option>
+        <option value="1.04">Super reducido (4%)</option>
+      </select>
+      <input type="submit" value="calcular"/>
+      <p>El precio final es:</p>
+      <output> </output>
+    </main>
+  </body>
+</html>
