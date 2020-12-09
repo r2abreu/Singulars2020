@@ -1,9 +1,9 @@
 let inputs = document.querySelectorAll('input');
-let [ lenght, width, submit ] = inputs;
+let [ altura, base, submit ] = inputs;
 let output = document.createElement('output');
 
 submit.addEventListener('click', function(event) {
-	[ width, lenght ].every(validate) ? showResult(calcAreaAndPerimeter()) : promptError();
+	[ base, altura ].every(validate) ? showResult(calcAreaAndPerimeter()) : promptError();
 });
 
 const validate = (input) => {
@@ -17,8 +17,8 @@ let showResult = (result) => {
 
 let calcAreaAndPerimeter = () => {
 	let rectangle = {};
-	rectangle.area = lenght.value * width.value;
-	rectangle.perimeter = 2 * (+lenght.value + +width.value);
+	rectangle.area = altura.value * base.value;
+	rectangle.perimeter = 2 * (+altura.value + +base.value);
 	return rectangle;
 };
 

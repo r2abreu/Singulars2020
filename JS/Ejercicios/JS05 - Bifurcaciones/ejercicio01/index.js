@@ -1,9 +1,9 @@
 let inputs = document.querySelectorAll('input');
-let [ first, second, third, submit ] = inputs;
+let [ n1, n2, n3, submit ] = inputs;
 let output = document.createElement('p');
 
 submit.addEventListener('click', function(event) {
-	let averageScore = (+first.value + +second.value + +third.value) / 3;
+	let averageScore = (+n1.value + +n2.value + +n3.value) / 3;
 	console.log(averageScore);
 	averageScore >= 5 ? approved() : failed();
 	document.body.appendChild(output);
