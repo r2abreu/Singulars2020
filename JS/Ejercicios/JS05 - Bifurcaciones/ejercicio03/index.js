@@ -7,7 +7,7 @@ submit.addEventListener('click', function(event) {
 });
 
 const validate = (input) => {
-	return typeof +input === 'number';
+	return typeof parseInt(input.value) === 'number' && input.value >= 0;
 };
 
 let showResult = (result) => {
@@ -24,4 +24,5 @@ let calcAreaAndPerimeter = () => {
 
 let promptError = () => {
 	output.textContent = 'Por favor, introduce valores correctos.';
+	document.body.appendChild(output);
 };
