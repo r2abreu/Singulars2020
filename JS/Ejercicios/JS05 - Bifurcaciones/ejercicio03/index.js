@@ -23,7 +23,7 @@ const calculateSalary = (previous, percentage) => {
 };
 
 const showResult = (result) => {
-	output.textContent = `Tu nuevo salario es de ${currencyFormat(result)}`;
+	output.textContent = `Tu nuevo salario es de ${currencyFormat(result)}.`;
 };
 
 const currencyFormat = (value) => {
