@@ -1,21 +1,19 @@
 let [ input, select, submit ] = document.querySelectorAll('input, select');
 let output = document.querySelector('output');
-let previousSalary = parseFloat(input.value);
-let salaryTier = parseFloat(select.value);
 submit.addEventListener('click', function(event) {
-	sortTier(parseFloat(select.value));
+	parseFloat(input.value) > 0 ? sortTier(parseFloat(input.value), parseFloat(select.value)) : promptError();
 });
 
-const sortTier = (tier) => {
+const sortTier = (salary, tier) => {
 	switch (tier) {
 		case 0.3:
-			calculateSalary(previousSalary, 0.3);
+			calculateSalary(salary, 0.3);
 			break;
 		case 0.05:
-			calculateSalary(previousSalary, 0.05);
+			calculateSalary(salary, 0.05);
 			break;
 		case -0.07:
-			calculateSalary(previousSalary, -0.07);
+			calculateSalary(salary, -0.07);
 			break;
 	}
 };
@@ -33,4 +31,8 @@ const currencyFormat = (value) => {
 		style: 'currency',
 		currency: 'EUR'
 	}).format(value);
+};
+
+let promptError = () => {
+	output.textContent = 'Por favor, introduce valores correctos.';
 };
