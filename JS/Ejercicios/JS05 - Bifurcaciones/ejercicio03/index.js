@@ -1,28 +1,36 @@
-let inputs = document.querySelectorAll('input');
-let [ lenght, width, submit ] = inputs;
-let output = document.createElement('output');
-
+let [ input, select, submit ] = document.querySelectorAll('input, select');
+let output = document.querySelector('output');
+let previousSalary = parseFloat(input.value);
+let salaryTier = parseFloat(select.value);
 submit.addEventListener('click', function(event) {
-	[ width, lenght ].every(validate) ? showResult(calcAreaAndPerimeter()) : promptError();
+	sortTier(parseFloat(select.value));
 });
 
-const validate = (input) => {
-	return typeof parseInt(input.value) === 'number' && input.value >= 0;
+const sortTier = (tier) => {
+	switch (tier) {
+		case 0.3:
+			calculateSalary(previousSalary, 0.3);
+			break;
+		case 0.05:
+			calculateSalary(previousSalary, 0.05);
+			break;
+		case -0.07:
+			calculateSalary(previousSalary, -0.07);
+			break;
+	}
 };
 
-let showResult = (result) => {
-	output.textContent = `El área de la figura es ${result.area} y el perímetro es ${result.perimeter}.`;
-	document.body.appendChild(output);
+const calculateSalary = (previous, percentage) => {
+	showResult(previous + previous * percentage);
 };
 
-let calcAreaAndPerimeter = () => {
-	let rectangle = {};
-	rectangle.area = lenght.value * width.value;
-	rectangle.perimeter = 2 * (+lenght.value + +width.value);
-	return rectangle;
+const showResult = (result) => {
+	output.textContent = `Tu nuevo salario es de ${currencyFormat(result)}`;
 };
 
-let promptError = () => {
-	output.textContent = 'Por favor, introduce valores correctos.';
-	document.body.appendChild(output);
+const currencyFormat = (value) => {
+	return new Intl.NumberFormat('es-ES', {
+		style: 'currency',
+		currency: 'EUR'
+	}).format(value);
 };
