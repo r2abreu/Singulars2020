@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./sobrio.css" type="text/css"/>
+    <script src="./index.js" defer="defer"></script>
+    <title>Implemento Ejercicio 04</title>
+  </head>
+  <body>
+    <h1>Ejercicio 04</h1>
+    <label for="radio">Ingresa el radio </label>
+    <input type="number" id="radio"/>
+    <input type="checkbox" value="perimetro" id="perimetro"/>
+    <label for="perimetro">Perimetro</label>
+    <input type="checkbox" value="area" id="area"/>
+    <label for="area">Area</label>
+    <input type="checkbox" value="diametro" id="diametro"/>
+    <label for="diametro">Diametro</label>
+    <input type="submit" value="Calcular" onclick="calcula()"/>
+    <hr/>
+    <output id="resul"></output>
+  </body>
+</html>
