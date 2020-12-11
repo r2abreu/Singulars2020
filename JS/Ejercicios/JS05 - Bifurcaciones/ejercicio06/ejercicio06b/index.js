@@ -13,20 +13,14 @@ const compare = () => {
 	let output = document.querySelector('output');
 	let bigger;
 	if (n1 > n2 && n1 > n3) {
-		if (n1 > n3) {
-			bigger = n1;
-		} else {
-			bigger = n2;
-		}
-	}
-
-	if (n2 > n1 && n2 > n3) {
-		console.log('n2 bigger');
+		bigger = n1;
+	} else {
 		if (n2 > n3) {
 			bigger = n2;
 		} else {
 			bigger = n3;
 		}
 	}
+
 	output.textContent = bigger;
 };

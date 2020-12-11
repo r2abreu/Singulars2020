@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./sobrio.css" type="text/css")
+        script(src="./index.js" defer)
+        title Ejercicio 07 | Calculadora de Notas
+    body
+        main
+            section
+                div 
+                    h1 Calculadora de notas     
+                    span Creado por Arturo Abreu
+                    p Ingresa los parametros para obtener el calculo
+                div
+                    h2 Parametros
+                    label(for="amountOfQuestions") Preguntas:
+                    input(type="number" id="amountOfQuestions" required)
+                    label(for="questionValueDiscount") Descuento por error:
+                    select(id="questionValueDiscount")
+                        option(value="0") 0%
+                        option(value="0.25") 25%
+                        option(value="0.33") 33%
+                        option(value="0.5") 50%
+                        option(value="0.66") 66%
+                        option(value="0.75") 75%
+                        option(value="1") 100%
+                    h2  Resultados 
+                    label(for="goodAnswersAmount") Aciertos:
+                    input(type="number" id="goodAnswers" required)
+                    label(for="badAnswersAmount") Errores: 
+                    input(type="number" id="badAnswersAmount")
+            output
+
