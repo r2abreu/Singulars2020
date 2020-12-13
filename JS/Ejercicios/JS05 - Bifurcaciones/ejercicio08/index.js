@@ -7,35 +7,41 @@ globalThis.addEventListener('DOMContentLoaded', function(event) {
 
 const selectElements = () => {
 	const inputs = document.querySelectorAll('input');
+	let output = document.querySelector('output');
 	let triangle = {};
 	triangle.a = parseFloat(inputs[0].value);
 	triangle.b = parseFloat(inputs[1].value);
 	triangle.c = parseFloat(inputs[2].value);
 
-	validateInputs(triangle) ? showResults(triangle) : promptError();
+	validateInputs(triangle) ? showResults(triangle, output) : promptError(output);
 };
 
 const validateInputs = (triangle) => {
 	for (let property in triangle) {
-		console.log(triangle[property]);
-		if (triangle[property] < 0 || Number.isNaN(triangle[property])) return false;
+		if (triangle[property] <= 0 || Number.isNaN(triangle[property])) return false;
 	}
 	return true;
 };
 
-const showResults = (triangle) => {
+const showResults = (triangle, output) => {
 	let typeOfTriangle = determineTriangle(triangle);
-	console.log(typeOfTriangle);
+	output.textContent = `Este triángulo es un triángulo ${typeOfTriangle}. `;
 };
 
 const determineTriangle = (triangle) => {
 	if (triangle.a === triangle.b && triangle.a === triangle.c) {
-		return 'equilatero';
+		return 'equilátero';
 	}
 
-	if (triangle.a !== triangle.b && triangle.a !== triangle.c) {
-		return 'escaleno';
+	if (!(triangle.a === triangle.b && triangle.a === triangle.c)) {
+		if (triangle.b === triangle.c) {
+			return 'isósceles';
+		} else {
+			return 'escaleno';
+		}
 	}
+};
 
-	return 'isoceles';
+const promptError = (output) => {
+	output.textContent = 'Por favor, revisa que estes ingresando solo números positivos';
 };
