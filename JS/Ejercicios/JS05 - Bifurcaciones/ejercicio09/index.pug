@@ -7,13 +7,10 @@ html(lang="es")
         link(rel="stylesheet", href="./sobrio.css", type="text/css")
         script(src="./index.js" defer)
     body
-        h1 Programa para determinar el tipo de triángulo según sus lados. 
-        p Introduce los lados del triángulo, asegurate de usar solo números positivos. 
-        label(for="sideA") Lado A
-        input(type="number" id="sideB")
-        label(for="sideB") Lado B
-        input(type="number" id="sideB")
-        label(for="sideC") Lado C
-        input(type="number" id="sideC")
-        input(type="submit" value="Determina")
+        h1 Juego de adivinanza.
+        p Introduce un  numero del 1 al 128 y descubre si puedes adivinarlo.
+        label(for="guess") Numero
+        input(type="number" id="guess")
+        input(type="submit" value="Adivina")
+        input(type="reset" value="Empieza otra vez")
         output
