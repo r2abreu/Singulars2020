@@ -1,17 +1,17 @@
 globalThis.addEventListener('DOMContentLoaded', function() {
-	let submitButton = document.querySelector('[type="submit"]');
-	let inputs = document.querySelectorAll('input:not([type="submit"]), select');
+	var inputs = document.querySelectorAll('input:not([type="submit"]), select');
 	inputs.forEach((input) => {
 		input.addEventListener('keyup', function(event) {
-			let output = document.querySelector('output');
-			let test = obtainAndParseValues(inputs);
-			validateValues(test) ? showScore(test, output) : promptError(output);
+			var output = document.querySelector('.output');
+			var test = obtainAndParseValues(inputs);
+			showScore(test, output);
+			// validateValues(test) ? showScore(test, output) : promptError(output);
 		});
 	});
 });
 
 const validateValues = (test) => {
-	for (let property in test) {
+	for (var property in test) {
 		if (!test[property]) {
 			return false;
 		}
@@ -20,42 +20,54 @@ const validateValues = (test) => {
 };
 
 const obtainAndParseValues = (inputs) => {
-	let test = {};
+	var test = {};
 	[ test.amountOfQuestions, test.questionValueDiscount, test.goodAnswersAmount, test.badAnswersAmount ] = inputs;
-	for (let property in test) {
+	for (var property in test) {
 		test[property] = parseFloat(test[property].value);
 	}
 	return test;
 };
 
 const showScore = (test, output) => {
-	const calculatedTest = calculateScore(test);
-	let grade;
-	if (test.totalScore >= 0 && test.totalScore < 4) {
-		console.log('reprobado');
+	calculateScore(test);
+	var grade;
+	if (test.totalScore < 5) {
+		grade = 'Reprobado';
 	}
 	if (test.totalScore >= 5 && test.totalScore < 9) {
-		console.log('Aprobado');
+		grade = 'Aprobado';
 	}
 	if (test.totalScore >= 9) {
-		console.log('Excelente');
+		grade = 'Excelente';
 	}
 
 	output.innerHTML = `
-        <div>
-            <p>Aciertos:</p><span>${test.goodAnswersAmount}</span>
-            <p>Errores:</p><span>${test.badAnswersAmount}</span>
-            <p>No contestadas:</p><span>${test.noAnswered}</span>
-            <p>Nota sin descontar:</p><span>${test.noDiscountScore}</span>
-            <p>Final sobre 10:</p><span>${test.totalScore}</span>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aciertos</th>
+                    <th>Errores</th>
+                    <th>No contestadas</th>
+                    <th>Nota sin descontar</th>
+                    <th>Final sobre 10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>${test.goodAnswersAmount}</td>
+                <td>${test.badAnswersAmount}</td>
+                <td>${test.noAnswered}</td>
+                <td>${test.noDiscountScore}</td>
+                <td>${test.totalScore}</td>
+            </tbody>
+        </table>
+        <output>${grade}</output>
     `;
 };
 
 const calculateScore = (test) => {
-	let valueOfQuestion = 10 / test.amountOfQuestions;
-	let scoreDiscount = test.badAnswersAmount * valueOfQuestion * test.questionValueDiscount;
-	test.noAnswered = test.goodAnswersAmount + test.badAnswersAmount;
+	var valueOfQuestion = 10 / test.amountOfQuestions;
+	var scoreDiscount = test.badAnswersAmount * (valueOfQuestion * test.questionValueDiscount);
+	test.noAnswered = test.amountOfQuestions - (test.goodAnswersAmount + test.badAnswersAmount);
 	test.noDiscountScore = test.goodAnswersAmount * valueOfQuestion;
 	test.totalScore = test.noDiscountScore - scoreDiscount;
 	return test;
