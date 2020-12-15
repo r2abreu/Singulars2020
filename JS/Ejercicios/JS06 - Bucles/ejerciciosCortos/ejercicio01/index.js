@@ -47,4 +47,28 @@ globalThis.addEventListener('DOMContentLoaded', function() {
 		console.log('%c Ejercicio Corto #3', 'font-size: 2rem; color: #fff');
 		console.log(counter);
 	});
+
+	// Ejercicio corto #4
+
+	submit[5].addEventListener('click', function() {
+		let base = parseInt(document.querySelector('#base').value);
+		let exponent = parseInt(document.querySelector('#exponent').value);
+		let result = 1;
+		for (let i = 0; i < exponent; i++) {
+			result *= base;
+		}
+		console.log('%c Ejercicio Corto #4', 'font-size: 2rem; color: #fff');
+		console.log(`Resultado: ${result}`);
+	});
+
+	// Ejercicio corto #5
+
+	submit[6].addEventListener('click', function() {
+		let multipleInput = parseInt(document.querySelector('#multipleInput').value);
+		result = 0;
+		console.log('%c Ejercicio Corto #5', 'font-size: 2rem; color: #fff');
+		for (let i = 0; i < 10; i++) {
+			console.log((result += multipleInput));
+		}
+	});
 });
