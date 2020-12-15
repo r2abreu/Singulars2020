@@ -13,8 +13,10 @@ globalThis.addEventListener('DOMContentLoaded', function() {
 				attempts = 0;
 			}
 
-			if (attempts > 7) {
+			if (attempts === 7) {
 				output.classList.toggle('bad');
+			} else{
+				output.classList.remove('bad');
 			}
 		});
 	});
@@ -44,7 +46,6 @@ const showResult = (guess, random, output) => {
 			output.textContent = 'El número que buscas es mas alto.';
 			break;
 		case 'equal':
-			output.classList.remove('bad');
 			output.textContent = 'Genial, has adivinado!';
 			break;
 		default:
@@ -69,6 +70,5 @@ const promptError = (output) => {
 
 const reset = (output) => {
 	output.textContent = '';
-	output.classList.remove('bad');
-	return parseInt(Math.random() * 127 + 1);
+	return parseInt(Math.random() * 128 + 1);
 };

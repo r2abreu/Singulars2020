@@ -18,9 +18,19 @@ const selectElements = () => {
 
 const validateInputs = (triangle) => {
 	for (let property in triangle) {
-		if (triangle[property] <= 0 || Number.isNaN(triangle[property])) return false;
+		if (Number.isNaN(triangle[property])) {
+			console.log("error")
+			return false;
+		}
 	}
-	return true;
+
+	if (triangle.a + triangle.b <= triangle.c || triangle.a + triangle.c <= triangle.a || triangle.b + triangle.c <= triangle.a) {
+		console.log(triangle.a + triangle.b <= triangle.c)
+		return false;
+	} else {
+		return true;
+	}
+	
 };
 
 const showResults = (triangle, output) => {
@@ -31,17 +41,13 @@ const showResults = (triangle, output) => {
 const determineTriangle = (triangle) => {
 	if (triangle.a === triangle.b && triangle.a === triangle.c) {
 		return 'equilátero';
-	}
-
-	if (!(triangle.a === triangle.b && triangle.a === triangle.c)) {
-		if (triangle.b === triangle.c) {
-			return 'isósceles';
-		} else {
-			return 'escaleno';
-		}
+	} else if (triangle.b === triangle.c) {
+		return 'isósceles';
+	} else {
+		return 'escaleno';
 	}
 };
 
 const promptError = (output) => {
-	output.textContent = 'Por favor, revisa que estes ingresando solo números positivos';
+	output.textContent = 'Por favor, revisa que estes ingresando solo números positivos y que los valores formen realmente un triángulo.';
 };
