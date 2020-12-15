@@ -5,7 +5,7 @@ globalThis.addEventListener('DOMContentLoaded', function() {
 
 	submit[0].addEventListener('click', function() {
 		console.log('%c Ejercicio Corto #1A', 'font-size: 2rem; color: #fff');
-		for (let i = 0; i <= 10; i++) {
+		for (let i = 1; i <= 10; i++) {
 			console.log(i);
 		}
 	});
