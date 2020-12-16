@@ -10,14 +10,13 @@ const printTable = () => {
 	let rows = parseInt(document.querySelector('#rows').value);
 	let tbody = document.querySelector('tbody');
 
-	let resultado = '';
+	let content = '';
 	for (let i = 1; i <= rows; i++) {
-		resultado += `<tr>`;
+		content += `<tr>`;
 		for (let j = 1; j <= columns; j++) {
-			resultado += `<td>fila ${i}, columna ${j}</td>`;
+			content += `<td>fila ${i}, columna ${j}</td>`;
 		}
-		resultado += '</tr>';
+		content += '</tr>';
 	}
-	console.log(resultado);
-	tbody.innerHTML = resultado;
+	tbody.innerHTML = content;
 };
