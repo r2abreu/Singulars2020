@@ -6,7 +6,7 @@ globalThis.addEventListener('DOMContentLoaded', function() {
 });
 
 const printTable = () => {
-	for (let i = 1; i <= 10; i++) {
+	for (let i = 1; i < 10; i++) {
 		let table = document.createElement('table');
 		let tbody = document.createElement('tbody');
 		let thead = document.createElement('thead');
@@ -21,6 +21,7 @@ const printTable = () => {
 		table.appendChild(thead);
 		table.appendChild(tbody);
 		table.setAttribute('border', 1);
-		document.body.appendChild(table);
+		let container = document.querySelector('article');
+		container.appendChild(table);
 	}
 };

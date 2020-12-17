@@ -224,4 +224,31 @@ label {
 	color: #000;
 }
 
+article {
+	display: flex;
+	gap: 5%;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+article table {
+	width: 25%;
+	flex: 1 1 10%;
+	border: 0;
+	border-spacing: 2px;
+	border-collapse: initial;
+}
+
+table th {
+	border: 0;
+	color: #fff;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.486);
+	background-color: #ff0000;
+}
+
+table td {
+	border: 0;
+	color: #000;
+	background-color: #ffdddd;
+}
 /*# sourceMappingURL=main.css.map */
