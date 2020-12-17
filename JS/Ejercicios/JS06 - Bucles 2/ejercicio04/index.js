@@ -7,14 +7,15 @@ globalThis.addEventListener('DOMContentLoaded', function() {
 
 const showResult = () => {
 	let number = parseInt(document.querySelector('#number').value);
-	let counter = 0;
+	let isPrime = true;
 
-	for (let i = 1; i <= number; i++) {
+	for (let i = 2; i < number; i++) {
+		console.log(i);
 		if (number % i === 0) {
-			counter++;
+			isPrime = false;
+			break;
 		}
 	}
-	let result = counter > 2 ? 'No primo' : 'Primo';
 	let output = document.querySelector('output');
-	output.textContent = result;
+	output.textContent = isPrime ? 'Primo.' : 'No primo.';
 };
