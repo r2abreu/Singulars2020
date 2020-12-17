@@ -10,16 +10,13 @@ const showResult = () => {
 	let exponent = parseInt(document.querySelector('#exponent').value);
 	let output = document.querySelector('output');
 	let result = 1;
-	if (exponent > 0) {
-		for (let i = 0; i < exponent; i++) {
-			result *= base;
-		}
-	} else if (exponent < 0) {
-		let divider = 1;
-		for (let i = 0; i < Math.abs(exponent); i++) {
-			divider *= base; //  Exponent
-			result = 1 / divider;
-		}
+
+	for (let i = 1; i <= Math.abs(exponent); i++) {
+		result *= base;
+	}
+
+	if (exponent < 0) {
+		result = 1 / result;
 	}
 	output.textContent = result.toLocaleString();
 };
