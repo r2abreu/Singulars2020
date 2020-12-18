@@ -5,14 +5,11 @@
 	let num2 = document.querySelector('#number2').value;
 	let submit = document.querySelectorAll('[type="submit"]');
 	submit[0].addEventListener('click', function() {
-		console.log(num1, num2);
 		alert(minimo(parseInt(num1), parseInt(num2)));
 	});
-
 	// Ejercicio 02
 
 	// Triangulo
-
 	submit[1].addEventListener('click', function() {
 		let base = document.querySelector('#base').value;
 		let height = document.querySelector('#height').value;
@@ -34,12 +31,22 @@
 		alert(areaCirculo(radio).toFixed(2));
 	});
 
+	// Ejercicio 03
+
 	// Descuento
 
 	submit[4].addEventListener('click', function() {
 		let price = parseInt(document.querySelector('#price').value);
 		let discount = parseInt(document.querySelector('#discount').value);
 		alert(descuento(price, discount));
+	});
+
+	// Ejercicio04
+
+	submit[5].addEventListener('click', function() {
+		let cateto1 = parseInt(document.querySelector('#cateto1').value);
+		let cateto2 = parseInt(document.querySelector('#cateto2').value);
+		alert(hipotenusa(cateto1, cateto2).toFixed(2));
 	});
 })();
 
@@ -63,7 +70,7 @@ const areaCirculo = (r) => {
 	return Math.PI * Math.pow(r, 2);
 };
 
-// Ejercicio 04: Descuento
+// Ejercicio 03: Descuento
 
 const descuento = (precio, descuento) => {
 	if (precio < 0) return NaN;
@@ -71,4 +78,10 @@ const descuento = (precio, descuento) => {
 	if (descuento < 0 || descuento > 100) return NaN;
 
 	return precio - precio * descuento / 100;
+};
+
+// Ejercicio 04: Hipotenusa
+
+const hipotenusa = (cat1, cat2) => {
+	return Math.sqrt(cat1 ** 2 + cat2 ** 2);
 };
