@@ -2,8 +2,7 @@
 	let submit = document.querySelector('[type="submit"]');
 	submit.addEventListener('click', function() {
 		let number = parseInt(document.querySelector('[type="number"]').value);
-		damePrimos(number);
-		console.log('trigger');
+		alert(damePrimos(number));
 	});
 })();
 
@@ -22,9 +21,12 @@ const esPrimo = (numero) => {
 	}
 };
 const damePrimos = (numero) => {
+	let result = '';
 	for (let i = 2; i < numero; i++) {
 		if (esPrimo(i)) {
-			console.log(i);
+			result += `${i},`;
 		}
 	}
+	let showResult = result.slice(0, result.length - 1);
+	return showResult;
 };
