@@ -2,12 +2,8 @@
 	globalThis.addEventListener('DOMContentLoaded', function() {
 		generateCanvas();
 		let divs = document.querySelectorAll('div');
-		divs.forEach((div) => {
-			div.addEventListener('mouseover', function() {
-				let color = document.querySelector('[type="color"]').value;
-				colorea(this, color);
-			});
-		});
+		let section = document.querySelector('section');
+		section.addEventListener('click', onMouseClick);
 	});
 })();
 
@@ -18,6 +14,22 @@ const generateCanvas = () => {
 	}
 };
 
-const colorea = (elem, color) => {
-	elem.style.backgroundColor = color;
-};
+function colorea() {
+	let color = document.querySelector('[type="color"]').value;
+	this.style.backgroundColor = color;
+}
+
+function onMouseClick() {
+	[ ...this.children ].forEach((div) => {
+		div.addEventListener('mouseover', colorea);
+	});
+
+	this.addEventListener('click', removeListener);
+}
+
+function removeListener() {
+	[ ...this.children ].forEach((div) => {
+		div.removeEventListener('mouseover', colorea);
+	});
+	this.removeEventListener('click', removeListener);
+}
