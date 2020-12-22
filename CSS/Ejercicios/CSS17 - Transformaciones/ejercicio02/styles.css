@@ -105,6 +105,7 @@ main section figure img {
 }
 
 #portrait section figure img:hover {
+	transform: scale(1.2) translate(-10px) rotate(360deg);
 	filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.555));
 }
 
