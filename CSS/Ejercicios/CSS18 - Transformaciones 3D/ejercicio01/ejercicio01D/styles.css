@@ -1,0 +1,34 @@
+body > div {
+	position: fixed;
+	width: 50%;
+	height: 50%;
+	top: 15%;
+	left: 25%;
+	background-color: #696;
+	padding: 30px;
+}
+
+body > div:hover > div {
+	transform: rotateY(180deg) rotate(20deg);
+}
+
+body > div > div {
+	position: relative;
+	margin: auto;
+	width: 200px;
+	height: 280px;
+	transform-style: preserve-3d;
+	border-radius: 10px;
+	transition: 2s;
+}
+
+body > div > div img {
+	position: absolute;
+	width: 200px;
+	height: 280px;
+	backface-visibility: hidden;
+}
+
+body > div > div img:last-of-type {
+	transform: rotateY(180deg);
+}

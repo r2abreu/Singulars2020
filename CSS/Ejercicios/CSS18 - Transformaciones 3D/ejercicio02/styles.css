@@ -1,0 +1,52 @@
+.cubo {
+	position: relative;
+	transform-style: preserve-3d;
+	top: 100px;
+	left: 100px;
+	height: 200px;
+	width: 200px;
+	transform: rotateX(45deg) rotateY(45deg);
+	transition: 2s;
+}
+
+.cubo:hover {
+	transform: rotateX(1turn) rotateY(1turn);
+}
+
+.cara {
+	position: absolute;
+	border: solid 1px black;
+	height: 200px;
+	width: 200px;
+	text-align: center;
+}
+
+.front {
+	background-color: rgba(255, 0, 0, 1);
+	transform: translateZ(100px);
+}
+
+.back {
+	background-color: rgba(0, 255, 0, 1);
+	transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+	background-color: rgba(0, 0, 255, 1);
+	transform: rotateY(90deg) translateZ(100px);
+}
+
+.right {
+	background-color: rgba(255, 255, 0, 1);
+	transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+	background-color: rgba(255, 0, 255, 1);
+	transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+	background-color: rgba(0, 255, 255, 1);
+	transform: rotateX(-90deg) translateZ(100px);
+}

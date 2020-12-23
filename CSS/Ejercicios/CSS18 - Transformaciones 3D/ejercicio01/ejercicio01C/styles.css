@@ -1,0 +1,34 @@
+#tapete {
+	position: fixed;
+	width: 50%;
+	height: 50%;
+	top: 15%;
+	left: 25%;
+	background-color: #696;
+	padding: 30px;
+}
+
+#tapete:hover .carta {
+	transform: rotateY(180deg) rotate(20deg);
+}
+
+.carta {
+	position: relative;
+	margin: auto;
+	width: 200px;
+	height: 280px;
+	transform-style: preserve-3d;
+	border-radius: 10px;
+	transition: 2s;
+}
+
+.carta .cara {
+	position: absolute;
+	width: 200px;
+	height: 280px;
+	backface-visibility: hidden;
+}
+
+.carta .cara.trasera {
+	transform: rotateY(180deg);
+}

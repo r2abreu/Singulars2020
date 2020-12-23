@@ -1,0 +1,39 @@
+div {
+	position: absolute;
+	top: 20px;
+	height: 300px;
+	left: 50px;
+	width: 200px;
+	transform-style: preserve-3d;
+	transform: rotateX(20deg) rotateY(-30deg) rotateZ(10deg);
+}
+
+div img {
+	position: absolute;
+	border: solid 1px black;
+	height: 100%;
+	width: 100%;
+	transform-origin: 0 50%;
+}
+
+div img:first-child {
+	transform: rotateY(0deg);
+}
+
+div img:nth-of-type(2) {
+	transform: rotateY(5deg);
+}
+div img:nth-of-type(3) {
+	transform: rotateY(10deg);
+}
+div img:nth-of-type(4) {
+	transform: rotateY(15deg);
+}
+
+div img:nth-of-type(5) {
+	transform: rotateY(20deg);
+}
+
+div img:last-of-type {
+	transform: rotateY(25deg);
+}
