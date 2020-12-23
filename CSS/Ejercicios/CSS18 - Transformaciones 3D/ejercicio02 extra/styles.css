@@ -9,6 +9,10 @@
 	transition: 2s;
 }
 
+.cubo:hover {
+	transform: rotateX(1turn) rotateY(1turn);
+}
+
 .cara {
 	position: absolute;
 	border: solid 1px black;
@@ -18,31 +22,31 @@
 }
 
 .front {
-	background-color: rgba(255, 0, 0, 0.5);
+	background-color: rgba(255, 0, 0, 1);
 	transform: translateZ(100px);
 }
 
 .back {
-	background-color: rgba(0, 255, 0, 0.5);
+	background-color: rgba(0, 255, 0, 1);
 	transform: rotateY(180deg) translateZ(100px);
 }
 
 .left {
-	background-color: rgba(0, 0, 255, 0.5);
+	background-color: rgba(0, 0, 255, 1);
 	transform: rotateY(90deg) translateZ(100px);
 }
 
 .right {
-	background-color: rgba(255, 255, 0, 0.5);
+	background-color: rgba(255, 255, 0, 1);
 	transform: rotateY(-90deg) translateZ(100px);
 }
 
 .top {
-	background-color: rgba(255, 0, 255, 0.5);
+	background-color: rgba(255, 0, 255, 1);
 	transform: rotateX(90deg) translateZ(100px);
 }
 
 .bottom {
-	background-color: rgba(0, 255, 255, 0.5);
+	background-color: rgba(0, 255, 255, 1);
 	transform: rotateX(-90deg) translateZ(100px);
 }
