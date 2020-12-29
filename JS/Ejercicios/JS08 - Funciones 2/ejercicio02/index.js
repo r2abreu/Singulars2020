@@ -1,5 +1,14 @@
+let totalMatches = 0;
+let totalWins = 0;
+let totalLost = 0;
+let totalDraw = 0;
+
 (function() {
 	const figures = document.querySelectorAll('figure');
+	const button = document.querySelector('button');
+
+	button.addEventListener('click', resetScore);
+
 	figures.forEach((figure) => {
 		figure.addEventListener('click', onFigureClick);
 	});
@@ -84,6 +93,8 @@ function updateDisplay(choice, image) {
 	}
 }
 
+// Show result message
+
 function displayResult(result) {
 	let output = document.querySelector('output');
 
@@ -96,10 +107,7 @@ function displayResult(result) {
 	}
 }
 
-let totalMatches = 0;
-let totalWins = 0;
-let totalLost = 0;
-let totalDraw = 0;
+// Update scoreboard with global variables
 
 function updateScore(result) {
 	if (result === 'won') {
@@ -125,4 +133,13 @@ function updateBoard(totalMatches, totalWins, totalLost, totalDraw) {
 	wins.textContent = totalWins;
 	lost.textContent = totalLost;
 	draw.textContent = totalDraw;
+}
+
+function resetScore() {
+	totalMatches = 0;
+	totalWins = 0;
+	totalLost = 0;
+	totalDraw = 0;
+	updateBoard(totalMatches, totalWins, totalLost, totalDraw);
+	console.log(totalDraw);
 }
