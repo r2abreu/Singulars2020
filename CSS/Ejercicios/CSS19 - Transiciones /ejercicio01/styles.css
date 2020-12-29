@@ -1,0 +1,74 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+div {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	margin-bottom: 1em;
+}
+
+#rojo {
+	background-color: #f00;
+	transition: width 0.5s ease-in-out 1s;
+}
+
+#azul {
+	background-color: #00f;
+	transition: all 0.5s ease-in-out 0.5s;
+}
+
+#amarillo {
+	background-color: #ff0;
+	transition: width 5s, height 1s;
+}
+
+#verde {
+	background-color: #0f0;
+	transition: height 2s, width 2s;
+}
+
+#rojo:hover {
+	width: 500px;
+}
+
+#azul:hover {
+	width: 500px;
+	height: 500px;
+}
+
+#amarillo:hover {
+	height: 200px;
+	width: 200px;
+}
+
+#amarillo:target {
+	width: 400px;
+	height: 400px;
+}
+
+#verde:hover {
+	width: 200px;
+	height: 200px;
+}
+
+#verde:target {
+	width: 200px;
+	height: 200px;
+}
