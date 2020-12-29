@@ -5,6 +5,10 @@ div {
 	left: 40%;
 	width: 200px;
 	transform-style: preserve-3d;
+	transition: all 0.5s ease-in-out 0.2s;
+}
+
+div:hover {
 	transform: rotateX(20deg) rotateY(-30deg) rotateZ(10deg);
 }
 
