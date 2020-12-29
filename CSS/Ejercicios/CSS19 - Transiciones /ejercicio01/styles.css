@@ -48,9 +48,19 @@ div {
 	width: 500px;
 }
 
+#rojo:target {
+	width: 400px;
+	height: 400px;
+}
+
 #azul:hover {
 	width: 500px;
 	height: 500px;
+}
+
+#azul:target {
+	width: 400px;
+	height: 400px;
 }
 
 #amarillo:hover {
@@ -69,6 +79,46 @@ div {
 }
 
 #verde:target {
-	width: 200px;
-	height: 200px;
+	width: 400px;
+	height: 400px;
+}
+
+section > div {
+	background-color: #f00;
+}
+
+section div:first-of-type {
+	transition-duration: 2s;
+	transition-timing-function: ease;
+}
+
+section div:first-of-type:hover {
+	width: 500px;
+}
+
+section div:nth-of-type(2) {
+	transition-duration: 2s;
+	transition-timing-function: linear;
+}
+
+section div:nth-of-type(2):hover {
+	width: 500px;
+}
+
+section div:nth-of-type(3) {
+	transition-duration: 2s;
+	transition-timing-function: cubic-bezier(.43, 2.06, .65, .61);
+}
+
+section div:nth-of-type(3):hover {
+	width: 500px;
+}
+
+section div:nth-of-type(4) {
+	transition-duration: 2s;
+	transition-timing-function: cubic-bezier(.43, 2.06, .65, .61);
+}
+
+section div:nth-of-type(4):hover {
+	background-color: yellow;
 }
