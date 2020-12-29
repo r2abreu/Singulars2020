@@ -141,5 +141,4 @@ function resetScore() {
 	totalLost = 0;
 	totalDraw = 0;
 	updateBoard(totalMatches, totalWins, totalLost, totalDraw);
-	console.log(totalDraw);
 }

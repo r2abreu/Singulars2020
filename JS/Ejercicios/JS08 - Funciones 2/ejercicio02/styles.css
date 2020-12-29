@@ -11,10 +11,19 @@ html {
 body {
 	max-width: 1000px;
 	margin: auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 figure img {
 	width: 100%;
+}
+
+figure {
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Righteous', cursive;
 }
 
 .display figure {
@@ -23,14 +32,20 @@ figure img {
 
 .picks {
 	display: flex;
-	border: 2px solid red;
 	justify-content: center;
-	width: min-content;
+	width: 100%;
+	margin-top: 2em;
 }
 
 .picks figure {
 	width: 5em;
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.picks figure:hover {
+	transform: translateY(-15px);
+	filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.699));
 }
 
 .display {
@@ -43,9 +58,14 @@ figure img {
 }
 
 .scoreboard {
-	border: 2px solid red;
-	min-width: 200px;
+	min-width: 400px;
+	font-family: 'Fredericka the Great', cursive;
+	min-height: 300px;
 	text-align: center;
+	padding-top: 2.5em;
+	color: #fff;
+	background-color: #36664c;
+	background: no-repeat url('./assets/chalkboard.png') top / 100%;
 }
 
 .scoreboard output {
@@ -55,4 +75,15 @@ figure img {
 
 .scoreboard span {
 	display: block;
+}
+
+.scoreboard p {
+	margin: 0.3em;
+}
+
+button {
+	margin: auto;
+	display: block;
+	width: 40%;
+	padding: 1em;
 }

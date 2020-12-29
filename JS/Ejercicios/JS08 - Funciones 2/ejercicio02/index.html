@@ -4,6 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./styles.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
         <script src="./index.js" defer></script>
         <title>Piedra papel o tijeras</title>
     </head>
@@ -13,17 +17,19 @@
         <main>
             <section class="display">
                 <figure>
-                    <img src="./assets/scissors.png" alt="" title="" />
+                    <img src="./assets/scissors.png" alt="user" title="Usuario" />
+                    <figcaption>Jugador</figcaption>
                 </figure>
                 <div class="scoreboard">
-                    <output> </output>
+                    <output>Juega ya!</output>
                     <p>Partidas:<span></span></p>
                     <p>Ganadas:<span></span></p>
                     <p>Perdidas:<span></span></p>
                     <p>Empatadas:<span></span></p>
                 </div>
                 <figure>
-                    <img src="./assets/scissors.png" alt="" title="" />
+                    <img src="./assets/scissors.png" alt="cpu" title="CPU" />
+                    <figcaption>CPU</figcaption>
                 </figure>
             </section>
             <section class="picks">
@@ -39,8 +45,8 @@
                     <img src="./assets/scissors.png" alt="imagen de tijera" title="Tijera" />
                     <figcaption>Tijera</figcaption>
                 </figure>
-                <button>Empezar de nuevo</button>
             </section>
+            <button>Empezar de nuevo</button>
         </main>
     </body>
 </html>
