@@ -1,160 +1,50 @@
-/*!
- * 
- * CSS Library
- * 
- * Author: Arturo Abreu
- * 
- */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-html {
-	box-sizing: border-box;
-	font-size: 1rem;
-}
-
 body {
-	padding: 0;
-	margin: 0 auto;
-	background-color: #fff;
-	font-family: Roboto, Verdana, Arial, sans-serif;
-	max-width: 50rem;
+	max-width: 1000px;
+	margin: auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 5em;
 }
 
-*,
-:before,
-:after {
-	box-sizing: inherit;
+div.cubo {
+	position: relative;
+	transform-style: preserve-3d;
+	margin: 100px;
+	width: 200px;
+	height: 200px;
+	transform: rotateX(40deg) rotateY(40deg);
 }
 
-h1,
-h2,
-h3,
-h4 {
-	color: #111111;
-	font-weight: bold;
-	font-family: Oswald, Verdana, Arial, sans-serif;
-	line-height: 1.5rem;
-	letter-spacing: 0.1rem;
-	margin: 0.5rem 0;
+div.cara {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	outline: 1px solid black;
+	transition: 1s;
 }
 
-h1 {
-	font-size: 3rem;
+div.cubo:target .cara.front {
+	background-color: rgba(255, 0, 255, 0.5);
+	transform: translateZ(-100px);
 }
-
-h2 {
-	font-size: 2.25 rem;
+div.cubo:target .cara.back {
+	background-color: rgba(255, 255, 0, 0.5);
+	transform: translateZ(100px);
 }
-
-h3 {
-	font-size: 1.5 rem;
+div.cubo:target .cara.left {
+	background-color: rgba(0, 255, 0, 0.5);
+	transform: rotateY(90deg) translateZ(-100px);
 }
-
-h4 {
-	font-size: 1.125rem;
+div.cubo:target .cara.right {
+	background-color: rgba(255, 0, 0, 0.5);
+	transform: rotateY(-90deg) translateZ(-100px);
 }
-
-p {
-	color: #333;
-	font-weight: 400;
+div.cubo:target .cara.top {
+	background-color: rgba(0, 0, 255, 0.5);
+	transform: rotateX(-90deg) translateZ(-100px);
 }
-
-blockquote {
-	border-left: 0.3rem solid #111111;
-	border-radius: 2px 0 0 2px;
-	padding: 0 0.5rem;
-	font-size: 1.5rem;
-	font-weight: lighter;
-}
-blockquote .blockquote-footer {
-	font-style: italic;
-	text-align: right;
-	font-size: 1rem;
-}
-
-button {
-	border: 0.065rem solid #ffffff00;
-	background-color: #111111;
-	padding: 0.7rem;
-	border-radius: 0.2rem;
-	color: #ffffff;
-}
-button:hover,
-button:focus,
-button:active {
-	color: #111111;
-	background: #ffffff;
-	border: 0.065rem solid #111111;
-	cursor: pointer;
-}
-
-label {
-	margin: 0.5rem 0;
-	font-weight: 400;
-}
-
-input:not([type*="checkbox"]):not([type="submit"]),
-select,
-textarea {
-	width: 100%;
-	margin: 0.5rem 0;
-	display: block;
-	padding: 0.4rem;
-}
-
-select {
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==)
-		right center no-repeat;
-	-moz-appearance: none;
-	border: 1px solid #cdc7c2;
-	border-radius: 0.3rem;
-}
-
-textarea {
-	overflow: auto;
-	max-width: 100%;
-	border-radius: 0.3rem;
-	border: 1px solid #cdc7c2;
-}
-
-[type="submit"] {
-	border: 0.065rem solid #ffffff00;
-	background-color: #111111;
-	padding: 0.7rem;
-	border-radius: 0.2rem;
-	color: #ffffff;
-	display: block;
-}
-[type="submit"]:hover,
-[type="submit"]:focus,
-[type="submit"]:active {
-	color: #111111;
-	background: #ffffff;
-	border: 0.065rem solid #111111;
-	cursor: pointer;
-}
-
-table {
-	padding: 0.5rem;
-	width: 100%;
-	border-collapse: collapse;
-}
-table tr:nth-child(even) {
-	background-color: #e0e0e0;
-}
-table th {
-	border-bottom: 0.2rem solid #111111;
-	padding: 0.5rem;
-}
-table td {
-	border-bottom: 0.065rem solid #111111;
-	padding: 0.5rem;
-}
-
-/* LOCAL RULES */
-
-figure {
-	width: 2rem;
+div.cubo:target .cara.bottom {
+	background-color: rgba(125, 125, 255, 0.5);
+	transform: rotateX(90deg) translateZ(-100px);
 }
 
 /*# sourceMappingURL=main.css.map */

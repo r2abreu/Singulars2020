@@ -1,0 +1,58 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+body {
+	max-width: 1000px;
+	margin: auto;
+}
+
+figure img {
+	width: 100%;
+}
+
+.display figure {
+	width: 10em;
+}
+
+.picks {
+	display: flex;
+	border: 2px solid red;
+	justify-content: center;
+	width: min-content;
+}
+
+.picks figure {
+	width: 5em;
+	cursor: pointer;
+}
+
+.display {
+	display: flex;
+	justify-content: space-around;
+}
+
+[src*="rock"] {
+	transform: rotateX(180deg);
+}
+
+.scoreboard {
+	border: 2px solid red;
+	min-width: 200px;
+	text-align: center;
+}
+
+.scoreboard output {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.scoreboard span {
+	display: block;
+}
