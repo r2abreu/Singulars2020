@@ -23,7 +23,6 @@ const generateCanvas = () => {
 };
 
 function colorea() {
-	console.log(borrar);
 	let color = document.querySelector('[type="color"]').value;
 	this.style.backgroundColor = borrar ? '#fff' : color;
 }
