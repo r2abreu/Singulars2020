@@ -1,3 +1,12 @@
+@font-face {
+	font-family: 'Wonton';
+	src: url('./assets/WontonbyDaFontMafia.woff2') format('woff2'),
+		url('./assets/WontonbyDaFontMafia.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -12,6 +21,7 @@ body {
 	max-width: 1000px;
 	margin: auto;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background: no-repeat url('./assets/dojo.svg') center center / 100%;
 }
 
 figure img {
@@ -23,7 +33,16 @@ figure {
 }
 
 h1 {
-	font-family: 'Righteous', cursive;
+	font-family: 'Wonton', cursive;
+	color: #b72f2c;
+	text-align: center;
+	font-size: 4rem;
+	filter: drop-shadow(1px 1px 5px #b72e2ca1);
+}
+
+.display {
+	display: flex;
+	align-items: center;
 }
 
 .display figure {
@@ -34,7 +53,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	margin-top: 2em;
+	margin-top: 1em;
 }
 
 .picks figure {
@@ -58,19 +77,21 @@ h1 {
 }
 
 .scoreboard {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: auto;
 	min-width: 400px;
-	font-family: 'Fredericka the Great', cursive;
-	min-height: 300px;
+	font-family: 'Wonton', cursive;
+	min-height: 400px;
 	text-align: center;
-	padding-top: 2.5em;
-	color: #fff;
-	background-color: #36664c;
-	background: no-repeat url('./assets/chalkboard.png') top / 100%;
+
+	color: #b72f2c;
+	font-size: 2em;
 }
 
 .scoreboard output {
 	display: block;
-	margin-bottom: 1em;
 }
 
 .scoreboard span {
@@ -78,7 +99,7 @@ h1 {
 }
 
 .scoreboard p {
-	margin: 0.3em;
+	margin: 0;
 }
 
 button {
