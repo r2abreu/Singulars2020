@@ -32,7 +32,8 @@ figure img {
 	width: 100%;
 }
 
-figure {
+.display figure {
+	margin: 0;
 	text-align: center;
 }
 
@@ -200,6 +201,9 @@ p {
 
 	.display {
 		flex-direction: column;
+	}
+	.display figure {
+		margin: 2em;
 	}
 
 	.scoreboard {
