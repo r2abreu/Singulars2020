@@ -1,10 +1,11 @@
-let totalMatches = 0;
-let totalWins = 0;
-let totalLost = 0;
-let totalDraw = 0;
+var totalMatches = 0;
+var totalWins = 0;
+var totalLost = 0;
+var totalDraw = 0;
+var output = document.querySelector('output');
 
 (function() {
-	const figures = document.querySelectorAll('figure');
+	const figures = document.querySelectorAll('.picks figure');
 	const button = document.querySelector('button');
 
 	button.addEventListener('click', resetScore);
@@ -37,7 +38,7 @@ function play(usersChoice, cpuChoice) {
 		} else if (cpuChoice === 'Piedra') {
 			return 'won';
 		} else {
-			return 'lost';
+			return 'lose';
 		}
 	} else if (cpuChoice === 'Tijera') {
 		return 'draw';
@@ -96,14 +97,17 @@ function updateDisplay(choice, image) {
 // Show result message
 
 function displayResult(result) {
-	let output = document.querySelector('output');
-
 	if (result === 'won') {
 		output.textContent = 'Has ganado!';
+		output.classList.remove('loser');
+		output.classList.add('winner');
 	} else if (result === 'lose') {
 		output.textContent = 'Has perdido!';
+		output.classList.remove('winner');
+		output.classList.add('loser');
 	} else {
 		output.textContent = 'Has empatado!';
+		output.classList.remove('winner', 'loser');
 	}
 }
 
@@ -112,7 +116,7 @@ function displayResult(result) {
 function updateScore(result) {
 	if (result === 'won') {
 		++totalWins;
-	} else if (result === 'lost') {
+	} else if (result === 'lose') {
 		++totalLost;
 	} else {
 		++totalDraw;
@@ -128,7 +132,6 @@ function updateBoard(totalMatches, totalWins, totalLost, totalDraw) {
 	let wins = document.querySelector('.scoreboard p:nth-of-type(2) span ');
 	let lost = document.querySelector('.scoreboard p:nth-of-type(3) span');
 	let draw = document.querySelector('.scoreboard p:last-of-type span');
-	console.log(totalLost);
 	matches.textContent = totalMatches;
 	wins.textContent = totalWins;
 	lost.textContent = totalLost;
@@ -140,5 +143,7 @@ function resetScore() {
 	totalWins = 0;
 	totalLost = 0;
 	totalDraw = 0;
+	output.textContent = 'Juega de nuevo!';
+	output.classList.remove('winner', 'loser');
 	updateBoard(totalMatches, totalWins, totalLost, totalDraw);
 }

@@ -3,50 +3,59 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="./styles.css" rel="stylesheet" type="text/css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
         <script src="./index.js" defer></script>
+        <link href="./styles.css" rel="stylesheet" type="text/css" />
         <title>Piedra papel o tijeras</title>
     </head>
     <body>
-        <h1>Piedra, papel o tijera</h1>
-
+        <header>
+            <h1>Piedra, papel o tijera dojo!</h1>
+        </header>
         <main>
             <section class="display">
-                <figure>
-                    <img src="./assets/scissors.png" alt="user" title="Usuario" />
-                    <figcaption>Jugador</figcaption>
-                </figure>
                 <div class="scoreboard">
-                    <output>Juega ya!</output>
-                    <p>Partidas:<span></span></p>
-                    <p>Ganadas:<span></span></p>
-                    <p>Perdidas:<span></span></p>
-                    <p>Empatadas:<span></span></p>
+                    <p>Partidas<span></span></p>
+                    <p>Ganadas<span></span></p>
+                    <p>Perdidas<span></span></p>
+                    <p>Empatadas<span></span></p>
                 </div>
-                <figure>
-                    <img src="./assets/scissors.png" alt="cpu" title="CPU" />
-                    <figcaption>CPU</figcaption>
-                </figure>
+                <div class="players">
+                    <figure>
+                        <img src="./assets/scissors.png" alt="user" title="Usuario" />
+                        <figcaption>Jugador</figcaption>
+                    </figure>
+                    <output>Juega ya!</output>
+                    <figure>
+                        <img src="./assets/scissors.png" alt="cpu" title="CPU" />
+                        <figcaption>CPU</figcaption>
+                    </figure>
+                </div>
             </section>
-            <section class="picks">
-                <figure>
-                    <img src="./assets/rock.png" alt="imagen de pieda" title="Piedra" />
-                    <figcaption>Piedra</figcaption>
-                </figure>
-                <figure>
-                    <img src="./assets/paper.png" alt="imagen de papel" title="Papel" />
-                    <figcaption>Papel</figcaption>
-                </figure>
-                <figure>
-                    <img src="./assets/scissors.png" alt="imagen de tijera" title="Tijera" />
-                    <figcaption>Tijera</figcaption>
-                </figure>
-            </section>
-            <button>Empezar de nuevo</button>
+            <div>
+                <section class="picks">
+                    <figure>
+                        <img src="./assets/rock.png" alt="imagen de pieda" title="Piedra" />
+                        <figcaption>Piedra</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./assets/paper.png" alt="imagen de papel" title="Papel" />
+                        <figcaption>Papel</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./assets/scissors.png" alt="imagen de tijera" title="Tijera" />
+                        <figcaption>Tijera</figcaption>
+                    </figure>
+                </section>
+                <button>Empezar de nuevo</button>
+            </div>
         </main>
     </body>
 </html>
