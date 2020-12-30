@@ -158,6 +158,14 @@ output {
 	color: #f00;
 }
 
+h2 {
+	display: none;
+}
+
+p {
+	text-align: center;
+}
+
 @keyframes shake {
 	10%,
 	90% {
