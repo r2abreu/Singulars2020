@@ -21,8 +21,9 @@ Este repositorio reúne mis notas personales y los ejercicios realizados durante
 
 ## Proyectos relevantes 
 
-1. [Evaluacion HTML](https://github.com/r2abreu/Singulars2020/tree/master/HTML/Ejercicios/HTML%20Evaluacion)
-2. [Piedra, papel y tijeras](https://github.com/r2abreu/Singulars2020/tree/master/JS/Ejercicios/JS08%20-%20Funciones%202/ejercicio02)
+1. [Evaluación HTML](https://github.com/r2abreu/Singulars2020/tree/master/HTML/Ejercicios/HTML%20Evaluacion)
+2. [Piedra, papel y tijeras](https://github.com/r2abreu/rock-paper-scissors)
+3. [Arturismo](https://r2abreu.github.io/arturismo/)
 
 
 
