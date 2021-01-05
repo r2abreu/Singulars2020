@@ -184,6 +184,15 @@ div {
 	margin: 1em 0;
 	background-color: rgba(51, 51, 51, 0.233);
 	border-radius: 0.5em;
+	overflow: auto;
+}
+
+h1 {
+	margin: 1em 0;
+}
+
+p:first-of-type {
+	font-size: 1.4em;
 }
 
 /*# sourceMappingURL=main.css.map */
