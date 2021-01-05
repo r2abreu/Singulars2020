@@ -11,6 +11,8 @@ function handleClick() {
 	let string = document.querySelector('[type="text"]').value;
 	let key = parseInt(document.querySelector('[type="number"]').value);
 
+	// Encrypts or decrypts depending on the selected operation
+
 	this.textContent === 'Cifrar' ? encryptString(string, key, 'cypher') : encryptString(string, key, 'decypher');
 }
 
@@ -27,10 +29,14 @@ function encryptString(str, key, operation) {
 	printResult(reverseStr(encryptedString));
 }
 
+// Prints the result in the output element
+
 function printResult(result) {
 	let output = document.querySelector('output');
 	output.textContent = result;
 }
+
+// Reverse string
 
 function reverseStr(str) {
 	let newStr = '';
