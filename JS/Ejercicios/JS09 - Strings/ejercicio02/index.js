@@ -19,7 +19,7 @@ function printResult(name, lastname1, lastname2) {
 }
 
 function transformStrings(name, lastname1, lastname2) {
-	let firstChar = name.slice(0, 1).toUpperCase();
+	let firstChar = name[0].toUpperCase();
 	let restOfSentence = name.slice(1).toLowerCase();
 
 	let transformedName = `${firstChar}${restOfSentence}`;

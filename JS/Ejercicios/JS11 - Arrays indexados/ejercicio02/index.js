@@ -7,7 +7,7 @@
 
 function handleClick() {
 	let output = document.querySelector('output');
-	output.textContent = generateArray();
+	generateArray();
 }
 
 function generateArray() {
