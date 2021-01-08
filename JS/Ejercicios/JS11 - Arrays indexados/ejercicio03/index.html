@@ -8,9 +8,23 @@
     <title>Arrays Indexados | Ejercicio 03</title>
   </head>
   <body>
-    <h1>Ejercicio DNI</h1>
-    <p>Recibe numero de DNI y devuelva la letra correspondiente.</p>
+    <h1>Genera tu DNI</h1>
+    <p>Bienvenido al sistema automatizado de gestion DNI (SAGD), introduce tus datos y genera tu DNI.</p>
     <form>
+      <label for="lastname1">Primer Apellido</label>
+      <input type="text" id="lastname1"/>
+      <label for="lastname2">Segundo Apellido</label>
+      <input type="text" id="lastname2"/>
+      <label for="name">Nombre</label>
+      <input type="text" id="name"/>
+      <label for="gender">Sexo</label>
+      <input type="text" id="gender"/>
+      <label for="nationality">Nacionalidad</label>
+      <input type="text" id="nationality" maxlength="2"/>
+      <label for="dob">Fecha de Nacimiento</label>
+      <input type="text" required="required" id="dob" pattern="((0[1-9])|([12]\d)|(3[01]))-((1[0-2])|(0[1-9]))-((20\d{2}|2100)|(19[0-9]{2}))" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="10-03-1992" maxlength="10"/>
+      <label for="image">Sube una imagen</label>
+      <input type="file" id="image"/>
       <label for="dni">Ingresa un numero de DNI valido.</label>
       <input type="text" id="dni" placeholder="27349542" pattern="\d{8}" title="Por favor, ingresa un numero de DNI valido" maxlength="8" required="required"/>
       <input type="submit" value="Genera tu DNI"/>

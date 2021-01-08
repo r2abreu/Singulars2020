@@ -195,11 +195,68 @@ p:first-of-type {
 	font-size: 1.4em;
 }
 
-output {
+.dni {
+	width: 100%;
+	background: no-repeat url(./dni.png) center center / 100%;
+	text-transform: uppercase;
+	position: relative;
+	min-height: 500px;
+}
+
+.dni output {
 	display: block;
 	margin: 1em 0;
 	font-size: 1.3rem;
 	overflow: auto;
+	font-size: 0.9em;
+	color: #000;
+	position: absolute;
 }
 
+.dni output:first-of-type {
+	top: 60px;
+	left: 29%;
+}
+
+.dni output:nth-child(2) {
+	left: 29%;
+	top: 100px;
+}
+
+.dni output:nth-child(3) {
+	left: 29%;
+	top: 140px;
+}
+
+.dni output:nth-child(4) {
+	left: 29%;
+	top: 180px;
+}
+
+.dni output:nth-child(5) {
+	left: 37%;
+	top: 180px;
+}
+
+.dni output:nth-child(6) {
+	left: 29%;
+	top: 220px;
+}
+
+.dni output:last-of-type {
+	bottom: 2.5%;
+	left: 25px;
+}
+
+.dni figure {
+	width: 15em;
+	position: absolute;
+	right: 0;
+	margin: 0;
+	bottom: -5px;
+}
+
+.dni figure img {
+	width: 100%;
+}
 /*# sourceMappingURL=main.css.map */
