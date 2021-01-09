@@ -12,6 +12,7 @@
 html {
 	box-sizing: border-box;
 	font-size: 1rem;
+	background-color: #5089fd;
 }
 
 body {
@@ -197,10 +198,12 @@ p:first-of-type {
 
 .dni {
 	width: 100%;
-	background: no-repeat url(./dni.png) center center / 100%;
+	background: no-repeat url(./dni.png) center center / cover;
 	text-transform: uppercase;
 	position: relative;
 	min-height: 500px;
+	min-width: 767px;
+	max-width: 767px;
 }
 
 .dni output {
