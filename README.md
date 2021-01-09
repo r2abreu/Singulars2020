@@ -26,5 +26,6 @@ Este repositorio reúne mis notas personales y los ejercicios realizados durante
 3. [Arturismo](https://r2abreu.github.io/arturismo/)
 4. [Fakebook](https://r2abreu.github.io/fakebook/)
 5. [Softwarium](https://r2abreu.github.io/softwarium/)
+6. [DNI Generator](https://r2abreu.github.io/DNI-generator/)
 
 
