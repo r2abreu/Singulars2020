@@ -28,9 +28,9 @@ function gatherData() {
 
 function generateDni(user) {
 	let container = document.createElement('div');
-	let reader = new FileReader();
 	container.classList.add('dni');
 
+	let reader = new FileReader();
 	let image = document.querySelector('[type="file"]').files[0];
 
 	for (property in user) {
