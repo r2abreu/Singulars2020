@@ -1,5 +1,7 @@
 // IIFE
 
+let generated = false;
+
 (function() {
 	let form = document.querySelector('form');
 	form.addEventListener('submit', handleSubmit);
@@ -7,7 +9,11 @@
 
 function handleSubmit(event) {
 	event.preventDefault();
-	generateDni(gatherData());
+	if (generated) {
+		alert('Tu DNI ya ha sido generado, si quieres generar otro DNI, por favor refresca la pagina');
+	} else {
+		generateDni(gatherData());
+	}
 }
 
 function gatherData() {
@@ -20,6 +26,7 @@ function gatherData() {
 
 	user.fullDni = determineFullDni();
 
+	generated = true;
 	return user;
 }
 
