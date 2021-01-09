@@ -7,10 +7,7 @@
 
 function handleSubmit(event) {
 	event.preventDefault();
-
-	let user = gatherData();
-
-	generateDni(user);
+	generateDni(gatherData());
 }
 
 function gatherData() {
@@ -28,6 +25,7 @@ function gatherData() {
 
 function generateDni(user) {
 	let container = document.createElement('div');
+	let recipient = document.querySelector('main > div');
 	container.classList.add('dni');
 
 	let reader = new FileReader();
@@ -42,14 +40,15 @@ function generateDni(user) {
 	}
 
 	reader.addEventListener('load', function() {
-		document.querySelector('img').src = reader.result;
+		recipient.querySelector('img').src = reader.result;
 	});
 
 	if (image) {
 		reader.readAsDataURL(image);
 	}
 
-	document.body.appendChild(container);
+	recipient.classList.add('generated');
+	recipient.appendChild(container);
 }
 
 function determineFullDni() {

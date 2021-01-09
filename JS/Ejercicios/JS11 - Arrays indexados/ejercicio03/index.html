@@ -5,36 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./sobrio.css" type="text/css"/>
     <script src="./index.js" defer="defer"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;700&display=swap" rel="stylesheet">
     <title>Arrays Indexados | Ejercicio 03</title>
   </head>
   <body>
     <header>
+      <figure>
+        <img src="./badge.png" alt="Police Badge" title="Policia Universal" />
+      </figure>
+      <h1>Servicio Automatico de Generación de DNI</h1>
       <nav>
-        <h1>SAGD</h1>
-        <p>Servicio Automatico de Generacion de DNI</p>
+        <ul>
+          <li>Incio</li> |
+          <li>Ayuda</li> |
+          <li>Contactar</li> |
+          <li>Aviso legal</li> |
+           <li>Accesibilidad</li> |
+          <li>Map Web</li>
+        </ul>
       </nav>
     </header>
-    <h1>Genera tu DNI</h1>
-    <p>Bienvenido al sistema automatizado de gestion DNI (SAGD), introduce tus datos y genera tu DNI.</p>
-    <form>
-      <label for="lastname1">Primer Apellido</label>
-      <input type="text" id="lastname1"/>
-      <label for="lastname2">Segundo Apellido</label>
-      <input type="text" id="lastname2"/>
-      <label for="name">Nombre</label>
-      <input type="text" id="name"/>
-      <label for="gender">Sexo</label>
-      <input type="text" id="gender"/>
-      <label for="nationality">Nacionalidad</label>
-      <input type="text" id="nationality" maxlength="2"/>
-      <label for="dob">Fecha de Nacimiento</label>
-      <input type="text" required="required" id="dob" pattern="((0[1-9])|([12]\d)|(3[01]))-((1[0-2])|(0[1-9]))-((20\d{2}|2100)|(19[0-9]{2}))" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="10-03-1992" maxlength="10"/>
-      <label for="image">Sube una imagen</label>
-      <input type="file" id="image"/>
-      <label for="dni">Ingresa un numero de DNI valido.</label>
-      <input type="text" id="dni" placeholder="27349542" pattern="\d{8}" title="Por favor, ingresa un numero de DNI valido" maxlength="8" required="required"/>
-      <input type="submit" value="Genera tu DNI"/>
-    </form>
+   <main>
+     <h2>Solicitud de DNI automatizado</h2>
+     <p>Rellena los campos con tus datos:</p>
+    <div>
+      <form>
+        <label for="lastname1">Primer Apellido</label>
+        <input type="text" id="lastname1" required="required"/>
+        <label for="lastname2">Segundo Apellido</label>
+        <input type="text" id="lastname2" required="required"/>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" required="required"/>
+        <label for="gender">Sexo</label>
+        <input type="text" id="gender" required="required"/>
+        <label for="nationality">Nacionalidad</label>
+        <input type="text" id="nationality" maxlength="2" required="required"/>
+        <label for="dob">Fecha de Nacimiento</label>
+        <input type="text" required="required" id="dob" pattern="((0[1-9])|([12]\d)|(3[01]))-((1[0-2])|(0[1-9]))-((20\d{2}|2100)|(19[0-9]{2}))" title="Por favor, revisa el formato e intentalo nuevamente" placeholder="10-03-1992" maxlength="10"/>
+        <label for="image">Imagen</label>
+        <input type="file" id="image" required="required"/>
+        <label for="dni">Ingresa un número de DNI valido.</label>
+        <input type="text" id="dni" placeholder="27349542" pattern="\d{8}" title="Por favor, ingresa un numero de DNI valido" maxlength="8" required="required"/>
+        <input type="submit" value="Genera tu DNI"/>
+      </form>
+    </div>
     <output></output>
+   </main>
+   <footer>
+     Esta página esta realizada con fines de entrenamiento y practicas de desarrollo Web unicamente.
+   </footer>
   </body>
 </html>
