@@ -50,21 +50,12 @@ function turnOnTheLights() {
 		[ pickedRow, pickedCell - 1 ],
 		[ pickedRow, pickedCell + 1 ]
 	];
-	console.log(neighbours);
 
 	for (ele of neighbours) {
-		if (ele[0] > 0 && ele[1] > 0) {
+		if (ele[0] >= 0 && ele[1] >= 0 && (ele[0] <= 4 && ele[1] <= 4)) {
 			elementMatrix[ele[0]][ele[1]].classList.toggle('light');
 		}
 	}
 
-	// if (pickedRow === 0) {
-	// 	neighbours.push(elementMatrix[pickedRow][pickedCell + 1]);
-	// 	neighbours.push(elementMatrix[pickedRow][pickedCell - 1]);
-	// }
-
-	// neighbours.push(elementMatrix[pickedRow][pickedCell + 1]);
-	// neighbours.push(elementMatrix[pickedRow][pickedCell - 1]);
-	// neighbours.push(elementMatrix[pickedRow + 1][pickedCell]);
-	// neighbours.push(elementMatrix[pickedRow - 1][pickedCell]);
+	elementMatrix[pickedRow][pickedCell].classList.toggle('light');
 }
