@@ -11,6 +11,7 @@ function handleClick() {
 	outputs[0].textContent = indiceDe(vector, inputs[0].value);
 	outputs[1].textContent = ultimoIndiceDe(vector, inputs[1].value);
 	outputs[2].textContent = JSON.stringify(concatenar(vector, inputs[2].value.split(',')));
+	outputs[3].textContent = JSON.stringify(invertir(vector));
 }
 
 function indiceDe(arr, element) {
@@ -38,6 +39,16 @@ function concatenar(arr1, arr2) {
 	let newArr = [ ...arr1 ];
 	for (ele of arr2) {
 		newArr.push(ele);
+	}
+
+	return newArr;
+}
+
+function invertir(arr) {
+	let newArr = [];
+
+	while (arr.length) {
+		newArr.push(arr.pop());
 	}
 
 	return newArr;
