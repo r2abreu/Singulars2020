@@ -67,8 +67,10 @@ function turnOnTheLights() {
 }
 
 function updateScore() {
-	let points = document.querySelector('span');
-	points.textContent = parseInt(points.textContent) - 10;
+	let pointsSpan = document.querySelector('span');
+	let pointsValue = parseInt(pointsSpan.textContent);
+	if (pointsValue > 0) pointsSpan.textContent = pointsValue - 10;
+	else pointsSpan.textContent = 'Reinicia el juego';
 }
 
 function handleReset() {
