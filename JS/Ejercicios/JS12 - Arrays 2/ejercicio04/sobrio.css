@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	padding: 5em;
+	padding-top: 0.5em;
 	margin: 0 auto;
 	background-color: #fff;
 	font-family: 'Roboto', Verdana, Arial, sans-serif;
@@ -42,15 +42,15 @@ h4 {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
 h2 {
-	font-size: 2.25 rem;
+	font-size: 2.25rem;
 }
 
 h3 {
-	font-size: 1.5 rem;
+	font-size: 1.5rem;
 }
 
 h4 {
@@ -160,16 +160,19 @@ table td {
 /* local */
 
 .container {
+	width: 90%;
+	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(5, min-content);
+	justify-content: center;
 	gap: 0.5em;
 }
 
 .container div {
-	width: 10em;
-	height: 10em;
+	width: 7em;
+	height: 7em;
 	border: 1px solid #333;
-	border-radius: 0.5em;
+	border-radius: 0.2em;
 }
 
 #color {
@@ -179,7 +182,7 @@ table td {
 }
 
 h1 {
-	margin: 1em 0;
+	margin: 0 0 1em 0;
 	line-height: initial;
 }
 
@@ -235,6 +238,16 @@ output {
 
 .light {
 	background: no-repeat url(./bombilla.png) center center / 50%;
+}
+
+main {
+	display: flex;
+}
+
+span {
+	display: block;
+	margin-top: 1em;
+	font-size: 3em;
 }
 
 /*# sourceMappingURL=main.css.map */
