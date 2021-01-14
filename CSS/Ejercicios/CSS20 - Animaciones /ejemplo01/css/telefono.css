@@ -1,0 +1,18 @@
+/* BODY (GRID)*/
+body{
+  grid-template-columns: auto;
+  grid-template-areas:
+    'h' 
+    'n' 
+    'm'
+    'g'
+    'foto' 
+    'e'
+    'o' 
+    'f';
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+

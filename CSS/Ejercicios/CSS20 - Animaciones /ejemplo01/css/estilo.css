@@ -1,0 +1,241 @@
+/* REGLAS GENERALES */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+p {
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+/* ELEMENTOS Y CONTENEDORES FLEX */
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.flex1 {
+	flex: 1;
+}
+.flex2 {
+	flex: 2;
+}
+.flex3 {
+	flex: 3;
+}
+.flex4 {
+	flex: 4;
+}
+.flex5 {
+	flex: 5;
+}
+.flex6 {
+	flex: 6;
+}
+
+/* INICIO DEL ESTILO GENERAL */
+html {
+	background-image: url('../imagenes/background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* Definición de nombres para el GRID */
+header {
+	grid-area: h;
+}
+nav {
+	grid-area: n;
+}
+#snesbig {
+	grid-area: foto;
+}
+main {
+	grid-area: m;
+}
+#galeria {
+	grid-area: g;
+}
+#opiniones {
+	grid-area: o;
+}
+#especificaciones {
+	grid-area: e;
+}
+footer {
+	grid-area: f;
+}
+
+/* BODY (GRID)*/
+body {
+	font-family: arial, verdana, helvetica;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: 30% 30% auto;
+	grid-template-areas: 'h h h' 'n n n' 'foto m m' 'foto g g' 'o o e' 'f f f';
+	width: 80%;
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+	box-shadow: 2px 2px 4px rgba(60, 60, 60, 0.6);
+}
+
+header {
+	background-image: url('../imagenes/header.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 30px 10px;
+	position: relative;
+	overflow: hidden;
+}
+/* Solucion de Ejercicio */
+
+header figure:last-of-type {
+	position: absolute;
+	bottom: 70px;
+	width: 5em;
+	animation: pasear 25s infinite ease-in-out, salto 25s infinite cubic-bezier(.17, .67, .83, .67);
+}
+
+header figure:last-of-type img {
+	width: 100%;
+}
+
+@keyframes pasear {
+	0% {
+		left: -10%;
+		transform: rotateY(0deg);
+	}
+
+	49% {
+		left: 90%;
+		transform: rotateY(0deg);
+	}
+	51% {
+		left: 90%;
+		transform: rotateY(180deg);
+	}
+	100% {
+		left: -10%;
+		transform: rotateY(180deg);
+	}
+}
+
+@keyframes salto {
+	20% {
+		bottom: 70px;
+	}
+
+	21% {
+		bottom: 120px;
+	}
+
+	22% {
+		bottom: 70px;
+	}
+
+	79% {
+		bottom: 70px;
+	}
+	80% {
+		bottom: 120px;
+	}
+
+	81% {
+		bottom: 70px;
+	}
+}
+
+header h1 {
+	color: white;
+	margin: auto;
+	text-align: center;
+	text-shadow: 2px 2px 2px black;
+	font-size: 4vw;
+}
+
+header #logo {
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 10px;
+	border-radius: 50%;
+	text-align: center;
+}
+header #logo img {
+	width: 90%;
+}
+
+nav {
+	background-color: black;
+	color: white;
+	border: solid 2px black;
+}
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	min-width: 100px;
+}
+
+nav ul li a {
+	display: block;
+	padding: 10px 20px;
+	transition: 0.3s;
+}
+
+nav ul li a:hover {
+	color: black;
+	background-color: white;
+}
+
+body h2 {
+	margin: 10px 0px 20px 0px;
+}
+
+#snesbig img {
+	width: 90%;
+}
+
+#galeria figure img {
+	width: 90%;
+}
+
+#opiniones,
+#especificaciones {
+	border: solid 1px grey;
+	padding: 10px;
+}
+
+#especificaciones table thead tr th {
+	color: white;
+	background-color: black;
+	padding: 5px 10px;
+}
+
+#especificaciones table tbody tr:nth-of-type(odd) {
+	background-color: #eee;
+}
+
+#especificaciones table td {
+	padding: 5px;
+}
+
+footer {
+	background-image: url('../imagenes/footer.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 50px;
+}
+
+footer p {
+	text-align: right;
+	color: white;
+	font-size: 1.5em;
+	text-shadow: 1px 1px 1px black;
+}

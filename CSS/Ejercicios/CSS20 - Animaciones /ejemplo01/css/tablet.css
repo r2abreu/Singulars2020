@@ -1,0 +1,15 @@
+/* BODY (GRID)*/
+body{
+  grid-template-columns: 30% auto;
+  grid-template-areas:
+    'h h' 
+    'n n' 
+    'foto e' 
+    'foto o' 
+    'g g'
+    'm m' 
+    'f f';
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
+}
