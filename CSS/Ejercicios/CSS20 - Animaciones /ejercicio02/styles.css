@@ -1,0 +1,51 @@
+.pitch {
+	background: no-repeat url(pitch.png) -100px 10px / contain;
+	position: relative;
+	width: 500px;
+	height: 500px;
+}
+
+figure {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 5em;
+	animation: rotate 2s linear infinite, vertical 1s cubic-bezier(.67, .06, .94, .74) alternate infinite,
+		horizontal 2s linear alternate infinite;
+}
+
+figure img {
+	border-radius: 50%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate3d(0, 0, 0, 360deg);
+	}
+
+	to {
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
+
+@keyframes vertical {
+	0% {
+		top: 0px;
+	}
+
+	100% {
+		top: 190px;
+	}
+}
+
+@keyframes horizontal {
+	0% {
+		left: -39px;
+	}
+
+	100% {
+		left: 279px;
+	}
+}
