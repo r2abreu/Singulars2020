@@ -1,0 +1,253 @@
+/*!
+ * 
+ * CSS Library
+ * 
+ * Author: Arturo Abreu
+ * 
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+html {
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+body {
+	padding-top: 0.5em;
+	margin: 0 auto;
+	background-color: #fff;
+	font-family: 'Roboto', Verdana, Arial, sans-serif;
+	max-width: 1000px;
+	color: #156c9ebd;
+}
+
+*,
+:before,
+:after {
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #111111;
+	font-weight: bold;
+	font-family: 'Playfair Display', Verdana, Arial, sans-serif;
+	line-height: 1.5rem;
+	letter-spacing: 0.1rem;
+	margin: 0.5rem 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 2.25rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.125rem;
+}
+
+p {
+	color: #333;
+	font-weight: 400;
+}
+
+blockquote {
+	border-left: 0.3rem solid #111111;
+	border-radius: 2px 0 0 2px;
+	padding: 0 0.5rem;
+	font-size: 1.5rem;
+	font-weight: lighter;
+}
+blockquote .blockquote-footer {
+	font-style: italic;
+	text-align: right;
+	font-size: 1rem;
+}
+
+button {
+	border: 0.065rem solid #ffffff00;
+	background-color: #111111;
+	padding: 0.7rem;
+	border-radius: 0.2rem;
+	color: #ffffff;
+}
+button:hover,
+button:focus,
+button:active {
+	color: #111111;
+	background: #ffffff;
+	border: 0.065rem solid #111111;
+	cursor: pointer;
+}
+
+label {
+	margin: 0.5rem 0;
+	font-weight: 400;
+}
+
+input:not([type*="checkbox"]):not([type="submit"]):not([type="reset"]):not([type="image"]),
+select,
+textarea {
+	width: 100%;
+	margin: 0.5rem 0;
+	display: block;
+	padding: 0.4rem;
+}
+
+select {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==)
+		right center no-repeat;
+	-moz-appearance: none;
+	border: 1px solid #cdc7c2;
+	border-radius: 0.3rem;
+}
+
+textarea {
+	overflow: auto;
+	max-width: 100%;
+	border-radius: 0.3rem;
+	border: 1px solid #cdc7c2;
+}
+
+[type="submit"],
+[type="reset"] {
+	border: 0.065rem solid #ffffff00;
+	background-color: #111111;
+	padding: 0.7rem;
+	border-radius: 0.2rem;
+	color: #ffffff;
+}
+[type="submit"]:hover,
+[type="submit"]:focus,
+[type="submit"]:active,
+[type="reset"]:hover,
+[type="reset"]:focus,
+[type="reset"]:active {
+	color: #111111;
+	background: #ffffff;
+	border: 0.065rem solid #111111;
+	cursor: pointer;
+}
+
+table {
+	padding: 0.5rem;
+	width: 100%;
+	border-collapse: collapse;
+}
+table tr:nth-child(even) {
+	background-color: #e0e0e0;
+}
+table th {
+	border-bottom: 0.2rem solid #111111;
+	padding: 0.5rem;
+}
+table td {
+	border-bottom: 0.065rem solid #111111;
+	padding: 0.5rem;
+}
+
+/* local */
+
+.container {
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(5, min-content);
+	justify-content: center;
+	gap: 0.5em;
+}
+
+.container div {
+	width: 7em;
+	height: 7em;
+	border: 1px solid #333;
+	border-radius: 0.2em;
+}
+
+#color {
+	width: 1em;
+	box-sizing: content-box;
+	padding: 0.5rem;
+}
+
+h1 {
+	margin: 0 0 1em 0;
+	line-height: initial;
+}
+
+section {
+	display: flex;
+	border: 1px solid #000;
+	align-items: center;
+}
+
+div > div {
+	padding: 0.5px;
+	border: 0;
+	margin: 0;
+	text-align: center;
+	background-color: #000;
+	border-radius: 0;
+}
+
+figure {
+	margin-top: 6em;
+	text-align: center;
+	margin-top: 6em;
+	text-align: center;
+}
+
+img {
+	margin: auto;
+	transition: all 2s ease-in;
+}
+
+[type="submit"] {
+	display: block;
+	margin: 0.5em 0;
+	z-index: 2;
+}
+
+[type="image"] {
+	width: 2em;
+	border: 1px solid #333;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: auto;
+}
+
+output {
+	font-size: 2em;
+	display: block;
+}
+
+.light {
+	background: no-repeat url(./bombilla.png) center center / 50%;
+}
+
+main {
+	display: flex;
+}
+
+span {
+	display: block;
+	margin-top: 1em;
+	font-size: 3em;
+}
+
+/*# sourceMappingURL=main.css.map */

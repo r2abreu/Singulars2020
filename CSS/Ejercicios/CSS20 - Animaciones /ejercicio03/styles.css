@@ -1,53 +1,28 @@
 body {
-	background: #000;
-}
-
-.solar-system {
-	background: black url(stars.png) repeat;
+	background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
 	position: absolute;
-	top: 300px;
+	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	display: block;
 	z-index: 0;
-	transform: rotateY(25deg) rotateX(-10deg);
 }
 
-.planet-container {
+h1 {
+	color: red;
+}
+
+.clip-circle {
 	position: absolute;
-	top: 20px;
-}
-
-/* CUSTOM PROPS */
-
-/* Planet Tilt */
-
-.earth .clip-circle {
-	transform: rotateX(7deg) rotateZ(15deg);
-}
-
-/* Planet Surface */
-
-.earth .face {
-	background-image: url(https://i.stack.imgur.com/fdtNz.jpg);
-}
-
-.moon .face {
-	background-image: url(https://i.pinimg.com/originals/3e/dc/e0/3edce08472326f054d5b3f004ebf08f6.jpg);
-}
-
-/* PLANET POSITION */
-
-.earth {
-	position: absolute;
-	left: 20px;
-}
-
-.moon {
-	position: absolute;
-	left: 70px;
-	transform: scale(0.5) translateY(100px);
+	padding: 0;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	-webkit-clip-path: circle(97px at center);
+	clip-path: circle(97px at center);
+	overflow: hidden;
 }
 
 .cube-wrapper {
@@ -56,73 +31,29 @@ body {
 	top: 100px;
 	left: 100px;
 	position: absolute;
+	-webkit-perspective-origin: 0 0;
 	perspective-origin: 0 0;
-	perspective: 80px;
+	-webkit-perspective: 90px;
+	perspective: 90px;
 }
 
 .cube-2 {
+	-webkit-transform: translateZ(-100px) scaleX(1.8);
 	transform: translateZ(-100px) scaleX(1.8);
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
+
 .cube {
 	top: -100px;
 	position: relative;
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	animation-name: rotate;
-	animation-duration: 10s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+	-webkit-animation: rotate 10s linear infinite;
 }
 
-.planet .lighting {
-	box-shadow: -20px -30px 55px 0 rgba(0, 0, 0, 0.9) inset, -75px -100px 150px 0 rgba(0, 0, 0, 0.4) inset,
-		75px 100px 200px 0 rgba(255, 255, 255, 0.2) inset, -1px -2px 10px 2px rgba(200, 190, 255, 0.2);
-}
-.planet .lighting:after {
-	box-shadow: 0 0 150px 51px rgba(255, 255, 255, 0.2), 0 0 26px 10px rgba(255, 255, 255, 0.2);
-}
-
-.circle {
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-}
-
-.clip-circle {
-	position: absolute;
-	padding: 0;
-	top: -16px;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	clip-path: circle(85px at center);
-}
-
-.lighting:after {
-	content: '';
-	position: absolute;
-	top: 50px;
-	left: 67px;
-}
-.reflection:before {
-	content: '';
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 200px;
-	width: 200px;
-	background-image: url(https://i.stack.imgur.com/ayCw7.png);
-	background-size: 200px 200px;
-}
-
-@keyframes rotate {
-	0% {
-		transform: rotate3d(0 0, 0, 360deg);
-	}
-	100% {
-		transform: rotate3d(0, 1, 0, 360deg);
-	}
+.earth .cube {
+	animation: rotate 10s linear infinite;
 }
 
 .face {
@@ -132,35 +63,144 @@ body {
 	height: 200px;
 }
 
-#face1 {
+.face:first-of-type {
+	-webkit-transform: translateX(-41.4px) translateZ(100px);
 	transform: translateX(-41.4px) translateZ(100px);
 	background-position: 0 0;
 }
-#face2 {
+
+.face:nth-of-type(2) {
+	-webkit-transform: translateX(29.2px) translateZ(70.8px) rotateY(45deg);
 	transform: translateX(29.2px) translateZ(70.8px) rotateY(45deg);
 	background-position: -82.8px 0;
 }
-#face3 {
+
+.face:nth-of-type(3) {
+	-webkit-transform: translateX(58.5px) rotateY(90deg);
 	transform: translateX(58.5px) rotateY(90deg);
 	background-position: -165.6px 0;
 }
-#face4 {
+
+.face:nth-of-type(4) {
+	-webkit-transform: translateX(29.2px) translateZ(-70.8px) rotateY(135deg);
 	transform: translateX(29.2px) translateZ(-70.8px) rotateY(135deg);
 	background-position: -248.4px 0;
 }
-#face5 {
+
+.face:nth-of-type(5) {
+	-webkit-transform: translateX(-41.4px) translateZ(-100px) rotateY(180deg);
 	transform: translateX(-41.4px) translateZ(-100px) rotateY(180deg);
 	background-position: -331.2px 0;
 }
-#face6 {
+
+.face:nth-of-type(6) {
+	-webkit-transform: translateX(-111.4px) translateZ(-70.8px) rotateY(225deg);
 	transform: translateX(-111.4px) translateZ(-70.8px) rotateY(225deg);
 	background-position: -414px 0;
 }
-#face7 {
+
+.face:nth-of-type(7) {
+	-webkit-transform: translateX(-141.4px) rotateY(270deg);
 	transform: translateX(-141.4px) rotateY(270deg);
 	background-position: -496.8px 0;
 }
-#face8 {
+
+.face:nth-of-type(8) {
+	-webkit-transform: translateX(-111.4px) translateZ(70px) rotateY(315deg);
 	transform: translateX(-111.4px) translateZ(70px) rotateY(315deg);
 	background-position: -579.6px 0;
+}
+
+.circle {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	-webkit-box-shadow: -20px -30px 55px 0 rgba(0, 0, 0, 0.9) inset, -75px -100px 150px 0 rgba(0, 0, 0, 0.4) inset,
+		75px 100px 200px 0 rgba(255, 255, 255, 0.2) inset, -1px -2px 10px 2px rgba(200, 190, 255, 0.2);
+	box-shadow: -20px -30px 55px 0 rgba(0, 0, 0, 0.9) inset, -75px -100px 150px 0 rgba(0, 0, 0, 0.4) inset,
+		75px 100px 200px 0 rgba(255, 255, 255, 0.2) inset, -1px -2px 10px 2px rgba(200, 190, 255, 0.2);
+}
+
+.solar-system {
+	position: relative;
+	width: 500px;
+	margin: auto;
+	height: 500px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateX(75deg);
+	transform: rotateX(75deg);
+}
+
+.earth {
+	position: absolute;
+	left: -webkit-calc(50% - 100px);
+	left: calc(50% - 100px);
+	top: 30%;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateX(-75deg) translateY(-70px);
+	transform: rotateX(-75deg) translateY(-70px);
+}
+
+.moon {
+	position: absolute;
+	-webkit-transform: scale(0.4);
+	-ms-transform: scale(0.4);
+	transform: scale(0.4);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.moon-orbit {
+	position: absolute;
+	width: 100%;
+	border-radius: 50%;
+	height: 100%;
+	margin: auto;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-animation: translation 10s linear infinite;
+	animation: translation 10s linear infinite;
+}
+
+.earth .face {
+	background-image: url(https://i.stack.imgur.com/fdtNz.jpg);
+}
+
+.moon .face {
+	background: #333;
+}
+
+@-webkit-keyframes translation {
+	0% {
+		-webkit-transform: rotateZ(0deg);
+		transform: rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(360deg);
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes translation {
+	0% {
+		-webkit-transform: rotateZ(0deg);
+		transform: rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(360deg);
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate3d(0, 0, 0, 360deg);
+	}
+
+	to {
+		transform: rotate3d(0, 1, 0, 360deg);
+	}
 }
