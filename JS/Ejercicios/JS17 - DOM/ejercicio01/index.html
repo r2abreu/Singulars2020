@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./analizador.js" defer></script>
+        <title>Trickier nesting, still</title>
+    </head>
+    <body>
+        <div>
+            <div>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Steps</th>
+                            <th>Process</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                Figure out the <em>root element</em>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                Deal with the <span>head</span> first, as it´s usually easy.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                Work trought the <span>body</span>. Just <em>take your time</em>.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+                This link is <em>not</em> active, but if it were, the answers to this <a href="">img</a> would be there. But <em>do this excercise anyway</em>.
+            </div>  
+            <button>Mostrar</button>
+        </div>
+    </body>
+</html>
