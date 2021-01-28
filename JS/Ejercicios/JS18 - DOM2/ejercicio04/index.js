@@ -3,24 +3,23 @@
 (() => {
 	let divs = document.querySelectorAll('div');
 	divs[0].addEventListener('mouseenter', () => {
-		handleMouse(divs);
+		handleMouse(event);
 	});
 	divs[1].addEventListener('mouseenter', () => {
 		handleSingleCreation(event);
 	});
-	divs[2].addEventListener('mouseenter', (event) => {
+	divs[2].addEventListener('mouseenter', () => {
 		handleSingleCreation(event);
 	});
-	divs[2].addEventListener('mouseleave', (event) => {
+	divs[2].addEventListener('mouseleave', () => {
 		handleSingleDestruction(event);
 	});
 })();
 
-function handleMouse(divs) {
+function handleMouse({ target }) {
 	let newDiv = document.createElement('div');
 	newDiv.innerText = 'Pasaste el raton';
-	console.log(divs);
-	divs[0].appendChild(newDiv);
+	target.appendChild(newDiv);
 }
 
 function handleSingleCreation({ target }) {
