@@ -16,10 +16,8 @@ html {
 
 body {
 	padding-top: 0.5em;
-	margin: 0 auto;
 	background-color: #fff;
 	font-family: 'Roboto', Verdana, Arial, sans-serif;
-	max-width: 1000px;
 	color: #156c9ebd;
 }
 
@@ -189,63 +187,17 @@ form {
 	flex-direction: column;
 }
 
-[type="submit"] {
-	display: block;
-	margin-top: 1em;
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
 }
 
 figure {
-	position: fixed;
-	left: 0;
-	-webkit-animation: 10s fly linear;
-	animation: 10s fly linear;
+	width: 300px;
 }
 
-output {
-	margin-top: 2em;
-}
-
-section {
-	border: 2px solid transparent;
-	display: grid;
-	width: 500px;
-	margin: auto;
-	grid-template-columns: repeat(3, 1fr);
-	box-sizing: border-box;
-}
-div {
-	margin-top: 2em;
-	border: 2px dashed #333;
-}
-
-.transitioned {
-	animation: rotate 0.5s ease-out;
-}
-
-@keyframes rotate {
-	0% {
-		transform: rotateY(0deg);
-	}
-
-	100% {
-		transform: rotateY(360deg);
-	}
-}
-
-.congratulations {
-	font-size: 4em;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-@-webkit-keyframes fly {
-	100% {
-		top: -100%;
-	}
-}
-
-@keyframes fly {
-	100% {
-		top: -100%;
-	}
+img {
+	width: 100%;
 }
