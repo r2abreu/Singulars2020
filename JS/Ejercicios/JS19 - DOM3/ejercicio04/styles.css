@@ -92,11 +92,16 @@ button:active {
 }
 
 label {
+	display: inline;
 	margin: 0.5rem 0;
 	font-weight: 400;
 }
 
-input:not([type*="checkbox"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="text"]),
+input {
+	margin-top: 1em;
+}
+
+input:not([type*="radio"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="text"]),
 select,
 textarea {
 	width: 100%;
@@ -127,6 +132,7 @@ textarea {
 	padding: 0.7rem;
 	border-radius: 0.2rem;
 	color: #ffffff;
+	margin-top: 1em;
 }
 
 [type="submit"]:hover,
@@ -204,4 +210,12 @@ img {
 figcaption {
 	color: #fff;
 	font-size: 3rem;
+}
+
+.dice {
+	display: flex;
+}
+
+.dice figure {
+	width: 10em;
 }

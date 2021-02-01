@@ -10,12 +10,31 @@
     <body>
         <main>
             <div class="stats">
-                <button>Jugar</button>
-                <input type="number">
+                <p>Monedas:</p>
+                <output></output>
+                <p>Turnos:</p>
+                <output></output>
+                <p>Aciertos:</p>
+                <output></output>
+                <p>Errores:</p>
+                <output></output>
+                <p>Record:</p>
+                <output></output>
+                <form action="">
+                    <label for="bet">Apuesta</label>
+                    <input id="bet" type="number" min="1" required>
+                    <div>
+                        <input type="radio" value="over" name="tier" required />
+                        <label>Mas de 7</label>
+                        <input type="radio" value="below" name="tier"  required/>
+                        <label>Menos de 7</label>
+                    </div>
+                    <input type="submit" value="Jugar">
+                </form>
             </div>
             <div class="dice">
-                <figure><img src="" alt=""></figure>
-                <figure><img src="" alt=""></figure>
+                <figure><img src="./assets/1.svg" alt="dados" title="Dados"></figure>
+                <figure><img src="./assets/1.svg" alt="dados" title="Dados"></figure>
             </div>
         </main>
     </body>
